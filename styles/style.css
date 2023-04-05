@@ -422,7 +422,7 @@ main section .our-collection-section .collection-item:nth-of-type(3) {
   background-image: url(../images/our_collection/our_collection_kids.jpg);
 }
 main section .our-collection-section .collection-item:nth-of-type(4) {
-  background-image: url(../images/our_collection/our_collection_woomen.jpg);
+  background-image: url(../images/our_collection/our_collection_home.jpg);
 }
 main section .stock-section .stock-section-header {
   display: flex;
