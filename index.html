@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- scripts cdn -->
+    <script type="module" src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>Мегахенд Грузия</title>
+</head>
+<body>
+    <header>
+        <div class="top-baner">
+            <div class="container">
+                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="about.html">о компании</a></li>
+                        <li><a href="stock.html">акции</a></li>
+                        <li><a href="our_collection.html">коллекции</a></li>
+                        <li><a href="brands.html">бренды</a></li>
+                        <li><a href="job_openings.html">вакансии</a></li>
+                    </ul>
+                </nav>
+                <div class="logo"><a href="index.html"><img src="images/logos/logo.svg" alt="логотип"></a></div>
+                <div class="more-info-header">
+                    <div class="item-m item-m-language">
+                        <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                        <p>en</p>
+                    </div>
+                    <div class="item-m">
+                        <div class="icon"><img src="images/icons/location.svg" alt=""></div>
+                        <p>Тбилиси</p>
+                        <p id="headerTime">14:43</p>
+                    </div>
+                    <div class="contact-container">
+                        <a href="tel:+7(987)847-33-11" class="phone">+7(987)847-33-11</a>
+                        <a href="contacts.html" class="btn btn-grey">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="landing-section">
+                <div class="container">
+                    <div class="landing-container">
+                        <div class="landing-text">КРУПНЕЙШИЙ СЕКОНД-<br>ХЕНД В ГРУЗИИ</div>
+                        <div class="calendar-section">
+                            <div class="calendar">
+                                <div class="calendar-header">
+                                    <span>календарь скидок</span>
+                                    <div class="share-block"><img src="images/icons/share.svg" alt=""></div>
+                                </div>
+                                <div class="calendar-body">
+                                    <div class="home-calendar-swiper swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="home-calendar-slide swiper-slide">
+                                                <div class="home-calendar-date">
+                                                    <span class="date">27</span>
+                                                    <span class="week-day">ПН, Сегодня</span>
+                                                </div>
+                                                <div class="home-calendar-sale">
+                                                    <span>60%</span>
+                                                </div>
+                                            </div>
+                                            <div class="home-calendar-slide swiper-slide">
+                                                <div class="home-calendar-date">
+                                                    <span class="date">28</span>
+                                                    <span class="week-day">ВТ</span>
+                                                </div>
+                                                <div class="home-calendar-sale">
+                                                    <span>60%</span>
+                                                </div>
+                                            </div>
+                                            <div class="home-calendar-slide swiper-slide">
+                                                <div class="home-calendar-date">
+                                                    <span class="date">29</span>
+                                                    <span class="week-day">Ср</span>
+                                                </div>
+                                                <div class="home-calendar-sale">
+                                                    <span>70%</span>
+                                                </div>
+                                            </div>
+                                            <div class="home-calendar-slide swiper-slide">
+                                                <div class="home-calendar-date">
+                                                    <span class="date">30</span>
+                                                    <span class="week-day">ЧТ</span>
+                                                </div>
+                                                <div class="home-calendar-sale">
+                                                    <span>80%</span>
+                                                </div>
+                                            </div>
+                                            <div class="home-calendar-slide swiper-slide">
+                                                <div class="home-calendar-date">
+                                                    <span class="date">31</span>
+                                                    <span class="week-day">ПТ</span>
+                                                </div>
+                                                <div class="home-calendar-sale">
+                                                    <span>90%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-footer-block">
+                                            <div class="home-calendar-prev arrow-prev"><img src="images/icons/arrow.svg" alt=""></div>
+                                            <span>39-57 Egnate Ninoshvili St</span>
+                                            <div class="home-calendar-next arrow-next"><img src="images/icons/arrow.svg" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calendar-body-big">
+
+                                </div>
+                                <div class="calendar-footer">
+                                    <div class="btn btn-outline">весь календарь</div>
+                                    <div class="btn btn-orange">КУПОН НА 500₽</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="brand-section">
+                <div class="slider-container no-container">
+                    <div class="brand-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                            <div class="swiper-slide brand-slide">
+                                <img src="images/nike.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="our-collection-section">
+                <div class="collection-item">
+                    <span class="collection-name">Женское</span>
+                    <a href="our_collection.html" class="btn btn-orange no-uppercase">Коллекция <div class="icons"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
+                </div>
+                <div class="collection-item">
+                    <span class="collection-name">Мужское</span>
+                    <a href="our_collection.html" class="btn btn-orange no-uppercase">Коллекция <div class="icons"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
+                </div>
+                <div class="collection-item">
+                    <span class="collection-name">Детское</span>
+                    <a href="our_collection.html" class="btn btn-orange no-uppercase">Коллекция <div class="icons"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
+                </div>
+                <div class="collection-item">
+                    <span class="collection-name">Для дома</span>
+                    <a href="our_collection.html" class="btn btn-orange no-uppercase">Коллекция <div class="icons"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="stock-section">
+                <div class="container">
+                    <div class="stock-section-header">
+                        <div class="section-title">скидки на одежду</div>
+                        <ul class="tabs-nav">
+                            <li><a href="#tab-1">все</a></li>
+                            <li><a href="#tab-2">мужское</a></li>
+                            <li><a href="#tab-3">женское</a></li>
+                            <li><a href="#tab-4">детское</a></li>
+                            <li><a href="#tab-5">для дома</a></li>
+                        </ul>	
+                    </div>
+                    <div class="tabs-items">
+                        <div class="tabs-item" id="tab-1">
+                            <div class="stock-body">
+                                <div class="stock-item">
+                                    <div class="stock-img" style="background-image: url(images/stock.jpg);">
+                                        <div class="tag green">75%</div>
+                                        <div class="tag">Женское</div> 
+                                    </div>
+                                    <div class="stock-body">
+                                        <span class="stock-name">Женская паттерн-блузка</span>
+                                        <div class="stock-price">
+                                            <span class="new-stock">600р</span>
+                                            <span class="old-stock">2400р</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stock-item">
+                                    <div class="stock-img" style="background-image: url(images/stock.jpg);">
+                                        <div class="tag green">75%</div>
+                                        <div class="tag">Женское</div> 
+                                    </div>
+                                    <div class="stock-body">
+                                        <span class="stock-name">Женская паттерн-блузка</span>
+                                        <div class="stock-price">
+                                            <span class="new-stock">600р</span>
+                                            <span class="old-stock">2400р</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stock-item">
+                                    <div class="stock-img" style="background-image: url(images/stock.jpg);">
+                                        <div class="tag green">75%</div>
+                                        <div class="tag">Женское</div> 
+                                    </div>
+                                    <div class="stock-body">
+                                        <span class="stock-name">Женская паттерн-блузка</span>
+                                        <div class="stock-price">
+                                            <span class="new-stock">600р</span>
+                                            <span class="old-stock">2400р</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="video-section">
+                <iframe width="100%" height="940px" src="https://www.youtube.com/embed/iKFjG4XKb6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="about-section">
+                <div class="container">
+                    <div class="aboout-container">
+                        <div class="about-item double-img">
+                            <img src="images/about/about1.jpg" alt="">
+                            <img src="images/about/about4.jpg" alt="">
+                        </div>
+                        <div class="about-item with-title">
+                            <img src="images/about/about2.jpg" alt="">
+                            <span>о нас</span>
+                        </div>
+                        <div class="about-item with-text">
+                            <img src="images/about/about3.jpg" alt="">
+                            <p>"МЕГАхенд" – это новый формат магазинов секонд-хенд, предоставляющий одежду на площади порядка тысячи квадратных метров. У нас вы сможете найти одежду для спорта, отдыха, деловых встреч или прогулок с друзьями.</p>
+                            <a href="about.html" class="btn btn-orange">Читать статью <div class="icon"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
+                        </div>
+                        <div class="about-item-text">
+                            <p>Если вам хочется тратить на одежду меньше, а покупать как можно больше - отправляйтесь в "МЕГАХЕНД". Визитная карточка "МЕГАХЕНД" - двухнедельная система скидок. У нас вы сможете найти одежду для спорта, отдыха, деловых встреч или прогулок.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="news-section">
+                <div class="container">
+                    <div class="section-title">
+                        новости и блог
+                    </div>
+                    <div class="news-container">
+                        <a href="news_item.html" class="news-item">
+                            <div class="news-img"><img src="images/news.jpg" alt=""></div>
+                            <div class="news-name">Как устроен секонд</div>
+                            <div class="news-dt-create">16 февраля 2023</div>
+                        </a>
+                        <a href="news_item.html" class="news-item">
+                            <div class="news-img"><img src="images/news.jpg" alt=""></div>
+                            <div class="news-name">Как устроен секонд</div>
+                            <div class="news-dt-create">16 февраля 2023</div>
+                        </a>
+                        <a href="news_item.html" class="news-item">
+                            <div class="news-img"><img src="images/news.jpg" alt=""></div>
+                            <div class="news-name">Как устроен секонд</div>
+                            <div class="news-dt-create">16 февраля 2023</div>
+                        </a>
+                        <a href="news_item.html" class="news-item">
+                            <div class="news-img"><img src="images/news.jpg" alt=""></div>
+                            <div class="news-name">Как устроен секонд</div>
+                            <div class="news-dt-create">16 февраля 2023</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="seo-section">
+                <div class="container">
+                    <h1 class="section-title">
+                        сео-заголовок
+                    </h1>
+                    <div class="content">
+                        <h1>h1</h1>
+                        <h2>h2</h2>
+                        <h3>h3</h3>
+                        <h4>h4</h4>
+                        <h5>h5</h5>
+                        <h6>h6</h6>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem nulla earum provident, alias quibusdam, magni dignissimos nemo, laudantium omnis sequi in praesentium soluta eligendi itaque minima eaque aperiam repellat minus!</p>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem nulla earum provident, alias quibusdam, magni dignissimos nemo, laudantium omnis sequi in praesentium soluta eligendi itaque minima eaque aperiam repellat minus!</p>
+                        <ul>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </ul>
+                        <ol>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                            <li>1</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="map-section">
+                <!-- <div id="map" style="height: 100%;" data-coord='{{ all_yandex_map_points }}'></div> -->
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A07120caf2b4efd330188da633762b6cd5caf2bcfcc8273d97bf49cc35ce2628f&amp;source=constructor" width="100%" height="609" frameborder="0"></iframe>
+                <div class="container">
+                    <div class="info-block">
+                        <div class="info-block-head">
+                            <div class="section-title">наши магазины</div>
+                            <div class="info-block-item">
+                                <div class="icon"><img src="images/icons/location-black.svg" alt=""></div>
+                                <p>39-57 Egnate Ninoshvili St</p>
+                            </div>
+                            <div class="info-block-item">
+                                <div class="icon"><img src="images/icons/time.svg" alt=""></div>
+                                <p>Ежедневно с 10:00 до 20:00 В день скидки 90% с 9:00 до 18:00</p>
+                            </div>
+                        </div>
+                        <a href="contacts.html" class="btn btn-orange no-uppercase">На карту <div class="icon"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="main-footer">
+                <div class="mailing">
+                    <div class="mailing-title">давайте будем <br> на связи!</div>
+                    <label for="mailing" class="mailing-form">
+                        <input id="mailing" type="email" placeholder="Ваш E-mail">
+                        <div class="btn btn-orange">Отправить</div>
+                    </label>
+                    <span class="description">*Нажимая кнопку "Отправить" вы даёте согласие на обработку персональных данных</span>
+                </div>
+                <div class="footer-content">
+                    <nav>
+                        <ul>
+                            <li><a href="about.html">о компании</a></li>
+                            <li><a href="stock.html">акции</a></li>
+                            <li><a href="our_collection.html">коллекции</a></li>
+                            <li><a href="brands.html">бренды</a></li>
+                            <li><a href="job_openings.html">вакансии</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><a href="">Арендодателям</a></li>
+                            <li><a href="">Оптовикам</a></li>
+                            <li><a href="">Реклама у нас</a></li>
+                            <li><a href="">Отзывы</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Блог</a></li>
+                            <li><a href="">Карта сайта</a></li>
+                        </ul>
+                        <div class="footer-img">
+                            <img src="images/other/footer-img.jpg" alt="">
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="second-footer">
+                <div class="item-s">
+                    <div class="logo">
+                        <img src="images/logos/logo.svg" alt="">
+                    </div>
+                    <div class="socials">
+                        <div class="social">
+                            <img src="images/socilas/dzen.svg" alt="">
+                        </div>
+                        <div class="social">
+                            <img src="images/socilas/youtube.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="item-s">
+                    <p>2023 © МЕГАХЕНД - интернет магазин</p>
+                </div>
+                <div class="item-s">
+                    <a href="privacy.html">Политика конфиденциальности</a>
+                    <a href="https://seo-rocket.ru/">Разработано Студией Сайтов</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/modules/untils.js"></script>
+    <script src="scripts/modules/sliders.js"></script>
+    <script></script>
+</body>
+</html>
