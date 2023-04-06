@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- scripts cdn -->
+    <script type="module" src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>Мегахенд Грузия</title>
+</head>
+<body>
+    <header>
+        <div class="top-baner">
+            <div class="container">
+                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="main-header static">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="about.html">о компании</a></li>
+                        <li><a href="stock.html">акции</a></li>
+                        <li><a href="our_collection.html">коллекции</a></li>
+                        <li><a href="brands.html">бренды</a></li>
+                        <li><a href="job_openings.html">вакансии</a></li>
+                    </ul>
+                </nav>
+                <div class="logo"><a href="index.html"><img src="images/logos/logo.svg" alt="логотип"></a></div>
+                <div class="more-info-header">
+                    <div class="item-m item-m-language">
+                        <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                        <p>en</p>
+                    </div>
+                    <div class="item-m">
+                        <div class="icon"><img src="images/icons/location.svg" alt=""></div>
+                        <p>Тбилиси</p>
+                        <p id="headerTime">14:43</p>
+                    </div>
+                    <div class="contact-container">
+                        <a href="tel:+7(987)847-33-11" class="phone">+7(987)847-33-11</a>
+                        <a href="contacts.html" class="btn btn-grey">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="about-landing-section">
+                <div class="container">
+                    <div class="about-landing-container">
+                        <h1>о компании <br>в тбилиси</h1>
+                        <iframe width="100%" height="940px" src="https://www.youtube.com/embed/iKFjG4XKb6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="about-info-section">
+                <div class="container">
+                    <div class="about-info-container">
+                        <div class="about-info-img">
+                            <div class="item-a"><img src="images/about/about_page1.jpg" alt=""></div>
+                            <div class="item-a"><img src="images/about/about_page2.jpg" alt=""></div>
+                            <div class="item-a"><img src="images/about/about_page3.jpg" alt=""></div>
+                        </div>
+                        <div class="about-info-text">
+                            <p class="section-title">МЕГАХЕНД – ЭТО СЕТЬ<br>СЕКОНДХЭНДОВ ПО ВСЕЙ ГРУЗИИ</p>
+                            <div class="about-info-content">
+                                <div class="item-a">
+                                    <div class="bulet"><img src="images/icons/bullet.svg" alt=""></div>
+                                    <span>Уникальная система скидок - до 90%!</span>
+                                </div>
+                                <div class="item-a">
+                                    <div class="bulet"><img src="images/icons/bullet.svg" alt=""></div>
+                                    <span>Европейские бренды – по доступным ценам!</span>
+                                </div>
+                                <div class="item-a">
+                                    <div class="bulet"><img src="images/icons/bullet.svg" alt=""></div>
+                                    <span>Бесконечное разнообразие одежды для женщин, мужчин и детей </span>
+                                </div>
+                                <div class="item-a">
+                                    <div class="bulet"><img src="images/icons/bullet.svg" alt=""></div>
+                                    <span>Огромный выбор обуви, аксессуаров и товаров для дома!</span>
+                                </div>
+                                <div class="item-a">
+                                    <div class="bulet"><img src="images/icons/bullet.svg" alt=""></div>
+                                    <span>Комфортные торговые залы площадью до 1000 кв.м.!</span>
+                                </div>
+                                <div class="item-a">
+                                    <div class="bulet"><img src="images/icons/bullet.svg" alt=""></div>
+                                    <span>Обновление товара каждую неделю!</span>
+                                </div>
+                                <div class="item-a">
+                                    <div class="bulet"><img src="images/icons/bullet.svg" alt=""></div>
+                                    <span>И, конечно, приятная атмосфера для неспешного шопинга!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="form-recall-section">
+                <div class="container">
+                    <div class="form-recall-container">
+                        <div class="form-recall-info">
+                            <p class="form-recall-title">
+                                Подпишитесь<br>на рассылку
+                            </p>
+                            <span class="form-recall-description">
+                                Получайте первыми выгодные предложения и скидки
+                            </span>
+                        </div>
+                        <form class="form-recall-form">
+                            <input type="name" class="custom-input black userName" placeholder="Ваше имя">
+                            <input type="email" class="custom-input black userEmail" placeholder="Ваше E-mail">
+                            <div class="btn btn-orange">Подписаться</div>
+                            <span class="description">*Нажимая кнопку "Отправить" вы даёте согласие на обработку персональных данных</span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="sales-section">
+                <div class="container">
+                    <div class="sales-container">
+                        <div class="sales-img">
+                            <img src="images/other/stock.jpg" alt="">
+                        </div>
+                        <div class="sales-text">
+                            <p class="sales-title">
+                                Уникальная система<br>скидок МЕГАХЕНД
+                            </p>
+                            <p class="sales-content">
+                                Все, конечно, знают о секонд-хенде. Но МЕГАХЕНД – не просто магазины модной одежды секонд-хенд, это торговая сеть федерального масштаба, которая предлагает абсолютно новый уровень качества и сервиса. Основа нашей работы– создание удобства и комфорта для покупателей и самый высокий уровень обслуживания! 
+                                <br><br>
+                                В МЕГАХЕНД представлена одежда, которая не подходит под классическое определение «секонд-хенд»: у нас продаются вещи, поступающие напрямую только из Европы, обладающие безупречным качеством и отличным внешним видом. Одежда в наши магазины поступает со стоков и является практически новой, некоторые модели – премиального уровня.
+                            </p>
+                            <a href="stock.html" class="btn btn-orange">смотреть акции</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="prefooter-section" style="background-image: url('images/backgrounds/pre-footer.jpg');">
+                <div class="container">
+                    <div class="prefooter-container">
+                        <p class="prefooter-title">ПОСТУПЛЕНИЕ БРЕНДОВЫХ <br> ВЕЩЕЙ В ДЕНЬ НОВОГО ЗАВОЗА</p>
+                        <p class="prefooter-conent">Если Вы хотите приобрести эксклюзивную вещь - приходите в "Мегахенд" в день НОВОГО ЗАВОЗА. <br>
+                            Если планируете сэкономить - обращайте внимание на таблицу скидок и приходите в дни 70%, 80% и 90% скидок.</p>
+                        <a href="stock.html" class="btn btn-orange">календарь скидок <div class="icon"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="main-footer">
+                <div class="mailing">
+                    <div class="mailing-title">давайте будем <br> на связи!</div>
+                    <label for="mailing" class="mailing-form">
+                        <input id="mailing" type="email" placeholder="Ваш E-mail">
+                        <div class="btn btn-orange">Отправить</div>
+                    </label>
+                    <span class="description">*Нажимая кнопку "Отправить" вы даёте согласие на обработку персональных данных</span>
+                </div>
+                <div class="footer-content">
+                    <nav>
+                        <ul>
+                            <li><a href="about.html">о компании</a></li>
+                            <li><a href="stock.html">акции</a></li>
+                            <li><a href="our_collection.html">коллекции</a></li>
+                            <li><a href="brands.html">бренды</a></li>
+                            <li><a href="job_openings.html">вакансии</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><a href="">Арендодателям</a></li>
+                            <li><a href="">Оптовикам</a></li>
+                            <li><a href="">Реклама у нас</a></li>
+                            <li><a href="">Отзывы</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Блог</a></li>
+                            <li><a href="">Карта сайта</a></li>
+                        </ul>
+                        <div class="footer-img">
+                            <img src="images/other/footer-img.jpg" alt="">
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="second-footer">
+                <div class="item-s">
+                    <div class="logo">
+                        <img src="images/logos/logo.svg" alt="">
+                    </div>
+                    <div class="socials">
+                        <div class="social">
+                            <img src="images/socilas/dzen.svg" alt="">
+                        </div>
+                        <div class="social">
+                            <img src="images/socilas/youtube.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="item-s">
+                    <p>2023 © МЕГАХЕНД - интернет магазин</p>
+                </div>
+                <div class="item-s">
+                    <a href="privacy.html">Политика конфиденциальности</a>
+                    <a href="https://seo-rocket.ru/">Разработано Студией Сайтов</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/modules/untils.js"></script>
+    <script src="scripts/modules/sliders.js"></script>
+    <script></script>
+</body>
+</html>

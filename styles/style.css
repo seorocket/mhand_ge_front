@@ -118,6 +118,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Coolvetica", sans-serif;
+  font-size: var(--fz20);
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -215,9 +216,21 @@ section .section-title {
   font-size: var(--fz48);
 }
 
+.custom-input.black {
+  background-color: #000000;
+}
+
+.custom-input {
+  font-size: var(--fz20);
+  color: #FFFFFF;
+  padding: 18px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -295,19 +308,32 @@ header .main-header .container .more-info-header .contact-container .phone {
   border: 2px solid #FFFFFF;
   border-radius: 100px;
 }
-header .main-header.sticky {
+header .main-header.sticky,
+header .main-header.static {
   background: #FFFFFF;
 }
-header .main-header.sticky a, header .main-header.sticky p {
+header .main-header.sticky a, header .main-header.sticky p,
+header .main-header.static a,
+header .main-header.static p {
   color: #000000 !important;
 }
-header .main-header.sticky .icon, header .main-header.sticky .logo {
+header .main-header.sticky .icon, header .main-header.sticky .logo,
+header .main-header.static .icon,
+header .main-header.static .logo {
   filter: invert(100%);
 }
-header .main-header.sticky .phone {
+header .main-header.sticky .phone,
+header .main-header.static .phone {
   border-color: #000000 !important;
 }
 
+main.no-mt {
+  margin-top: 0;
+}
+
+main {
+  margin-top: 178px;
+}
 main section .landing-section {
   background-image: url(../images/backgrounds/landing-bg.jpg);
   height: 100vh;
@@ -587,8 +613,173 @@ main section .map-section .info-block .info-block-head .info-block-item:last-chi
   width: 30px;
   height: 20px;
 }
+main section .about-landing-section .about-landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section .about-landing-section .about-landing-container h1 {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 90%;
+  margin-bottom: 100px;
+}
+main section .about-info-section {
+  height: fit-content;
+}
+main section .about-info-section .about-info-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  padding-bottom: 92.4px;
+}
+main section .about-info-section .about-info-container .about-info-img {
+  position: relative;
+  height: 100%;
+}
+main section .about-info-section .about-info-container .about-info-img .item-a {
+  position: absolute;
+}
+main section .about-info-section .about-info-container .about-info-img .item-a:nth-of-type(1) {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+main section .about-info-section .about-info-container .about-info-img .item-a:nth-of-type(2) {
+  width: 406px;
+  height: 270px;
+  z-index: 2;
+  bottom: -10%;
+  left: -28px;
+}
+main section .about-info-section .about-info-container .about-info-img .item-a:nth-of-type(3) {
+  width: 347px;
+  height: 231px;
+  z-index: 3;
+  left: 30%;
+  bottom: -20%;
+}
+main section .about-info-section .about-info-container .about-info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+main section .about-info-section .about-info-container .about-info-text .section-title {
+  margin: 0;
+}
+main section .about-info-section .about-info-container .about-info-text .about-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+main section .about-info-section .about-info-container .about-info-text .about-info-content .item-a {
+  font-size: var(--fz20);
+  color: #575757;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main section .about-info-section .about-info-container .about-info-text .about-info-content .item-a .bulet {
+  position: relative;
+}
+main section .about-info-section .about-info-container .about-info-text .about-info-content:before {
+  content: "";
+  height: 98%;
+  width: 2px;
+  background: #0D674C;
+  position: absolute;
+  top: 4px;
+  left: 11px;
+}
+main section .form-recall-section {
+  padding: 40px 0;
+  background: #000000;
+  color: white;
+}
+main section .form-recall-section .form-recall-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  column-gap: 400px;
+}
+main section .form-recall-section .form-recall-container .form-recall-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main section .form-recall-section .form-recall-container .form-recall-info .form-recall-title {
+  margin: 0;
+  font-size: var(--fz64);
+  line-height: 120%;
+  text-transform: uppercase;
+}
+main section .form-recall-section .form-recall-container .form-recall-info .form-recall-description {
+  color: #FFFFFF;
+  opacity: 0.4;
+  font-size: var(--fz20);
+}
+main section .form-recall-section .form-recall-container .form-recall-form {
+  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+main section .form-recall-section .form-recall-container .form-recall-form .description {
+  color: #FFFFFF;
+  opacity: 0.4;
+  font-size: var(--fz20);
+}
+main section .sales-section .sales-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+}
+main section .sales-section .sales-container .sales-img img {
+  object-fit: contain;
+}
+main section .sales-section .sales-container .sales-text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+main section .sales-section .sales-container .sales-text p {
+  margin: 0;
+}
+main section .sales-section .sales-container .sales-text .sales-title {
+  font-size: var(--fz48);
+}
+main section .sales-section .sales-container .sales-text .sales-content {
+  color: #575757;
+}
+main section .prefooter-section {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main section .prefooter-section .prefooter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section .prefooter-section .prefooter-container p {
+  margin: 0;
+}
+main section .prefooter-section .prefooter-container .prefooter-title {
+  font-size: var(--fz96);
+  margin-bottom: 20px;
+}
+main section .prefooter-section .prefooter-container .prefooter-conent {
+  margin-bottom: 30px;
+}
 
 footer {
+  margin-top: -2px;
   background: #000000;
   padding: 80px 0;
 }

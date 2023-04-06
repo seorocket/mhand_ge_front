@@ -26,6 +26,7 @@ html, body
     margin: 0
     padding: 0
     font-family: 'Coolvetica', sans-serif
+    font-size: var(--fz20)
     font-weight: 400
     letter-spacing: 0.02em
 h1
@@ -101,10 +102,20 @@ section .section-title
     text-transform: uppercase
     font-size: var(--fz48)
 
+.custom-input.black
+    background-color: $black
+.custom-input
+    font-size: var(--fz20)
+    color: $white
+    padding: 18px
+    outline: none
+    border: 1px solid rgba(255, 255, 255, 0.2)
+
+
 
 header
     position: fixed
-    z-index: 2
+    z-index: 5
     top: 0
     left: 0
     width: 100%
@@ -175,7 +186,8 @@ header
                         padding: 10px 20px
                         border: 2px solid $white
                         border-radius: 100px
-    .main-header.sticky
+    .main-header.sticky,
+    .main-header.static
         // transition: all .3s easy-in-out
         background: $white
         a, p
@@ -185,7 +197,10 @@ header
         .phone
             border-color: $black !important
 
+main.no-mt
+    margin-top: 0
 main
+    margin-top: 178px
     section
         .landing-section
             background-image: url(../images/backgrounds/landing-bg.jpg)
@@ -423,7 +438,144 @@ main
                         .icon
                             width: 30px
                             height: 20px
+        .about-landing-section
+            .about-landing-container
+                display: flex
+                flex-direction: column
+                align-items: center
+                h1
+                    text-align: center
+                    text-transform: uppercase
+                    line-height: 90%
+                    margin-bottom: 100px
+        .about-info-section
+            height: fit-content
+            .about-info-container
+                display: grid
+                grid-template-columns: repeat(2, 1fr)
+                gap: 80px
+                padding-bottom: calc(231px * 0.4)
+                .about-info-img
+                    position: relative
+                    height: 100%
+                    .item-a
+                        position: absolute
+                    .item-a:nth-of-type(1)
+                        position: relative
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        z-index: 1
+                    .item-a:nth-of-type(2)
+                        width: 406px
+                        height: 270px
+                        z-index: 2
+                        bottom: -10%
+                        left: -28px
+                    .item-a:nth-of-type(3)
+                        width: 347px
+                        height: 231px
+                        z-index: 3
+                        left: 30%
+                        bottom: -20%
+
+                .about-info-text
+                    display: flex
+                    flex-direction: column
+                    gap: 40px
+                    .section-title
+                        margin: 0
+                    .about-info-content
+                        display: flex
+                        flex-direction: column
+                        gap: 20px
+                        position: relative
+                        .item-a
+                            font-size: var(--fz20)
+                            color: $gray
+                            display: flex
+                            align-items: center
+                            gap: 20px
+                            .bulet
+                                position: relative
+                    .about-info-content:before
+                        content: ''
+                        height: 98%
+                        width: 2px
+                        background: $forestGreen
+                        position: absolute
+                        top: 4px
+                        left: 11px
+        .form-recall-section
+            padding: 40px 0
+            background: $black
+            color: white
+            .form-recall-container
+                display: grid
+                grid-template-columns: 1fr 2fr
+                align-items: center
+                column-gap: 400px
+                .form-recall-info
+                    display: flex
+                    flex-direction: column
+                    gap: 10px
+                    .form-recall-title
+                        margin: 0
+                        font-size: var(--fz64)
+                        line-height: 120%
+                        text-transform: uppercase
+                    .form-recall-description
+                       color: $white
+                       opacity: .4
+                       font-size: var(--fz20)
+                .form-recall-form
+                    height: fit-content
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    gap: 20px
+                    .description
+                        color: $white
+                        opacity: .4
+                        font-size: var(--fz20)
+        .sales-section
+                .sales-container
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    gap: 80px
+                    .sales-img
+                        img
+                            object-fit: contain
+                    .sales-text
+                        display: flex
+                        flex-direction: column
+                        gap: 40px
+                        align-items: flex-start
+                        p
+                            margin: 0
+                        .sales-title
+                            font-size: var(--fz48)
+                        .sales-content
+                            color: $gray
+        .prefooter-section
+            color: $white
+            text-align: center
+            padding: 100px
+            background-repeat: no-repeat
+            background-size: cover
+            .prefooter-container
+                display: flex
+                flex-direction: column
+                align-items: center
+                p
+                    margin: 0
+                .prefooter-title
+                    font-size: var(--fz96)
+                    margin-bottom: 20px
+                .prefooter-conent
+                    margin-bottom: 30px
+
 footer
+    margin-top: -2px
     background: $black
     padding: 80px 0
     .main-footer
