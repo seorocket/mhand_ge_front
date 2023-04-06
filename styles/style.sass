@@ -154,11 +154,46 @@ header
                     margin: 0
                     padding: 0
                     li
-                        a
+                        padding-bottom: 10px
+                        position: relative
+                        >a, >span
                             color: $white
                             text-transform: uppercase
                             text-decoration: none
                             font-size: var(--fz20)
+                        ul.sub-menu
+                            padding: 30px
+                            background-color: $white
+                            position: absolute
+                            left: 0
+                            margin-top: 10px
+                            visibility: hidden
+                            display: grid
+                            gap: 30px 100px
+                            grid-template-columns: repeat(2, 1fr)
+                            grid-template-rows: repeat(4, 1fr)
+                            li
+                                margin: 0
+                                padding: 0
+                                a
+                                    text-transform: uppercase
+                                    color: $black
+                            >ul
+                                grid-row: span 2
+                                padding: 0
+                                display: flex
+                                flex-direction: column
+                                gap: 10px
+                                li
+                                    a
+                                        opacity: .4
+                                        font-size: var(--fz16)
+
+                            
+                    li:hover
+                        >ul
+                           
+                            visibility: visible
             .more-info-header
                 display: flex
                 gap: 40px
@@ -190,7 +225,7 @@ header
     .main-header.static
         // transition: all .3s easy-in-out
         background: $white
-        a, p
+        a, p, span
             color: $black !important
         .icon, .logo
             filter: invert(100%)
@@ -438,8 +473,8 @@ main
                         .icon
                             width: 30px
                             height: 20px
-        .about-landing-section
-            .about-landing-container
+        .page-landing-section
+            .page-landing-container
                 display: flex
                 flex-direction: column
                 align-items: center
@@ -448,6 +483,12 @@ main
                     text-transform: uppercase
                     line-height: 90%
                     margin-bottom: 100px
+                h1.with-description
+                    margin-bottom: 30px
+                .description
+                    padding: 0
+                    color: $gray
+                    font-size: var(--fz28)
         .about-info-section
             height: fit-content
             .about-info-container
@@ -550,12 +591,29 @@ main
                         flex-direction: column
                         gap: 40px
                         align-items: flex-start
+                        justify-content: space-between
                         p
                             margin: 0
                         .sales-title
                             font-size: var(--fz48)
                         .sales-content
                             color: $gray
+                        .content.landlords-requirements
+                            display: grid
+                            grid-template-columns: repeat(3, 1fr)
+                            grid-template-rows: 185px 111px
+                            gap: 20px
+                            .item-c
+                                padding: 20px
+                                display: flex
+                                gap: 10px
+                                border: 1px solid $grey
+                                .bulet  
+                                    img
+                                        width: 24px
+                                        height: 24px
+                            .item-c:nth-of-type(4)
+                                grid-column: span 2 
         .prefooter-section
             color: $white
             text-align: center
@@ -573,6 +631,80 @@ main
                     margin-bottom: 20px
                 .prefooter-conent
                     margin-bottom: 30px
+        .landlords-img
+            margin-top: 100px
+            .img
+                width: 100%
+        .landlords-contacts-section
+            padding: 60px 0 
+            margin-bottom: 2px
+            background: $black
+            border-bottom: 1px solid $gray
+            .landloars-contacts-container
+                color: $white
+                .title  
+                    text-transform: uppercase
+                    font-size: var(--fz96)
+                    margin-bottom: 20px
+                .lc-header
+                    display: grid
+                    grid-template-columns: repeat(3, 1fr)
+                    gap: 20px
+                    align-items: center
+                    margin-bottom: 30px
+                    .search-input
+                       input
+                        width: 100%
+                    .city-list::-webkit-scrollbar
+                        width: 0
+                        height: 0
+                    .city-list
+                        grid-column: 2 span
+                        -ms-overflow-style: none
+                        overflow: -moz-scrollbars-none
+                        display: flex
+                        flex-wrap: nowrap
+                        white-space: nowrap
+                        overflow-x: auto 
+                        gap: 10px
+                   
+                        .item-c
+                            padding: 15px 30px
+                            text-transform: uppercase
+                            background: rgba(255, 255, 255, 0.2)
+                            border-radius: 100px
+
+                .lc-contacts
+                    display: grid
+                    grid-template-columns: repeat(3, 1fr)
+                    gap: 20px
+                    .item-c
+                        padding: 30px
+                        background: rgba(255, 255, 255, 0.05)
+                        border: 1px solid rgba(255, 255, 255, 0.05)
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        .icon   
+                            img
+                                width: 32px
+                                height: 32px
+                        >p
+                            margin-bottom: 20px
+                        .contact
+                            padding: 24px 20px
+                            background: $white
+                            display: flex
+                            gap: 20px
+                            color: $black
+                    .item-c:last-child
+                        background: $forestGreen
+                        border: none
+                        justify-content: space-between
+                        span:first-child
+                            font-size: var(--fz28)
+                        span:last-child
+                            font-size: var(--fz48)
 
 footer
     margin-top: -2px

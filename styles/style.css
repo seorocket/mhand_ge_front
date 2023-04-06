@@ -272,11 +272,49 @@ header .main-header .container nav ul {
   margin: 0;
   padding: 0;
 }
-header .main-header .container nav ul li a {
+header .main-header .container nav ul li {
+  padding-bottom: 10px;
+  position: relative;
+}
+header .main-header .container nav ul li > a, header .main-header .container nav ul li > span {
   color: #FFFFFF;
   text-transform: uppercase;
   text-decoration: none;
   font-size: var(--fz20);
+}
+header .main-header .container nav ul li ul.sub-menu {
+  padding: 30px;
+  background-color: #FFFFFF;
+  position: absolute;
+  left: 0;
+  margin-top: 10px;
+  visibility: hidden;
+  display: grid;
+  gap: 30px 100px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+header .main-header .container nav ul li ul.sub-menu li {
+  margin: 0;
+  padding: 0;
+}
+header .main-header .container nav ul li ul.sub-menu li a {
+  text-transform: uppercase;
+  color: #000000;
+}
+header .main-header .container nav ul li ul.sub-menu > ul {
+  grid-row: span 2;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+header .main-header .container nav ul li ul.sub-menu > ul li a {
+  opacity: 0.4;
+  font-size: var(--fz16);
+}
+header .main-header .container nav ul li:hover > ul {
+  visibility: visible;
 }
 header .main-header .container .more-info-header {
   display: flex;
@@ -312,9 +350,10 @@ header .main-header.sticky,
 header .main-header.static {
   background: #FFFFFF;
 }
-header .main-header.sticky a, header .main-header.sticky p,
+header .main-header.sticky a, header .main-header.sticky p, header .main-header.sticky span,
 header .main-header.static a,
-header .main-header.static p {
+header .main-header.static p,
+header .main-header.static span {
   color: #000000 !important;
 }
 header .main-header.sticky .icon, header .main-header.sticky .logo,
@@ -613,16 +652,24 @@ main section .map-section .info-block .info-block-head .info-block-item:last-chi
   width: 30px;
   height: 20px;
 }
-main section .about-landing-section .about-landing-container {
+main section .page-landing-section .page-landing-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main section .about-landing-section .about-landing-container h1 {
+main section .page-landing-section .page-landing-container h1 {
   text-align: center;
   text-transform: uppercase;
   line-height: 90%;
   margin-bottom: 100px;
+}
+main section .page-landing-section .page-landing-container h1.with-description {
+  margin-bottom: 30px;
+}
+main section .page-landing-section .page-landing-container .description {
+  padding: 0;
+  color: #575757;
+  font-size: var(--fz28);
 }
 main section .about-info-section {
   height: fit-content;
@@ -745,6 +792,7 @@ main section .sales-section .sales-container .sales-text {
   flex-direction: column;
   gap: 40px;
   align-items: flex-start;
+  justify-content: space-between;
 }
 main section .sales-section .sales-container .sales-text p {
   margin: 0;
@@ -754,6 +802,25 @@ main section .sales-section .sales-container .sales-text .sales-title {
 }
 main section .sales-section .sales-container .sales-text .sales-content {
   color: #575757;
+}
+main section .sales-section .sales-container .sales-text .content.landlords-requirements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 185px 111px;
+  gap: 20px;
+}
+main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid #D9D9D9;
+}
+main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c .bulet img {
+  width: 24px;
+  height: 24px;
+}
+main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(4) {
+  grid-column: span 2;
 }
 main section .prefooter-section {
   color: #FFFFFF;
@@ -776,6 +843,94 @@ main section .prefooter-section .prefooter-container .prefooter-title {
 }
 main section .prefooter-section .prefooter-container .prefooter-conent {
   margin-bottom: 30px;
+}
+main section .landlords-img {
+  margin-top: 100px;
+}
+main section .landlords-img .img {
+  width: 100%;
+}
+main section .landlords-contacts-section {
+  padding: 60px 0;
+  margin-bottom: 2px;
+  background: #000000;
+  border-bottom: 1px solid #575757;
+}
+main section .landlords-contacts-section .landloars-contacts-container {
+  color: #FFFFFF;
+}
+main section .landlords-contacts-section .landloars-contacts-container .title {
+  text-transform: uppercase;
+  font-size: var(--fz96);
+  margin-bottom: 20px;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-header .search-input input {
+  width: 100%;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-header .city-list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-header .city-list {
+  grid-column: 2 span;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-header .city-list .item-c {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c .icon img {
+  width: 32px;
+  height: 32px;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c > p {
+  margin-bottom: 20px;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c .contact {
+  padding: 24px 20px;
+  background: #FFFFFF;
+  display: flex;
+  gap: 20px;
+  color: #000000;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c:last-child {
+  background: #0D674C;
+  border: none;
+  justify-content: space-between;
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c:last-child span:first-child {
+  font-size: var(--fz28);
+}
+main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c:last-child span:last-child {
+  font-size: var(--fz48);
 }
 
 footer {
