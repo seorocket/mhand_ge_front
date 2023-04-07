@@ -5,4 +5,11 @@ $(window).scroll(function() {
     } else {
       header.removeClass('sticky');
     }
-  });
+});
+
+$('.all-calendar').on('click', function () {
+  const elements = $(this).parents('.open')
+  elements.each(function (key) {
+    $(elements[key]).removeClass('open')
+  })
+})

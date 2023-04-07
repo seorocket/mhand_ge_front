@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- scripts cdn -->
+    <script type="module" src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <title>Мегахенд Грузия</title>
+</head>
+<body>
+    <header>
+        <div class="top-baner">
+            <div class="container">
+                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+        <div class="main-header static">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="about.html">о компании</a></li>
+                        <li><a href="stock.html">акции</a></li>
+                        <li><a href="our_collection.html">коллекции</a></li>
+                        <li><a href="brands.html">бренды</a></li>
+                        <li><a href="job_openings.html">вакансии</a></li>
+                    </ul>
+                </nav>
+                <div class="logo"><a href="index.html"><img src="images/logos/logo.svg" alt="логотип"></a></div>
+                <div class="more-info-header">
+                    <div class="item-m item-m-language">
+                        <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                        <p>en</p>
+                    </div>
+                    <div class="item-m">
+                        <div class="icon"><img src="images/icons/location.svg" alt=""></div>
+                        <p>Тбилиси</p>
+                        <p id="headerTime">14:43</p>
+                    </div>
+                    <div class="contact-container">
+                        <a href="tel:+7(987)847-33-11" class="phone">+7(987)847-33-11</a>
+                        <a href="contacts.html" class="btn btn-grey">Контакты</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="mb-main">
+        <section>
+            <div class="page-landing-section">
+                <div class="container">
+                    <div class="page-landing-container">
+                        <div class="breadcrumbs">
+                            <ul>
+                              <li><a href="index.html">Главная</a><div class="icon"><img src="images/icons/polygon.svg" alt=""></div></li>
+                              <li>Акции</li>
+                            </ul>
+                          </div>
+                        <h1>акции</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="calendar-stock-section">
+                <div class="container">
+                   <div class="landing-container open">
+                    <div class="calendar-section open">
+                        <div class="calendar">
+                            <div class="calendar-header">
+                                <span>календарь скидок</span>
+                                <div class="share-block"><img src="images/icons/share.svg" alt=""></div>
+                            </div>
+                            <div class="calendar-body">
+                                <div class="home-calendar-swiper swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="home-calendar-slide swiper-slide">
+                                            <div class="home-calendar-date">
+                                                <span class="date">27</span>
+                                                <span class="week-day">ПН, Сегодня</span>
+                                            </div>
+                                            <div class="home-calendar-sale">
+                                                <span>60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-calendar-slide swiper-slide">
+                                            <div class="home-calendar-date">
+                                                <span class="date">28</span>
+                                                <span class="week-day">ВТ</span>
+                                            </div>
+                                            <div class="home-calendar-sale">
+                                                <span>60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-calendar-slide swiper-slide">
+                                            <div class="home-calendar-date">
+                                                <span class="date">29</span>
+                                                <span class="week-day">Ср</span>
+                                            </div>
+                                            <div class="home-calendar-sale">
+                                                <span>70%</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-calendar-slide swiper-slide">
+                                            <div class="home-calendar-date">
+                                                <span class="date">30</span>
+                                                <span class="week-day">ЧТ</span>
+                                            </div>
+                                            <div class="home-calendar-sale">
+                                                <span>80%</span>
+                                            </div>
+                                        </div>
+                                        <div class="home-calendar-slide swiper-slide">
+                                            <div class="home-calendar-date">
+                                                <span class="date">31</span>
+                                                <span class="week-day">ПТ</span>
+                                            </div>
+                                            <div class="home-calendar-sale">
+                                                <span>90%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-footer-block">
+                                        <div class="home-calendar-prev arrow-prev"><img src="images/icons/arrow.svg" alt=""></div>
+                                        <span>39-57 Egnate Ninoshvili St</span>
+                                        <div class="home-calendar-next arrow-next"><img src="images/icons/arrow.svg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calendar-body-big">
+                                    <div class="detailed-calendar-swiper swiper" style="background-image: url('images/backgrounds/adv_text.png');">
+                                        <div class="swiper-wrapper">
+                                            <div class="item-day swiper-slide">
+                                                <div class="item-day-header">понедельник</div>
+                                                <div class="item-day-navigation">
+                                                    <div class="detailed-calendar-prev arrow-prev"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                    <span>27 марта</span>
+                                                    <div class="detailed-calendar-next arrow-next"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                </div>
+                                                <div class="item-day-sale">
+                                                    60%
+                                                </div>
+                                            </div>
+                                            <div class="item-day swiper-slide">
+                                                <div class="item-day-header">понедельник</div>
+                                                <div class="item-day-navigation">
+                                                    <div class="detailed-calendar-prev arrow-prev"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                    <span>27 марта</span>
+                                                    <div class="detailed-calendar-next arrow-next"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                </div>
+                                                <div class="item-day-sale">
+                                                    60%
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="calendar-footer">
+                                <div class="btn btn-outline all-calendar">весь календарь</div>
+                                <div class="btn btn-orange">КУПОН НА 500₽</div>
+                            </div>
+                        </div>
+                        <div class="calendar-big">
+                            <div class="header">
+                                <p>март</p>
+                            </div>
+                            <div class="body">
+                                <div class="week border-no-padding">
+                                    <div class="item-w">пн</div>
+                                    <div class="item-w">вт</div>
+                                    <div class="item-w">ср</div>
+                                    <div class="item-w">чт</div>
+                                    <div class="item-w">пт</div>
+                                    <div class="item-w">сб</div>
+                                    <div class="item-w">вс</div>
+                                </div>
+                                <div class="sales">
+                                    <div class="item-s empty">
+                                        <span class="sale">-</span>
+                                        <span class="date">-</span>
+
+                                    </div>
+                                    <div class="item-s empty">
+                                        <span class="sale">-</span>
+                                        <span class="date">-</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale new-clothe">новый завоз</span>
+                                        <span class="date">02</span>
+                                    </div>
+                                    <div class="item-s today">
+                                        <span class="sale new-clothe">новый завоз</span>
+                                        <span class="date">02</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                    <div class="item-s">
+                                        <span class="sale">40%</span>
+                                        <span class="date">01</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-section">
+            <div class="stock-section">
+                <div class="container">
+                    <div class="stock-section-header">
+                        <div class="section-title">скидки на одежду</div>
+                        <ul class="tabs-nav">
+                            <li><a href="#tab-1">все</a></li>
+                            <li><a href="#tab-2">мужское</a></li>
+                            <li><a href="#tab-3">женское</a></li>
+                            <li><a href="#tab-4">детское</a></li>
+                            <li><a href="#tab-5">для дома</a></li>
+                        </ul>	
+                    </div>
+                    <div class="tabs-items">
+                        <div class="tabs-item" id="tab-1">
+                            <div class="stock-body">
+                                <div class="stock-item">
+                                    <div class="stock-img" style="background-image: url(images/stock.jpg);">
+                                        <div class="tag green">75%</div>
+                                        <div class="tag">Женское</div> 
+                                    </div>
+                                    <div class="stock-body">
+                                        <span class="stock-name">Женская паттерн-блузка</span>
+                                        <div class="stock-price">
+                                            <span class="new-stock">600р</span>
+                                            <span class="old-stock">2400р</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stock-item">
+                                    <div class="stock-img" style="background-image: url(images/stock.jpg);">
+                                        <div class="tag green">75%</div>
+                                        <div class="tag">Женское</div> 
+                                    </div>
+                                    <div class="stock-body">
+                                        <span class="stock-name">Женская паттерн-блузка</span>
+                                        <div class="stock-price">
+                                            <span class="new-stock">600р</span>
+                                            <span class="old-stock">2400р</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="stock-item">
+                                    <div class="stock-img" style="background-image: url(images/stock.jpg);">
+                                        <div class="tag green">75%</div>
+                                        <div class="tag">Женское</div> 
+                                    </div>
+                                    <div class="stock-body">
+                                        <span class="stock-name">Женская паттерн-блузка</span>
+                                        <div class="stock-price">
+                                            <span class="new-stock">600р</span>
+                                            <span class="old-stock">2400р</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="main-footer">
+                <div class="mailing">
+                    <div class="mailing-title">давайте будем <br> на связи!</div>
+                    <label for="mailing" class="mailing-form">
+                        <input id="mailing" type="email" placeholder="Ваш E-mail">
+                        <div class="btn btn-orange">Отправить</div>
+                    </label>
+                    <span class="description">*Нажимая кнопку "Отправить" вы даёте согласие на обработку персональных данных</span>
+                </div>
+                <div class="footer-content">
+                    <nav>
+                        <ul>
+                            <li><a href="about.html">о компании</a></li>
+                            <li><a href="stock.html">акции</a></li>
+                            <li><a href="our_collection.html">коллекции</a></li>
+                            <li><a href="brands.html">бренды</a></li>
+                            <li><a href="job_openings.html">вакансии</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <ul>
+                            <li><a href="">Арендодателям</a></li>
+                            <li><a href="">Оптовикам</a></li>
+                            <li><a href="">Реклама у нас</a></li>
+                            <li><a href="">Отзывы</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Блог</a></li>
+                            <li><a href="">Карта сайта</a></li>
+                        </ul>
+                        <div class="footer-img">
+                            <img src="images/other/footer-img.jpg" alt="">
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="second-footer">
+                <div class="item-s">
+                    <div class="logo">
+                        <img src="images/logos/logo.svg" alt="">
+                    </div>
+                    <div class="socials">
+                        <div class="social">
+                            <img src="images/socilas/dzen.svg" alt="">
+                        </div>
+                        <div class="social">
+                            <img src="images/socilas/youtube.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="item-s">
+                    <p>2023 © МЕГАХЕНД - интернет магазин</p>
+                </div>
+                <div class="item-s">
+                    <a href="privacy.html">Политика конфиденциальности</a>
+                    <a href="https://seo-rocket.ru/">Разработано Студией Сайтов</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/modules/untils.js"></script>
+    <script src="scripts/modules/sliders.js"></script>
+    <script></script>
+</body>
+</html>

@@ -24,3 +24,9 @@ new Swiper('.brand-swiper', {
         delay: 3000,
       },
 })
+new Swiper('.detailed-calendar-swiper', {
+    navigation: {
+        nextEl: '.detailed-calendar-next',
+        prevEl: '.detailed-calendar-prev',
+      },
+})

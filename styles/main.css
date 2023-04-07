@@ -108,7 +108,6 @@
   --fz64: 64px;
   --fz96: 96px;
   --fz144: 144px;
-  --ln120: 120%;
 }
 
 *, *::before, *::after {
@@ -203,8 +202,7 @@ img {
   display: flex;
   justify-content: space-between;
 }
-
-.arrow-prev {
+.swiper-footer-block .arrow-prev {
   transform: rotate(-180deg);
 }
 
@@ -220,23 +218,6 @@ section .section-title {
 
 .custom-input.black {
   background-color: #000000;
-}
-
-.custom-input.gray {
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #000000;
-}
-
-.custom-input.green {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #FFFFFF;
-}
-
-.custom-input.green::placeholder {
-  opacity: 0.4;
-  color: #FFFFFF;
 }
 
 .custom-input {
@@ -385,10 +366,6 @@ header .main-header.static .phone {
   border-color: #000000 !important;
 }
 
-main.mb-main {
-  margin-bottom: 110px;
-}
-
 main.no-mt {
   margin-top: 0;
 }
@@ -396,7 +373,7 @@ main.no-mt {
 main {
   margin-top: 178px;
 }
-main section .landing-section, main section .calendar-stock-section {
+main section .landing-section {
   background-image: url(../images/backgrounds/landing-bg.jpg);
   height: 100vh;
   background-repeat: no-repeat;
@@ -408,220 +385,76 @@ main section .landing-section, main section .calendar-stock-section {
   align-items: center;
   justify-content: center;
 }
-main section .landing-section .container, main section .calendar-stock-section .container {
+main section .landing-section .container {
   position: relative;
   height: 100%;
   margin-top: 218px;
   margin-bottom: 170px;
-  overflow: hidden;
 }
-main section .landing-section .landing-container, main section .calendar-stock-section .landing-container {
+main section .landing-section .landing-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20vh;
-  width: fit-content;
-  overflow: hidden;
-  margin: 0 auto;
 }
-main section .landing-section .landing-container .landing-text, main section .calendar-stock-section .landing-container .landing-text {
+main section .landing-section .landing-container .landing-text {
   text-align: center;
   color: #FFFFFF;
   font-size: var(--fz144);
   line-height: 90%;
 }
-main section .landing-section .landing-container .calendar-section .calendar, main section .calendar-stock-section .landing-container .calendar-section .calendar {
-  padding: 35px;
+main section .landing-section .landing-container .calendar-section {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main section .landing-section .landing-container .calendar-section .calendar {
+  padding: 30px;
   background: #FFFFFF;
   width: 720px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-header, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-header {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-footer, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-footer {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
   display: flex;
   flex-direction: column;
   padding: 10px;
   border: 1px solid #D9D9D9;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
   display: flex;
   justify-content: space-between;
   font-size: var(--fz20);
   color: rgba(0, 0, 0, 0.4);
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
   font-size: var(--fz48);
   color: #0D674C;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
   width: 30% !important;
-  background: rgba(0, 0, 0, 0.05);
-  border: none;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active), main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
   width: 20% !important;
-}
-main section .calendar-stock-section {
-  background: none;
-  height: fit-content;
-}
-main section .calendar-stock-section .container {
-  margin: 0;
-}
-main section .landing-section .calendar-section, main section .calendar-stock-section .calendar-section {
-  position: relative;
-  transition: all 0.2s ease-in-out;
-}
-main section .landing-section .calendar-section .calendar-body-big, main section .calendar-stock-section .calendar-section .calendar-body-big {
-  overflow: hidden;
-  transition: all 0.2s ease-in-out;
-  height: 0;
-}
-main section .landing-section .calendar-section .calendar-big, main section .calendar-stock-section .calendar-section .calendar-big {
-  z-index: -1;
-  transition: all 0.2s ease-in-out;
-  background: #E5E5E5;
-  position: absolute;
-  padding: 43px 30px 28px;
-  height: fit-content;
-  width: fit-content;
-  left: -100%;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-main section .landing-section .calendar-section .calendar-big .header, main section .calendar-stock-section .calendar-section .calendar-big .header {
-  color: #575757;
-  font-size: var(--fz28);
-  text-transform: uppercase;
-}
-main section .landing-section .calendar-section .calendar-big .header p, main section .calendar-stock-section .calendar-section .calendar-big .header p {
-  margin: 0;
-}
-main section .landing-section .calendar-section .calendar-big .body, main section .calendar-stock-section .calendar-section .calendar-big .body {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-main section .landing-section .calendar-section .calendar-big .body .week.border-no-padding, main section .calendar-stock-section .calendar-section .calendar-big .body .week.border-no-padding {
-  width: 100%;
-  display: grid;
-  padding: 10px 0;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 20px;
-}
-main section .landing-section .calendar-section .calendar-big .body .week.border-no-padding .item-w, main section .calendar-stock-section .calendar-section .calendar-big .body .week.border-no-padding .item-w {
-  color: rgba(0, 0, 0, 0.4);
-  text-transform: uppercase;
-}
-main section .landing-section .calendar-section .calendar-big .body .sales, main section .calendar-stock-section .calendar-section .calendar-big .body .sales {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 20px;
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s {
-  padding: 10px;
-  background: #FFFFFF;
-  border: 1px solid #D9D9D9;
-  display: flex;
-  justify-content: space-between;
-  gap: 5px;
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s .date, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s .date {
-  color: rgba(0, 0, 0, 0.4);
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s .sale, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s .sale {
-  padding-top: 20px;
-  color: #0D674C;
-  font-size: var(--fz48);
-  text-transform: uppercase;
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s .sale.new-clothe, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s .sale.new-clothe {
-  color: #F07106;
-  font-size: var(--fz24);
-  line-height: 120%;
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.today, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.today {
-  background: #0D674C;
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.today .date, main section .landing-section .calendar-section .calendar-big .body .sales .item-s.today .sale, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.today .date, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.today .sale {
-  color: #FFFFFF;
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.empty, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.empty {
-  background: rgba(0, 0, 0, 0.05);
-}
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.empty .date, main section .landing-section .calendar-section .calendar-big .body .sales .item-s.empty .sale, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.empty .date, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.empty .sale {
-  color: #575757;
-}
-main section .landing-section .calendar-section.open, main section .calendar-stock-section .calendar-section.open {
-  background: #FFFFFF;
-  transform: translateX(-540px);
-  transition: all 0.2s ease-in-out;
-}
-main section .landing-section .calendar-section.open .calendar-big, main section .calendar-stock-section .calendar-section.open .calendar-big {
-  left: 100%;
-}
-main section .landing-section .calendar-section.open .calendar-body-big, main section .calendar-stock-section .calendar-section.open .calendar-body-big {
-  height: 390px;
-}
-main section .landing-section .calendar-section.open .calendar-header span, main section .calendar-stock-section .calendar-section.open .calendar-header span {
-  font-size: var(--fz48);
-}
-main section .landing-section .calendar-section.open .calendar, main section .calendar-stock-section .calendar-section.open .calendar {
-  padding: 30px 30px 48px;
-}
-main section .landing-section .calendar-section.open .detailed-calendar-swiper, main section .calendar-stock-section .calendar-section.open .detailed-calendar-swiper {
-  padding: 54px 0;
-  width: 100%;
-  margin-top: 10px;
-}
-main section .landing-section .calendar-section.open .detailed-calendar-swiper .item-day, main section .calendar-stock-section .calendar-section.open .detailed-calendar-swiper .item-day {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #FFFFFF;
-}
-main section .landing-section .calendar-section.open .detailed-calendar-swiper .item-day .item-day-header, main section .calendar-stock-section .calendar-section.open .detailed-calendar-swiper .item-day .item-day-header {
-  font-size: 48px;
-  text-transform: uppercase;
-}
-main section .landing-section .calendar-section.open .detailed-calendar-swiper .item-day .item-day-navigation, main section .calendar-stock-section .calendar-section.open .detailed-calendar-swiper .item-day .item-day-navigation {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-main section .landing-section .calendar-section.open .detailed-calendar-swiper .item-day .item-day-sale, main section .calendar-stock-section .calendar-section.open .detailed-calendar-swiper .item-day .item-day-sale {
-  line-height: 120%;
-  font-size: var(--fz144);
-}
-main section .landing-section .landing-container.index.open, main section .calendar-stock-section .landing-container.index.open {
-  position: absolute;
-}
-main section .landing-section .landing-container.open, main section .calendar-stock-section .landing-container.open {
-  width: 100%;
 }
 main section .brand-section {
   padding: 60px 0;
 }
 main section .brand-section .brand-swiper {
   overflow: hidden;
-}
-main section .brand-section .brand-swiper .brand-slide {
-  filter: invert(100%);
 }
 main section .our-collection-section {
   display: grid;
@@ -824,28 +657,6 @@ main section .page-landing-section .page-landing-container {
   flex-direction: column;
   align-items: center;
 }
-main section .page-landing-section .page-landing-container .breadcrumbs ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-  padding: 0;
-  margin: 20px 0 0 0;
-}
-main section .page-landing-section .page-landing-container .breadcrumbs ul li {
-  color: #000000;
-  opacity: 0.4;
-  font-size: var(--fz18);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-main section .page-landing-section .page-landing-container .breadcrumbs ul li .icon img {
-  width: 9px;
-  height: 8px;
-}
-main section .page-landing-section .page-landing-container .breadcrumbs ul li a {
-  color: #000000;
-}
 main section .page-landing-section .page-landing-container h1 {
   text-align: center;
   text-transform: uppercase;
@@ -968,13 +779,6 @@ main section .form-recall-section .form-recall-container .form-recall-form .desc
   opacity: 0.4;
   font-size: var(--fz20);
 }
-main section .form-recall-section.similar .form-recall-container {
-  gap: 200px;
-  grid-template-columns: repeat(2, 1fr);
-}
-main section .form-recall-section.green {
-  background: #0D674C;
-}
 main section .sales-section .sales-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -995,14 +799,9 @@ main section .sales-section .sales-container .sales-text p {
 }
 main section .sales-section .sales-container .sales-text .sales-title {
   font-size: var(--fz48);
-  text-transform: uppercase;
 }
 main section .sales-section .sales-container .sales-text .sales-content {
   color: #575757;
-}
-main section .sales-section .sales-container .sales-text .sales-desctiption {
-  color: #0D674C;
-  font-size: var(--fz28);
 }
 main section .sales-section .sales-container .sales-text .content.landlords-requirements {
   display: grid;
@@ -1107,7 +906,6 @@ main section .landlords-contacts-section .landloars-contacts-container .lc-conta
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
 }
 main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c .icon img {
   width: 32px;
@@ -1133,157 +931,6 @@ main section .landlords-contacts-section .landloars-contacts-container .lc-conta
 }
 main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c:last-child span:last-child {
   font-size: var(--fz48);
-}
-main section .left-text-section .left-text-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 80px;
-}
-main section .left-text-section .left-text-container .content {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-main section .left-text-section .left-text-container .content p {
-  margin: 0;
-}
-main section .left-text-section .left-text-container .content .title {
-  font-size: var(--fz48);
-  text-transform: uppercase;
-}
-main section .left-text-section .left-text-container .content .text {
-  opacity: 0.4;
-}
-main section .left-text-section .left-text-container .img {
-  padding: 68px 115px;
-  color: #FFFFFF;
-  font-size: var(--fz48);
-  text-align: center;
-  text-transform: uppercase;
-}
-main section .left-text-section .left-text-container .img p {
-  margin: 0;
-}
-main section .brands-section .brands-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-main section .brands-section .brands-container .search-brand {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-main section .brands-section .brands-container .search-brand input {
-  grid-column: 2/4;
-}
-main section .brands-section .brands-container .brands {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-main section .brands-section .brands-container .brands .item-b {
-  background-repeat: no-repeat;
-  height: 561px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main section .address-section {
-  margin-top: 40px;
-}
-main section .address-section .addresses-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-main section .address-section .addresses-container .item-a {
-  padding: 30px;
-  border: 1px solid #D9D9D9;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-}
-main section .address-section .addresses-container .item-a p {
-  margin: 0;
-}
-main section .address-section .addresses-container .item-a .header {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-main section .address-section .addresses-container .item-a .header .work-time {
-  opacity: 0.4;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-main section .address-section .addresses-container .item-a .header .work-time .icon {
-  width: 24px;
-  height: 24px;
-}
-main section .address-section .addresses-container .item-a .header .work-time .icon img {
-  width: 24px;
-  height: 24px;
-}
-main section .address-section .addresses-container .item-a .phone {
-  color: #000000;
-  border: 1px solid #000000;
-  border-radius: 100px;
-  padding: 10px 20px;
-}
-main section .our-collection-page-section .our-collection-page-container {
-  display: flex;
-  flex-direction: column;
-  gap: 100px;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 350px;
-  gap: 20px;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) {
-  padding: 40px;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 20px;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .title {
-  text-transform: uppercase;
-  font-size: var(--fz64);
-  line-height: 120%;
-  max-width: 433px;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .type-collection {
-  display: flex;
-  gap: 10px;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .type-collection .item-t {
-  padding: 10px 15px;
-  border-radius: 100px;
-  background: rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  cursor: pointer;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .type-collection .item-t.active {
-  background: #000000;
-  color: #FFFFFF;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .descriptio {
-  opacity: 0.4;
-  max-width: 433px;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1),
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+4),
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+5) {
-  grid-column: span 2;
-}
-main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
 footer {
@@ -12972,4 +12619,4 @@ textarea.form-control-lg {
 }
 /*# sourceMappingURL=bootstrap.css.map */
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
