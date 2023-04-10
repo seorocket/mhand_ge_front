@@ -5,6 +5,7 @@
   --fz20: 20px
   --fz24: 24px
   --fz28: 28px
+  --fz36: 36px
   --fz48: 48px
   --fz64: 64px
   --fz96: 96px
@@ -100,6 +101,8 @@ img
 
 .mt-section
   margin-top: 100px
+.mt-section.mt-80
+  margin-top: 80px
 
 section .section-title
   margin-bottom: 25px
@@ -274,6 +277,22 @@ main
 
   section
     .landing-section, .calendar-stock-section
+      .container
+        position: relative
+        height: 100%
+        margin-top: 218px
+        margin-bottom: 170px
+        overflow: hidden
+
+      .landing-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 20vh
+        width: fit-content
+        overflow: hidden
+        margin: 0 auto
+    .landing-section, .calendar-stock-section
       background-image: url(../images/backgrounds/landing-bg.jpg)
       height: 100vh
       background-repeat: no-repeat
@@ -290,7 +309,6 @@ main
         height: 100%
         margin-top: 218px
         margin-bottom: 170px
-        overflow: hidden
 
       .landing-container
         display: flex
@@ -298,7 +316,6 @@ main
         align-items: center
         gap: 20vh
         width: fit-content
-        overflow: hidden
         margin: 0 auto
 
         .landing-text
@@ -366,75 +383,75 @@ main
 
     .landing-section, .calendar-stock-section
       .landing-container
-      .calendar-section
-        position: relative
-        transition: all .2s ease-in-out
-        .calendar-body-big
-          overflow: hidden
+        .calendar-section
+          position: relative
           transition: all .2s ease-in-out
-          height: 0
-        .calendar-big
-          z-index: -1
-          transition: all .2s ease-in-out
-          background: #E5E5E5
-          position: absolute
-          padding: 43px 30px 28px
-          height: fit-content
-          width: fit-content
-          left: -100%
-          top: 0
-          display: flex
-          flex-direction: column
-          gap: 32px
-          .header
-            color: $gray
-            font-size: var(--fz28)
-            text-transform: uppercase
-            p
-              margin: 0
-          .body
+          .calendar-body-big
+            overflow: hidden
+            transition: all .2s ease-in-out
+            height: 0
+          .calendar-big
+            z-index: -1
+            transition: all .2s ease-in-out
+            background: #E5E5E5
+            position: absolute
+            padding: 43px 30px 28px
+            height: fit-content
+            width: fit-content
+            left: -100%
+            top: 0
             display: flex
             flex-direction: column
-            gap: 30px
-            .week.border-no-padding
-              width: 100%
-              display: grid
-              padding: 10px 0
-              grid-template-columns: repeat(7, 1fr)
-              gap: 20px
-              .item-w
-                color: rgba(0, 0, 0, .4)
-                text-transform: uppercase
-            .sales
-              display: grid
-              grid-template-columns: repeat(7, 1fr)
-              gap: 20px
-              .item-s
-                padding: 10px
-                background: $white
-                border: 1px solid $grey
-                display: flex
-                justify-content: space-between
-                gap: 5px
-                .date
+            gap: 32px
+            .header
+              color: $gray
+              font-size: var(--fz28)
+              text-transform: uppercase
+              p
+                margin: 0
+            .body
+              display: flex
+              flex-direction: column
+              gap: 30px
+              .week.border-no-padding
+                width: 100%
+                display: grid
+                padding: 10px 0
+                grid-template-columns: repeat(7, 1fr)
+                gap: 20px
+                .item-w
                   color: rgba(0, 0, 0, .4)
-                .sale
-                  padding-top: 20px
-                  color: $forestGreen
-                  font-size: var(--fz48)
                   text-transform: uppercase
-                .sale.new-clothe
-                  color: $orange
-                  font-size: var(--fz24)
-                  line-height: 120%
-              .item-s.today
-                background: $forestGreen
-                .date, .sale
-                  color: $white
-              .item-s.empty
-                background: rgba(0, 0, 0, .05)
-                .date, .sale
-                  color: $gray
+              .sales
+                display: grid
+                grid-template-columns: repeat(7, 1fr)
+                gap: 20px
+                .item-s
+                  padding: 10px
+                  background: $white
+                  border: 1px solid $grey
+                  display: flex
+                  justify-content: space-between
+                  gap: 5px
+                  .date
+                    color: rgba(0, 0, 0, .4)
+                  .sale
+                    padding-top: 20px
+                    color: $forestGreen
+                    font-size: var(--fz48)
+                    text-transform: uppercase
+                  .sale.new-clothe
+                    color: $orange
+                    font-size: var(--fz24)
+                    line-height: 120%
+                .item-s.today
+                  background: $forestGreen
+                  .date, .sale
+                    color: $white
+                .item-s.empty
+                  background: rgba(0, 0, 0, .05)
+                  .date, .sale
+                    color: $gray
       .calendar-section.open
         background: $white
         transform: translateX(calc(((1800px - 720px) / 2) * -1))
@@ -472,6 +489,7 @@ main
         position: absolute
       .landing-container.open
         width: 100%
+    
     .brand-section
       padding: 60px 0
 
@@ -686,6 +704,24 @@ main
         display: flex
         flex-direction: column
         align-items: center
+        .blog-filter
+          margin-top: 20px
+          padding: 18px
+          border: 1px solid rgba(0, 0, 0, 0.1)
+          background: rgba(0, 0, 0, 0.05)
+          width: 100%
+          max-width: 496px
+          select
+            width: 100%
+            background: transparent
+            border: none
+        .title
+          display: flex
+          align-items: center
+          justify-content: space-between
+          width: 100%
+          h1
+            flex: 1 
         .breadcrumbs
           ul
             list-style: none
@@ -721,6 +757,26 @@ main
           color: $gray
           font-size: var(--fz28)
 
+      .page-landing-container.news-item
+        h1
+          font-size: var(--fz48)
+          margin-bottom: 38px
+    
+      .page-landing-container.fz48
+        h1
+          font-size: var(--fz48)
+      
+      .page-landing-container.news
+        max-width: 70vw
+        margin: 0 auto
+
+      .page-landing-container.mb-40
+        h1
+          margin-bottom: 40px
+      .page-landing-container.mb-0
+        h1
+          margin-bottom: 0
+    
     .about-info-section
       height: fit-content
 
@@ -1129,6 +1185,330 @@ main
             background-size: cover
             background-position: center
 
+
+    .blog-section
+      .blog-container
+        display: grid
+        gap: 20px
+        grid-template-columns: repeat(3, 1fr)
+        .news-item
+          color: $black
+          display: flex
+          flex-direction: column
+          gap: 10px
+          p
+            margin: 0
+          .news-img
+            height: 330px
+          .news-date
+            opacity: .4 
+    .news-page-section
+        #tabs
+          display: flex
+          flex-direction: column
+          gap: 80px
+          align-items: center
+          .tabs-nav
+            display: flex
+            gap: 10px
+            align-items: center
+            li 
+              list-style: none
+              white-space: nowrap
+              a
+                color: $black
+                border-radius: 100px
+                padding: 15px 30px
+                background: rgba(0, 0, 0, .2)
+                text-transform: uppercase
+                font-size: 24px
+              a.active
+                color: $white
+                background: $orange
+          .tabs-items
+            .news-page-item-container
+              display: grid
+              gap: 20px
+              grid-template-columns: repeat(3, 1fr)
+              .news-item
+                color: $black
+                display: flex
+                flex-direction: column
+                gap: 10px
+                p
+                  margin: 0
+                .news-img
+                  height: 330px
+                .news-date
+                  opacity: .4 
+
+    .news-item-section  
+      .news-item-container
+        display: flex
+        flex-direction: column
+        gap: 20px
+        max-width: 70vw
+        margin: 0 auto
+        .news-item-img
+          height: 503px
+        article
+          p
+            margin: 0
+            color: rgba(0, 0, 0, .4)
+            b
+              color: $black
+        .socials
+          margin-top: 20px
+          .ya-share2__container_mobile.ya-share2__container_size_l .ya-share2__icon
+            height: 40px
+            width: 40px
+          .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge
+            background-color: $orange
+            .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy)
+              background-size: 32px 32px
+
+      .news-item-container.brand
+        .news-item-img
+          height: 420px
+          position: relative
+        .news-item-img:after
+          content: ''
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+          position: absolute
+          background-image: url("../images/nike.svg")
+          background-repeat: no-repeat
+          background-position: center
+
+    .reviews-section
+      .reviews-container  
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 20px
+        .item-r
+          display: flex
+          flex-direction: column
+          gap: 20px
+          padding: 30px
+          border: 1px solid $grey
+          .icon
+            img
+              object-fit: contain
+              width: 43px
+              height: 43px
+          p
+            margin: 0
+          p.text-review
+            opacity: .4
+          p.review-name
+            font-size: var(--fz28)
+
+    .tabs-items.faq  
+      width: 100%    
+      .accordion-button::after 
+        background-image: url("../images/icons/plus.svg")
+        background-size: 32px 32px
+        background-position: center
+        transform: scale(0.75) !important
+    
+      .accordion-button:not(.collapsed)::after 
+        background-image: url("../images/icons/minus.svg")
+        background-size: 32px 32px
+        background-position: center
+
+      .accordion-button:focus
+        box-shadow: none
+        background: #fff !important
+
+      .accordion-button
+        background: $white
+        outline: none
+        text-transform: uppercase
+        font-size: var(--fz36)
+        padding: 0
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+
+      .accordion-header
+        margin: 30px 0
+
+      .accordion-body
+        padding: 0
+        padding-bottom: 30px
+        p
+          margin: 0
+          opacity: .4
+  
+      .accordion-button:not(.collapsed)
+        color: $black
+        background-color: none
+        box-shadow: none
+      
+      .accordion
+        width: 100%
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 0 20px
+        .accordion-item
+          border: none
+          border-radius: 0
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+
+        .accordion-item:nth-of-type(1),
+        .accordion-item:nth-of-type(2)
+          border-top: 1px solid rgba(0, 0, 0, 0.1)
+
+    .error-page-section
+      margin-top: calc(183px + 90px)
+      .error-page-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 40px  
+        .error-text
+          max-width: 410px
+          text-align: center
+          opacity: .4
+          p
+            margin: 0
+
+    .job_opening-section
+      .job_opening-container
+        display: flex
+        flex-direction: column
+        gap: 100px
+        .divisions
+          display: flex
+          flex-direction: column
+          gap: 40px
+          align-items: center
+          .title
+            color: $forestGreen
+            text-transform: uppercase
+            font-size: var(--fz48)
+          .job_opening-items
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            gap: 20px
+            width: 100%
+            .accordion-item
+              border: 1px solid $grey
+            .accordion-button.collapsed
+              .close-modal
+                display: none
+
+            .accordion-button:not(.collapsed):after
+              content: ''
+              width: calc(100% - 60px)
+              height: 1px
+              bottom: 0
+              left: 50%
+              transform: translateX(-50%)
+              position: absolute
+              background: $grey
+            .accordion-button
+              position: relative
+              background: none
+              padding: 30px
+              display: grid
+              grid-template-columns: 3fr 1fr 
+              row-gap: 20px
+              justify-items: start
+
+              .close-modal
+                white-space: nowrap
+                text-transform: uppercase
+                opacity: .4
+                
+              .job-name
+                  text-transform: uppercase
+                  font-size: var(--fz28)
+              .job-wages
+                font-size: var(--fz28)
+                color: $forestGreen
+                text-align: end
+                width: 100%
+            .accordion-body
+              display: flex
+              flex-direction: column
+              padding: 0
+              gap: 30px 30px 0
+              .title
+                font-size: var(--fz20)
+                color: $black
+              .divisions
+                padding: 30px
+                display: flex
+                align-items: stretch
+                flex-direction: column
+                gap: 20px
+                .duties
+                  display: grid
+                  grid-template-columns: repeat(3, 1fr)
+                  width: 100%
+                  gap: 69px
+                  .item-d
+                    display: flex
+                    gap: 20px
+                    align-items: flex-start
+                    p
+                      margin: 0
+                      font-size: var(--fz16)
+                      color: $gray
+                    .icon img
+                      width: 20px
+                      height: 20px
+
+              .proposal:after
+                content: ''
+                width: 100%
+                height: 100%
+                background: rgba(0, 0, 0, .05)
+                position: absolute
+                left: 0
+                top: 0
+              .proposal
+                padding: 30px 0 0
+                position: relative
+                .title
+                  padding: 0 30px
+                  margin-bottom: 30px
+                p
+                  margin: 0
+                .proposal-items
+                  display: grid
+                  grid-template-columns: repeat(3, minmax(0, 1fr))
+                  .item-p:nth-of-type(6n+3)
+                    border-right: none
+                  .item-p
+                    display: flex
+                    gap: 12px
+                    padding: 35px 35px 30px
+                    border-top: 1px solid rgba(0, 0, 0, .1)
+                    border-right: 1px solid rgba(0, 0, 0, .1)
+                    .number
+                      font-size: var(--fz28)
+                    p
+                      margin: 0
+                      font-size: var(--fz16)
+                      opacity: .4
+              .requirements
+                padding: 30px
+                .title
+                  margin-bottom: 20px
+                .requirements-items
+                  display: flex
+                  gap: 10px
+                  flex-wrap: wrap
+                  width: 100% 
+                  .item-r
+                    padding: 10px 20px
+                    border: 1px solid $grey
+                    border-radius: 100px
+
+
+  
 footer
   margin-top: -2px
   background: $black

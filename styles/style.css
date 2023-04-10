@@ -104,6 +104,7 @@
   --fz20: 20px;
   --fz24: 24px;
   --fz28: 28px;
+  --fz36: 36px;
   --fz48: 48px;
   --fz64: 64px;
   --fz96: 96px;
@@ -210,6 +211,10 @@ img {
 
 .mt-section {
   margin-top: 100px;
+}
+
+.mt-section.mt-80 {
+  margin-top: 80px;
 }
 
 section .section-title {
@@ -396,6 +401,22 @@ main.no-mt {
 main {
   margin-top: 178px;
 }
+main section .landing-section .container, main section .calendar-stock-section .container {
+  position: relative;
+  height: 100%;
+  margin-top: 218px;
+  margin-bottom: 170px;
+  overflow: hidden;
+}
+main section .landing-section .landing-container, main section .calendar-stock-section .landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20vh;
+  width: fit-content;
+  overflow: hidden;
+  margin: 0 auto;
+}
 main section .landing-section, main section .calendar-stock-section {
   background-image: url(../images/backgrounds/landing-bg.jpg);
   height: 100vh;
@@ -413,7 +434,6 @@ main section .landing-section .container, main section .calendar-stock-section .
   height: 100%;
   margin-top: 218px;
   margin-bottom: 170px;
-  overflow: hidden;
 }
 main section .landing-section .landing-container, main section .calendar-stock-section .landing-container {
   display: flex;
@@ -421,7 +441,6 @@ main section .landing-section .landing-container, main section .calendar-stock-s
   align-items: center;
   gap: 20vh;
   width: fit-content;
-  overflow: hidden;
   margin: 0 auto;
 }
 main section .landing-section .landing-container .landing-text, main section .calendar-stock-section .landing-container .landing-text {
@@ -480,16 +499,16 @@ main section .calendar-stock-section {
 main section .calendar-stock-section .container {
   margin: 0;
 }
-main section .landing-section .calendar-section, main section .calendar-stock-section .calendar-section {
+main section .landing-section .landing-container .calendar-section, main section .calendar-stock-section .landing-container .calendar-section {
   position: relative;
   transition: all 0.2s ease-in-out;
 }
-main section .landing-section .calendar-section .calendar-body-big, main section .calendar-stock-section .calendar-section .calendar-body-big {
+main section .landing-section .landing-container .calendar-section .calendar-body-big, main section .calendar-stock-section .landing-container .calendar-section .calendar-body-big {
   overflow: hidden;
   transition: all 0.2s ease-in-out;
   height: 0;
 }
-main section .landing-section .calendar-section .calendar-big, main section .calendar-stock-section .calendar-section .calendar-big {
+main section .landing-section .landing-container .calendar-section .calendar-big, main section .calendar-stock-section .landing-container .calendar-section .calendar-big {
   z-index: -1;
   transition: all 0.2s ease-in-out;
   background: #E5E5E5;
@@ -503,36 +522,36 @@ main section .landing-section .calendar-section .calendar-big, main section .cal
   flex-direction: column;
   gap: 32px;
 }
-main section .landing-section .calendar-section .calendar-big .header, main section .calendar-stock-section .calendar-section .calendar-big .header {
+main section .landing-section .landing-container .calendar-section .calendar-big .header, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .header {
   color: #575757;
   font-size: var(--fz28);
   text-transform: uppercase;
 }
-main section .landing-section .calendar-section .calendar-big .header p, main section .calendar-stock-section .calendar-section .calendar-big .header p {
+main section .landing-section .landing-container .calendar-section .calendar-big .header p, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .header p {
   margin: 0;
 }
-main section .landing-section .calendar-section .calendar-big .body, main section .calendar-stock-section .calendar-section .calendar-big .body {
+main section .landing-section .landing-container .calendar-section .calendar-big .body, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-main section .landing-section .calendar-section .calendar-big .body .week.border-no-padding, main section .calendar-stock-section .calendar-section .calendar-big .body .week.border-no-padding {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .week.border-no-padding, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .week.border-no-padding {
   width: 100%;
   display: grid;
   padding: 10px 0;
   grid-template-columns: repeat(7, 1fr);
   gap: 20px;
 }
-main section .landing-section .calendar-section .calendar-big .body .week.border-no-padding .item-w, main section .calendar-stock-section .calendar-section .calendar-big .body .week.border-no-padding .item-w {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .week.border-no-padding .item-w, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .week.border-no-padding .item-w {
   color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
 }
-main section .landing-section .calendar-section .calendar-big .body .sales, main section .calendar-stock-section .calendar-section .calendar-big .body .sales {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 20px;
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s {
   padding: 10px;
   background: #FFFFFF;
   border: 1px solid #D9D9D9;
@@ -540,30 +559,30 @@ main section .landing-section .calendar-section .calendar-big .body .sales .item
   justify-content: space-between;
   gap: 5px;
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s .date, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s .date {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s .date, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s .date {
   color: rgba(0, 0, 0, 0.4);
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s .sale, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s .sale {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s .sale, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s .sale {
   padding-top: 20px;
   color: #0D674C;
   font-size: var(--fz48);
   text-transform: uppercase;
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s .sale.new-clothe, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s .sale.new-clothe {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s .sale.new-clothe, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s .sale.new-clothe {
   color: #F07106;
   font-size: var(--fz24);
   line-height: 120%;
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.today, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.today {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s.today, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s.today {
   background: #0D674C;
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.today .date, main section .landing-section .calendar-section .calendar-big .body .sales .item-s.today .sale, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.today .date, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.today .sale {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s.today .date, main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s.today .sale, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s.today .date, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s.today .sale {
   color: #FFFFFF;
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.empty, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.empty {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s.empty, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s.empty {
   background: rgba(0, 0, 0, 0.05);
 }
-main section .landing-section .calendar-section .calendar-big .body .sales .item-s.empty .date, main section .landing-section .calendar-section .calendar-big .body .sales .item-s.empty .sale, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.empty .date, main section .calendar-stock-section .calendar-section .calendar-big .body .sales .item-s.empty .sale {
+main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s.empty .date, main section .landing-section .landing-container .calendar-section .calendar-big .body .sales .item-s.empty .sale, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s.empty .date, main section .calendar-stock-section .landing-container .calendar-section .calendar-big .body .sales .item-s.empty .sale {
   color: #575757;
 }
 main section .landing-section .calendar-section.open, main section .calendar-stock-section .calendar-section.open {
@@ -824,6 +843,28 @@ main section .page-landing-section .page-landing-container {
   flex-direction: column;
   align-items: center;
 }
+main section .page-landing-section .page-landing-container .blog-filter {
+  margin-top: 20px;
+  padding: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 496px;
+}
+main section .page-landing-section .page-landing-container .blog-filter select {
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+main section .page-landing-section .page-landing-container .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main section .page-landing-section .page-landing-container .title h1 {
+  flex: 1;
+}
 main section .page-landing-section .page-landing-container .breadcrumbs ul {
   list-style: none;
   display: flex;
@@ -859,6 +900,23 @@ main section .page-landing-section .page-landing-container .description {
   padding: 0;
   color: #575757;
   font-size: var(--fz28);
+}
+main section .page-landing-section .page-landing-container.news-item h1 {
+  font-size: var(--fz48);
+  margin-bottom: 38px;
+}
+main section .page-landing-section .page-landing-container.fz48 h1 {
+  font-size: var(--fz48);
+}
+main section .page-landing-section .page-landing-container.news {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+main section .page-landing-section .page-landing-container.mb-40 h1 {
+  margin-bottom: 40px;
+}
+main section .page-landing-section .page-landing-container.mb-0 h1 {
+  margin-bottom: 0;
 }
 main section .about-info-section {
   height: fit-content;
@@ -1284,6 +1342,376 @@ main section .our-collection-page-section .our-collection-page-container .item-o
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+main section .blog-section .blog-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+main section .blog-section .blog-container .news-item {
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main section .blog-section .blog-container .news-item p {
+  margin: 0;
+}
+main section .blog-section .blog-container .news-item .news-img {
+  height: 330px;
+}
+main section .blog-section .blog-container .news-item .news-date {
+  opacity: 0.4;
+}
+main section .news-page-section #tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  align-items: center;
+}
+main section .news-page-section #tabs .tabs-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+main section .news-page-section #tabs .tabs-nav li {
+  list-style: none;
+  white-space: nowrap;
+}
+main section .news-page-section #tabs .tabs-nav li a {
+  color: #000000;
+  border-radius: 100px;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-size: 24px;
+}
+main section .news-page-section #tabs .tabs-nav li a.active {
+  color: #FFFFFF;
+  background: #F07106;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container .news-item {
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container .news-item p {
+  margin: 0;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container .news-item .news-img {
+  height: 330px;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container .news-item .news-date {
+  opacity: 0.4;
+}
+main section .news-item-section .news-item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 70vw;
+  margin: 0 auto;
+}
+main section .news-item-section .news-item-container .news-item-img {
+  height: 503px;
+}
+main section .news-item-section .news-item-container article p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.4);
+}
+main section .news-item-section .news-item-container article p b {
+  color: #000000;
+}
+main section .news-item-section .news-item-container .socials {
+  margin-top: 20px;
+}
+main section .news-item-section .news-item-container .socials .ya-share2__container_mobile.ya-share2__container_size_l .ya-share2__icon {
+  height: 40px;
+  width: 40px;
+}
+main section .news-item-section .news-item-container .socials .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge {
+  background-color: #F07106;
+}
+main section .news-item-section .news-item-container .socials .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy) {
+  background-size: 32px 32px;
+}
+main section .news-item-section .news-item-container.brand .news-item-img {
+  height: 420px;
+  position: relative;
+}
+main section .news-item-section .news-item-container.brand .news-item-img:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("../images/nike.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+main section .reviews-section .reviews-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main section .reviews-section .reviews-container .item-r {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid #D9D9D9;
+}
+main section .reviews-section .reviews-container .item-r .icon img {
+  object-fit: contain;
+  width: 43px;
+  height: 43px;
+}
+main section .reviews-section .reviews-container .item-r p {
+  margin: 0;
+}
+main section .reviews-section .reviews-container .item-r p.text-review {
+  opacity: 0.4;
+}
+main section .reviews-section .reviews-container .item-r p.review-name {
+  font-size: var(--fz28);
+}
+main section .tabs-items.faq {
+  width: 100%;
+}
+main section .tabs-items.faq .accordion-button::after {
+  background-image: url("../images/icons/plus.svg");
+  background-size: 32px 32px;
+  background-position: center;
+  transform: scale(0.75) !important;
+}
+main section .tabs-items.faq .accordion-button:not(.collapsed)::after {
+  background-image: url("../images/icons/minus.svg");
+  background-size: 32px 32px;
+  background-position: center;
+}
+main section .tabs-items.faq .accordion-button:focus {
+  box-shadow: none;
+  background: #fff !important;
+}
+main section .tabs-items.faq .accordion-button {
+  background: #FFFFFF;
+  outline: none;
+  text-transform: uppercase;
+  font-size: var(--fz36);
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+main section .tabs-items.faq .accordion-header {
+  margin: 30px 0;
+}
+main section .tabs-items.faq .accordion-body {
+  padding: 0;
+  padding-bottom: 30px;
+}
+main section .tabs-items.faq .accordion-body p {
+  margin: 0;
+  opacity: 0.4;
+}
+main section .tabs-items.faq .accordion-button:not(.collapsed) {
+  color: #000000;
+  background-color: none;
+  box-shadow: none;
+}
+main section .tabs-items.faq .accordion {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 20px;
+}
+main section .tabs-items.faq .accordion .accordion-item {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+main section .tabs-items.faq .accordion .accordion-item:nth-of-type(1),
+main section .tabs-items.faq .accordion .accordion-item:nth-of-type(2) {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+main section .error-page-section {
+  margin-top: 273px;
+}
+main section .error-page-section .error-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+main section .error-page-section .error-page-container .error-text {
+  max-width: 410px;
+  text-align: center;
+  opacity: 0.4;
+}
+main section .error-page-section .error-page-container .error-text p {
+  margin: 0;
+}
+main section .job_opening-section .job_opening-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+main section .job_opening-section .job_opening-container .divisions {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+main section .job_opening-section .job_opening-container .divisions .title {
+  color: #0D674C;
+  text-transform: uppercase;
+  font-size: var(--fz48);
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-item {
+  border: 1px solid #D9D9D9;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button.collapsed .close-modal {
+  display: none;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button:not(.collapsed):after {
+  content: "";
+  width: calc(100% - 60px);
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background: #D9D9D9;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button {
+  position: relative;
+  background: none;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  row-gap: 20px;
+  justify-items: start;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .close-modal {
+  white-space: nowrap;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-name {
+  text-transform: uppercase;
+  font-size: var(--fz28);
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-wages {
+  font-size: var(--fz28);
+  color: #0D674C;
+  text-align: end;
+  width: 100%;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 30px 30px 0;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .title {
+  font-size: var(--fz20);
+  color: #000000;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions {
+  padding: 30px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 20px;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions .duties {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 69px;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions .duties .item-d {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions .duties .item-d p {
+  margin: 0;
+  font-size: var(--fz16);
+  color: #575757;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions .duties .item-d .icon img {
+  width: 20px;
+  height: 20px;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal {
+  padding: 30px 0 0;
+  position: relative;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal .title {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal p {
+  margin: 0;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal .proposal-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal .proposal-items .item-p:nth-of-type(6n+3) {
+  border-right: none;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal .proposal-items .item-p {
+  display: flex;
+  gap: 12px;
+  padding: 35px 35px 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal .proposal-items .item-p .number {
+  font-size: var(--fz28);
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal .proposal-items .item-p p {
+  margin: 0;
+  font-size: var(--fz16);
+  opacity: 0.4;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .requirements {
+  padding: 30px;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .requirements .title {
+  margin-bottom: 20px;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .requirements .requirements-items {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .requirements .requirements-items .item-r {
+  padding: 10px 20px;
+  border: 1px solid #D9D9D9;
+  border-radius: 100px;
 }
 
 footer {
@@ -5604,11 +6032,6 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-  font-size: 1rem;
-  color: var(--bs-accordion-btn-color);
-  text-align: left;
-  background-color: var(--bs-accordion-btn-bg);
   border: 0;
   border-radius: 0;
   overflow-anchor: none;
@@ -5620,65 +6043,11 @@ textarea.form-control-lg {
     transition: none;
   }
 }
-.accordion-button:not(.collapsed) {
-  color: var(--bs-accordion-active-color);
-  background-color: var(--bs-accordion-active-bg);
-  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-}
-
-.accordion-button:not(.collapsed)::after {
-  background-image: var(--bs-accordion-btn-active-icon);
-  transform: var(--bs-accordion-btn-icon-transform);
-}
-
-.accordion-button::after {
-  flex-shrink: 0;
-  width: var(--bs-accordion-btn-icon-width);
-  height: var(--bs-accordion-btn-icon-width);
-  margin-left: auto;
-  content: "";
-  background-image: var(--bs-accordion-btn-icon);
-  background-repeat: no-repeat;
-  background-size: var(--bs-accordion-btn-icon-width);
-  transition: var(--bs-accordion-btn-icon-transition);
-}
-
 @media (prefers-reduced-motion: reduce) {
   .accordion-button::after {
     transition: none;
   }
 }
-.accordion-button:hover {
-  z-index: 2;
-}
-
-.accordion-button:focus {
-  z-index: 3;
-  border-color: var(--bs-accordion-btn-focus-border-color);
-  outline: 0;
-  box-shadow: var(--bs-accordion-btn-focus-box-shadow);
-}
-
-.accordion-header {
-  margin-bottom: 0;
-}
-
-.accordion-item {
-  color: var(--bs-accordion-color);
-  background-color: var(--bs-accordion-bg);
-  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
-}
-
-.accordion-item:first-of-type {
-  border-top-left-radius: var(--bs-accordion-border-radius);
-  border-top-right-radius: var(--bs-accordion-border-radius);
-}
-
-.accordion-item:first-of-type .accordion-button {
-  border-top-left-radius: var(--bs-accordion-inner-border-radius);
-  border-top-right-radius: var(--bs-accordion-inner-border-radius);
-}
-
 .accordion-item:not(:first-of-type) {
   border-top: 0;
 }
@@ -9148,10 +9517,6 @@ textarea.form-control-lg {
 
 .me-auto {
   margin-right: auto !important;
-}
-
-.mb-0 {
-  margin-bottom: 0 !important;
 }
 
 .mb-1 {
