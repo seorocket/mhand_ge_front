@@ -14,6 +14,34 @@
     <title>Мегахенд Грузия</title>
 </head>
 <body>
+    <!-- modals -->
+    <div class="modal fade custom-modal" id="reviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-body">
+                <div class="header">
+                    <div class="title">ОСТАВИТЬ ОТЗЫВ</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="body">
+                    <div class="content-review">
+                        <span class="description">Совершили покупку и хотите поделиться впечатлением с другими покупателями? Заполните форму ниже!</span>
+                        <form class="review-form">
+                            <input type="text" class="custom-input gray name" placeholder="Ваше Имя">
+                            <input type="phone" class="custom-input gray phone" placeholder="Ваш Номер телефона">
+                            <textarea class="custom-input gray comment" placeholder="Текст отзыва" rows="5"></textarea>
+                        </form>
+                        <div class="footer-form">
+                            <span class="agreement">Нажимая кнопку “отправить” вы даете согласие на <a href="privacy.html">обработку персональных данных</a></span>
+                            <div class="btn btn-orange send-form" data-type-form="type-2">Отправить</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    <!-- main -->
     <header>
         <div class="top-baner">
             <div class="container">
@@ -54,7 +82,7 @@
         <section>
             <div class="page-landing-section">
                 <div class="container">
-                    <div class="page-landing-container mb-40">
+                    <div class="page-landing-container mb-20">
                         <div class="breadcrumbs">
                             <ul>
                               <li><a href="index.html">Главная</a><div class="icon"><img src="images/icons/polygon.svg" alt=""></div></li>
@@ -62,6 +90,7 @@
                             </ul>
                           </div>
                         <h1>Отзывы</h1>
+                        <div class="btn btn-orange comment">оставиь отзыв</div>
                     </div>
                 </div>
             </div>
@@ -182,6 +211,8 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/bootstrap/bootstrap.js"></script>
+    <script src="scripts/modules/modals.js"></script>
     <script src="scripts/modules/untils.js"></script>
     <script src="scripts/modules/sliders.js"></script>
     <script></script>

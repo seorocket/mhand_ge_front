@@ -19,7 +19,8 @@ new Swiper('.home-calendar-swiper', {
 })
 
 new Swiper('.brand-swiper', {
-    slidesPerView: 7,
+    slidesPerView: 10,
+    spaceBetween: 80,
     autoplay: {
         delay: 3000,
       },

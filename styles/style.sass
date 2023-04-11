@@ -109,9 +109,27 @@ section .section-title
   text-transform: uppercase
   font-size: var(--fz48)
 
+.custom-checkbox
+  position: relative
+  label
+    width: 20px
+    height: 20px
+    background: rgba(0, 0, 0, 0.05)
+    border: 1px solid rgba(0, 0, 0, 0.1)
+  .input
+    display: none
+  .input:checked ~ label:after
+    content: url(../images/icons/agree.png)
+    width: 20px
+    height: 20px
+    position: absolute
+    top: -10px
+    left: 0
+
 .custom-input.black
   background-color: $black
-
+.custom-input.gray::placeholder
+  color: rgba(0, 0, 0, .2)
 .custom-input.gray
   background: rgba(0, 0, 0, 0.05)
   border: 1px solid rgba(0, 0, 0, 0.1)
@@ -130,7 +148,6 @@ section .section-title
   padding: 18px
   outline: none
   border: 1px solid rgba(255, 255, 255, 0.2)
-
 header
   position: fixed
   z-index: 5
@@ -139,7 +156,10 @@ header
   width: 100%
   // mix-blend-mode: difference
   .top-baner
-    padding: 15px
+    padding: 0
+    height: 0
+    overflow: hidden
+    transition: all .2s ease-in-out
     background: $forestGreen
     color: $white
 
@@ -155,6 +175,9 @@ header
         a
           color: $white
           opacity: .4
+  .top-baner.open
+    padding: 15px
+    height: 54px
 
   .main-header
     padding: 40px 0
@@ -177,8 +200,9 @@ header
           padding: 0
 
           li
-            padding-bottom: 10px
             position: relative
+            user-select: none
+            cursor: pointer
 
             > a, > span
               color: $white
@@ -186,41 +210,44 @@ header
               text-decoration: none
               font-size: var(--fz20)
 
-            ul.sub-menu
-              padding: 30px
-              background-color: $white
+            .sub-menu
+              visibility: hidden
+              padding-top: 10px
               position: absolute
               left: 0
-              margin-top: 10px
-              visibility: hidden
-              display: grid
-              gap: 30px 100px
-              grid-template-columns: repeat(2, 1fr)
-              grid-template-rows: repeat(4, 1fr)
-
-              li
-                margin: 0
-                padding: 0
-
-                a
-                  text-transform: uppercase
-                  color: $black
-
-              > ul
-                grid-row: span 2
-                padding: 0
-                display: flex
-                flex-direction: column
-                gap: 10px
+              >ul
+                padding: 30px
+                background-color: $white
+                display: grid
+                gap: 30px 100px
+                grid-template-columns: repeat(2, 1fr)
+                grid-template-rows: repeat(4, 1fr)
 
                 li
+                  margin: 0
+                  padding: 0
+                  user-select: none
+                  cursor: pointer
                   a
-                    opacity: .4
-                    font-size: var(--fz16)
+                    text-transform: uppercase
+                    color: $black
+
+                > ul
+                  grid-row: span 2
+                  padding: 0
+                  display: flex
+                  flex-direction: column
+                  gap: 10px
+
+                  li
+                    user-select: none
+                    cursor: pointer
+                    a
+                      opacity: .4
+                      font-size: var(--fz16)
 
           li:hover
-            > ul
-
+            > .sub-menu
               visibility: visible
 
       .more-info-header
@@ -242,6 +269,38 @@ header
 
         .item-m.item-m-language
           text-transform: uppercase
+          position: relative
+          .select-language
+            ul
+              margin: 0
+              padding: 0
+
+              background: $white
+              position: absolute
+              visibility: hidden
+              top: 100%
+              left: 0
+              list-style: none
+              li
+                user-select: none
+                padding: 20px
+                margin: 0
+                display: flex
+                justify-content: space-between
+                gap: 100px
+                p
+                  margin: 0
+                  color: $black
+              li:hover
+                background: rgba(0, 0, 0, .05)
+              li:nth-of-type(2)
+                border-top: 1px solid $grey
+                border-bottom: 1px solid $grey
+
+        .item-m.item-m-language:hover
+          .select-language
+            ul
+              visibility: visible
 
         .contact-container
           display: flex
@@ -489,7 +548,7 @@ main
         position: absolute
       .landing-container.open
         width: 100%
-    
+
     .brand-section
       padding: 60px 0
 
@@ -721,7 +780,7 @@ main
           justify-content: space-between
           width: 100%
           h1
-            flex: 1 
+            flex: 1
         .breadcrumbs
           ul
             list-style: none
@@ -761,11 +820,11 @@ main
         h1
           font-size: var(--fz48)
           margin-bottom: 38px
-    
+
       .page-landing-container.fz48
         h1
           font-size: var(--fz48)
-      
+
       .page-landing-container.news
         max-width: 70vw
         margin: 0 auto
@@ -776,7 +835,12 @@ main
       .page-landing-container.mb-0
         h1
           margin-bottom: 0
-    
+      .page-landing-container.mb-20
+        h1
+          margin-bottom: 20px
+        .btn
+          margin-bottom: 80px
+
     .about-info-section
       height: fit-content
 
@@ -1185,7 +1249,6 @@ main
             background-size: cover
             background-position: center
 
-
     .blog-section
       .blog-container
         display: grid
@@ -1201,27 +1264,27 @@ main
           .news-img
             height: 330px
           .news-date
-            opacity: .4 
+            opacity: .4
     .news-page-section
-        #tabs
+      #tabs
+        display: flex
+        flex-direction: column
+        gap: 80px
+        align-items: center
+        .tabs-nav
           display: flex
-          flex-direction: column
-          gap: 80px
+          gap: 10px
           align-items: center
-          .tabs-nav
-            display: flex
-            gap: 10px
-            align-items: center
-            li 
-              list-style: none
-              white-space: nowrap
-              a
-                color: $black
-                border-radius: 100px
-                padding: 15px 30px
-                background: rgba(0, 0, 0, .2)
-                text-transform: uppercase
-                font-size: 24px
+          li
+            list-style: none
+            white-space: nowrap
+            a
+              color: $black
+              border-radius: 100px
+              padding: 15px 30px
+              background: rgba(0, 0, 0, .2)
+              text-transform: uppercase
+              font-size: 24px
               a.active
                 color: $white
                 background: $orange
@@ -1240,9 +1303,9 @@ main
                 .news-img
                   height: 330px
                 .news-date
-                  opacity: .4 
+                  opacity: .4
 
-    .news-item-section  
+    .news-item-section
       .news-item-container
         display: flex
         flex-direction: column
@@ -1283,7 +1346,7 @@ main
           background-position: center
 
     .reviews-section
-      .reviews-container  
+      .reviews-container
         display: grid
         grid-template-columns: repeat(3, 1fr)
         gap: 20px
@@ -1305,15 +1368,15 @@ main
           p.review-name
             font-size: var(--fz28)
 
-    .tabs-items.faq  
-      width: 100%    
-      .accordion-button::after 
+    .tabs-items.faq
+      width: 100%
+      .accordion-button::after
         background-image: url("../images/icons/plus.svg")
         background-size: 32px 32px
         background-position: center
         transform: scale(0.75) !important
-    
-      .accordion-button:not(.collapsed)::after 
+
+      .accordion-button:not(.collapsed)::after
         background-image: url("../images/icons/minus.svg")
         background-size: 32px 32px
         background-position: center
@@ -1339,12 +1402,12 @@ main
         p
           margin: 0
           opacity: .4
-  
+
       .accordion-button:not(.collapsed)
         color: $black
         background-color: none
         box-shadow: none
-      
+
       .accordion
         width: 100%
         display: grid
@@ -1365,7 +1428,7 @@ main
         display: flex
         flex-direction: column
         align-items: center
-        gap: 40px  
+        gap: 40px
         .error-text
           max-width: 410px
           text-align: center
@@ -1412,7 +1475,7 @@ main
               background: none
               padding: 30px
               display: grid
-              grid-template-columns: 3fr 1fr 
+              grid-template-columns: 3fr 1fr
               row-gap: 20px
               justify-items: start
 
@@ -1420,10 +1483,10 @@ main
                 white-space: nowrap
                 text-transform: uppercase
                 opacity: .4
-                
+
               .job-name
-                  text-transform: uppercase
-                  font-size: var(--fz28)
+                text-transform: uppercase
+                font-size: var(--fz28)
               .job-wages
                 font-size: var(--fz28)
                 color: $forestGreen
@@ -1501,14 +1564,58 @@ main
                   display: flex
                   gap: 10px
                   flex-wrap: wrap
-                  width: 100% 
+                  width: 100%
                   .item-r
                     padding: 10px 20px
                     border: 1px solid $grey
                     border-radius: 100px
 
+.select-city-popup.open
+  visibility: visible
+.select-city-popup
+  visibility: hidden
+  position: fixed
+  z-index: 10
+  background: $white
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  padding: 30px
+  .header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+    .title
+      font-size: var(--fz48)
+      text-transform: uppercase
+    i
+      font-size: 32px
+  .city-searh
+    width: 100%
+    margin-bottom: 40px
 
-  
+    input
+      width: 100%
+      max-width: 583px
+
+  .select-city-content
+    display: inline-flex
+    flex-direction: column
+    flex-wrap: wrap
+    max-height: 765px
+    list-style: none
+    width: 100%
+    padding: 0
+    margin: 0
+    .first-later-city
+      text-transform: uppercase
+      font-size: var(--fz28)
+      margin-bottom: 20px
+    .select-city-content-item
+      margin-bottom: 20px
+      opacity: .4
+
 footer
   margin-top: -2px
   background: $black

@@ -4868,7 +4868,7 @@ textarea.form-control-lg {
 
 .modal {
   --bs-modal-zindex: 1055;
-  --bs-modal-width: 500px;
+  --bs-modal-width: 720px;
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
@@ -4899,6 +4899,7 @@ textarea.form-control-lg {
   overflow-y: auto;
   outline: 0;
 }
+
 
 .modal-dialog {
   position: relative;
@@ -4949,7 +4950,6 @@ textarea.form-control-lg {
   background-color: var(--bs-modal-bg);
   background-clip: padding-box;
   border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-  border-radius: var(--bs-modal-border-radius);
   outline: 0;
 }
 
@@ -4993,9 +4993,9 @@ textarea.form-control-lg {
 }
 
 .modal-body {
+  padding: 30px;
   position: relative;
   flex: 1 1 auto;
-  padding: var(--bs-modal-padding);
 }
 
 .modal-footer {
@@ -5026,6 +5026,10 @@ textarea.form-control-lg {
   }
   .modal-sm {
     --bs-modal-width: 300px;
+  }
+
+  .modal-dialog.modal-dialog-xl{
+    --bs-modal-width: 1800px;
   }
 }
 @media (min-width: 992px) {

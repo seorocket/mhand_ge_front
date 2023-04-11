@@ -7,17 +7,167 @@
     <!-- styles -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- scripts cdn -->
     <script type="module" src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <title>Мегахенд Грузия</title>
 </head>
 <body>
+    <!-- select city window -->
+    <div class="select-city-popup container">
+        <div class="header">
+            <div class="title">выберите свой город</div>
+            <div class="close-popup"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <label for="search" class="search-input city-searh">
+            <input type="text" class="custom-input gray" id="search" placeholder="Поиск">
+        </label>
+        <ul class="select-city-content">
+            <li class="first-later-city">а</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="select-city-content-item">Aбаша</li>
+            <li class="first-later-city">б</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+            <li class="select-city-content-item">Багдати</li>
+        </ul>
+
+    </div>
+    <!-- modals -->
+    <div class="modal fade custom-modal" id="couponModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="header">
+                    <div class="title">получить купон</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="body">
+                    <span class="description">Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую покупку с выгодой!</span>
+                    <div id="tabs" class="select-coupon-type">
+                        <ul class="tabs-nav">
+                            <li><a href="#tab-1">ПОЛУЧИТЬ 300₽</a></li>
+                            <li><a href="#tab-2">ПОЛУЧИТЬ 500₽</a></li>
+                        </ul>	
+                        <div class="tabs-items">
+                            <div class="tabs-item" id="tab-1">
+                                <form class="coupon-form">
+                                    <input type="text" class="custom-input gray name" placeholder="Ваше Имя">
+                                    <input type="phone" class="custom-input gray phone" placeholder="Ваш Номер телефона">
+                                    <div class="select-city-container">
+                                        <select class="select-city city" name="city">
+                                            <option></option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </form>
+                                <div class="footer-form">
+                                    <div class="agree-checkbox">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="agreement">
+                                            <label for="agreement" class="custom-checkbox"></label>
+                                        </div>
+                                        <span class="offer">Я ознакомлен(а) с условиями <a href="offer.html">публичной оферты и условиями проведения акции</a></span>
+                                        <span class="agreement">Нажимая кнопку “получить” вы даете согласие на <a href="privacy.html">обработку персональных данных</a></span>
+                                    </div>
+                                    <div class="btn btn-orange send-form" data-type-form="type-1">получить купон</div>
+                                </div>
+                            </div>
+                            <div class="tabs-item" id="tab-2">
+                                <form class="coupon-form">
+                                    <input type="text" class="custom-input gray name" placeholder="Ваше Имя">
+                                    <input type="phone" class="custom-input gray phone" placeholder="Ваш Номер телефона">
+                                    <div class="select-city-container">
+                                        <select class="select-city city" name="city">
+                                            <option></option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" class="custom-input gray frend-1-name" placeholder="Имя Друга">
+                                    <input type="phone" class="custom-input gray frend-1-phone" placeholder="Номер телефона друга">
+                                    <div class="select-city-container">
+                                        <select class="select-city city" name="city">
+                                            <option></option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                    <input type="text" class="custom-input gray frend-2-name" placeholder="Имя Друга">
+                                    <input type="phone" class="custom-input gray frend-2-phone" placeholder="Номер телефона друга">
+                                    <div class="select-city-container">
+                                        <select class="select-city city" name="city">
+                                            <option></option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </form>
+                                <div class="footer-form">
+                                    <div class="agree-checkbox">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="agreement">
+                                            <label for="agreement" class="custom-checkbox"></label>
+                                        </div>
+                                        <span class="offer">Я ознакомлен(а) с условиями <a href="offer.html">публичной оферты и условиями проведения акции</a></span>
+                                        <span class="agreement">Нажимая кнопку “получить” вы даете согласие на <a href="privacy.html">обработку персональных данных</a></span>
+                                    </div>
+                                    <div class="btn btn-orange send-form" data-type-form="type-1">получить купон</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- main -->
     <header>
-        <div class="top-baner">
+        <div class="top-baner open">
             <div class="container">
-                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark"></i>
+                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark close-banner"></i>
             </div>
         </div>
         <div class="main-header">
@@ -26,19 +176,21 @@
                     <ul>
                         <li>
                             <span>О компании</span>
-                            <ul class="sub-menu">
-                                <li><a href="about.html">О компании</a></li>
-                                <li><a href="news.html">Новости</a></li>
-                                <li><a>Сотрудничество</a></li>
-                                <li><a href="blog.html">Блог</a></li>
+                            <div class="sub-menu">
                                 <ul>
-                                    <li><a href="landlords.html">Арендодателям</a></li>
-                                    <li><a href="wholesalers.html">Оптовикам</a></li>
-                                    <li><a href="advertisement.html">Реклама у нас</a></li>
+                                    <li><a href="about.html">О компании</a></li>
+                                    <li><a href="news.html">Новости</a></li>
+                                    <li><a>Сотрудничество</a></li>
+                                    <li><a href="blog.html">Блог</a></li>
+                                    <ul>
+                                        <li><a href="landlords.html">Арендодателям</a></li>
+                                        <li><a href="wholesalers.html">Оптовикам</a></li>
+                                        <li><a href="advertisement.html">Реклама у нас</a></li>
+                                    </ul>
+                                    <li><a href="reviews.html">Отзывы</a></li>
+                                    <li><a href="faq.html">faq</a></li>
                                 </ul>
-                                <li><a href="reviews.html">Отзывы</a></li>
-                                <li><a href="faq.html">faq</a></li>
-                            </ul>
+                            </div>
                         </li>
                         <li><a href="stock.html">акции</a></li>
                         <li><a href="our_collection.html">коллекции</a></li>
@@ -50,11 +202,27 @@
                 <div class="more-info-header">
                     <div class="item-m item-m-language">
                         <div class="icon"><img src="images/icons/language.svg" alt=""></div>
-                        <p>en</p>
+                        <div class="select-language">
+                            <p>en</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <p>русский</p>
+                                    <span>RU</span>
+                                </li>
+                                <li>
+                                    <p>English</p>
+                                    <span>EN</span>
+                                </li>
+                                <li>
+                                    <p>ქართული</p>
+                                    <span>KA</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="item-m">
                         <div class="icon"><img src="images/icons/location.svg" alt=""></div>
-                        <p>Тбилиси</p>
+                        <p id="currentCity">Тбилиси</p>
                         <p id="headerTime">14:43</p>
                     </div>
                     <div class="contact-container">
@@ -164,7 +332,7 @@
                                     </div>
                                     <div class="calendar-footer">
                                         <div class="btn btn-outline all-calendar">весь календарь</div>
-                                        <div class="btn btn-orange">КУПОН НА 500₽</div>
+                                        <div class="btn btn-orange get-coupon">КУПОН НА 500₽</div>
                                     </div>
                                 </div>
                                 <div class="calendar-big">
@@ -658,6 +826,10 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/select2/languages/en.js"></script>
+    <script src="scripts/select2/languages/ru.js"></script>
+    <script src="scripts/bootstrap/bootstrap.js"></script>
+    <script src="scripts/modules/modals.js"></script>
     <script src="scripts/modules/untils.js"></script>
     <script src="scripts/modules/sliders.js"></script>
     <script></script>

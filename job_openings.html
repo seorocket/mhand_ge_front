@@ -7,13 +7,137 @@
     <!-- styles -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- scripts cdn -->
     <script type="module" src="https://kit.fontawesome.com/68a7244d01.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <title>Мегахенд Грузия</title>
 </head>
 <body>
+    <!-- modals -->
+    <div class="modal fade custom-modal" id="jobModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-xl">
+            <div class="modal-content">
+            <div class="modal-body">
+                <div class="header">
+                    <div class="header-content">
+                        <div class="title">ЗАПОЛНЕНИЕ АНКЕТЫ</div>
+                        <div class="description">ОПЕРАЦИОННЫЙ ДИРЕКТОР</div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="body">
+                    <div class="content-job">
+                        <form class="job-form">
+                            <div class="main-info">
+                                <input type="text" class="custom-input gray lastName" placeholder="Фамилия">
+                                <input type="text" class="custom-input gray name" placeholder="Имя">
+                                <input type="text" class="custom-input gray patronymic" placeholder="Отчество">
+                                <input type="text" class="custom-input gray phone" placeholder="Номер телефона">
+                                <input type="text" class="custom-input gray birthday datepicker" placeholder="Дата рождения">
+                                <div class="select-city-container">
+                                    <select class="select-city city" name="city">
+                                        <option></option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="WY">Wyoming</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="comment-info">
+                                <textarea class="custom-input gray positive" placeholder="Опишите Ваши достоинства" rows="2"></textarea>  
+                                <textarea class="custom-input gray negative" placeholder="Опишите Ваши недостатки" rows="2"></textarea>  
+                                <textarea class="custom-input gray why-me" placeholder="Почему Вы хотите работать у нас?" rows="2"></textarea>  
+                                <div class="footer-form">
+                                    <span class="agreement">Нажимая кнопку “отправить” вы даете согласие на <a href="privacy.html">обработку персональных данных</a></span>
+                                    <div class="btn btn-orange send-form" data-type-form="type-2">Отправить</div>
+                                </div>
+                            </div>
+                            <div class="more-info">
+                                <div class="item-m">
+                                    <div class="title">Гражданство</div>
+                                    <div class="description">Укажите гражданином какой страны вы являетесь</div>
+                                    <div class="inputs-section">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="citizenshipRf">
+                                            <label for="citizenshipRf" class="custom-checkbox"></label>
+                                            <span>РФ</span>
+                                        </div>
+                                        <input type="text" class="custom-input gray сitizenship" placeholder="Другое гражданство">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="citizenshipGe">
+                                            <label for="citizenshipGe" class="custom-checkbox"></label>
+                                            <span>Грузии</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-m">
+                                    <div class="title">Здоровье</div>
+                                    <div class="description">Есть ли у Вас физические ограничения\инвалидность?</div>
+                                    <div class="inputs-section">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="healthYes">
+                                            <label for="healthYes" class="custom-checkbox"></label>
+                                            <span>Да</span>
+                                        </div>
+                                        <input type="text" class="custom-input gray сitizenship" placeholder="Если да - поясните">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="healthNo">
+                                            <label for="healthNo" class="custom-checkbox"></label>
+                                            <span>Нет</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-m">
+                                    <div class="title">Судимости</div>
+                                    <div class="description">Были ли у Вас административные, уголовные, гражданские иски, судимости?</div>
+                                    <div class="inputs-section">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="criminalYes">
+                                            <label for="criminalYes" class="custom-checkbox"></label>
+                                            <span>Да</span>
+                                        </div>
+                                        <input type="text" class="custom-input gray сitizenship" placeholder="Если да - поясните">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="criminalNo">
+                                            <label for="criminalNo" class="custom-checkbox"></label>
+                                            <span>Нет</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-m">
+                                    <div class="title">Опыт</div>
+                                    <div class="description">Есть ли у Вас опыт работы на кассе?<br><br></div>
+                                    <div class="inputs-section">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="skillYes">
+                                            <label for="skillYes" class="custom-checkbox"></label>
+                                            <span>Да</span>
+                                        </div>
+                                        <input type="text" class="custom-input gray сitizenship" placeholder="Если да - поясните">
+                                        <div class="custom-checkbox">
+                                            <input type="checkbox" class="agree input" id="skillNo">
+                                            <label for="skillNo" class="custom-checkbox"></label>
+                                            <span>Нет</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!--                             
+                            <input type="phone" class="custom-input gray phone" placeholder="Ваш Номер телефона">
+                            <textarea class="custom-input gray comment" placeholder="Текст отзыва" rows="5"></textarea> -->
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="top-baner">
             <div class="container">
@@ -80,7 +204,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                         <div class="job-name">ОПЕРАЦИОННЫЙ ДИРЕКТОР</div>
                                         <div class="job-wages">от 35 000 ₽</div>
-                                        <div class="btn btn-orange">заполнить анкету <div class="icon"><img src="images/icons/arrow-up-left.svg" alt=""></div></div>
+                                        <div class="btn btn-orange questionnaire">заполнить анкету <div class="icon"><img src="images/icons/arrow-up-left.svg" alt=""></div></div>
                                         <div class="close-modal">СКРЫТЬ ПОДРОБНОСТИ</div>
                                     </button>
                                   </div>
@@ -579,9 +703,12 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/select2/languages/en.js"></script>
+    <script src="scripts/select2/languages/ru.js"></script>
     <script src="scripts/bootstrap/bootstrap.js"></script>
-    <script src="scripts/modules/untils.js"></script>
+    <script src="scripts/modules/modals.js"></script>
     <script src="scripts/modules/sliders.js"></script>
+    <script src="scripts/modules/untils.js"></script>
     <script></script>
 </body>
 </html>
