@@ -15,16 +15,65 @@
 </head>
 <body>
     <header>
-        <div class="top-baner">
+        <div class="top-baner open">
             <div class="container">
-                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark"></i>
+                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark close-banner"></i>
             </div>
         </div>
         <div class="main-header static">
-            <div class="container">
+            <div class="container desctop">
+                <div class="more-desktop">
+                    <div class="burget-menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="item-m item-m-language">
+                        <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                        <div class="select-language">
+                            <p>en</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <p>русский</p>
+                                    <span>RU</span>
+                                </li>
+                                <li>
+                                    <p>English</p>
+                                    <span>EN</span>
+                                </li>
+                                <li>
+                                    <p>ქართული</p>
+                                    <span>KA</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item-m">
+                        <div class="icon"><img src="images/icons/location.svg" alt=""></div>
+                        <p id="currentCity">Тбилиси</p>
+                        <p id="headerTime">14:43</p>
+                    </div>
+                </div>
                 <nav>
                     <ul>
-                        <li><a href="about.html">о компании</a></li>
+                        <li class="active-sub-menu">
+                            <span>О компании</span>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="about.html">О компании</a></li>
+                                    <li><a href="news.html">Новости</a></li>
+                                    <li><a>Сотрудничество</a></li>
+                                    <li><a href="blog.html">Блог</a></li>
+                                    <ul>
+                                        <li><a href="landlords.html">Арендодателям</a></li>
+                                        <li><a href="wholesalers.html">Оптовикам</a></li>
+                                        <li><a href="advertisement.html">Реклама у нас</a></li>
+                                    </ul>
+                                    <li><a href="reviews.html">Отзывы</a></li>
+                                    <li><a href="faq.html">faq</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="stock.html">акции</a></li>
                         <li><a href="our_collection.html">коллекции</a></li>
                         <li><a href="brands.html">бренды</a></li>
@@ -35,11 +84,27 @@
                 <div class="more-info-header">
                     <div class="item-m item-m-language">
                         <div class="icon"><img src="images/icons/language.svg" alt=""></div>
-                        <p>en</p>
+                        <div class="select-language">
+                            <p>en</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <p>русский</p>
+                                    <span>RU</span>
+                                </li>
+                                <li>
+                                    <p>English</p>
+                                    <span>EN</span>
+                                </li>
+                                <li>
+                                    <p>ქართული</p>
+                                    <span>KA</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="item-m">
                         <div class="icon"><img src="images/icons/location.svg" alt=""></div>
-                        <p>Тбилиси</p>
+                        <p id="currentCity">Тбилиси</p>
                         <p id="headerTime">14:43</p>
                     </div>
                     <div class="contact-container">
@@ -47,6 +112,35 @@
                         <a href="contacts.html" class="btn btn-grey">Контакты</a>
                     </div>
                 </div>
+            </div>
+            <div class="container mobile">
+                <div class="burget-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="item-m item-m-language header-icon">
+                    <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                    <div class="select-language">
+                        <ul class="sub-menu">
+                            <li>
+                                <p>русский</p>
+                                <span>RU</span>
+                            </li>
+                            <li>
+                                <p>English</p>
+                                <span>EN</span>
+                            </li>
+                            <li>
+                                <p>ქართული</p>
+                                <span>KA</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="index.html" class="logo"><img src="images/logos/logo.svg" alt=""></a>
+                <div class="header-icon icon"><img src="images/icons/location.svg" alt=""></div>
+                <div class="heder-city-icon header-icon icon"><img src="images/icons/phone_white.svg" alt=""></div>
             </div>
         </div>
     </header>
@@ -70,10 +164,11 @@
                 <div class="container">
                     <div class="sales-container">
                         <div class="sales-img">
-                            <img src="images/backgrounds/old_fabrics.jpg" alt="">
+                            <img class="desktop" src="images/backgrounds/old_fabrics.jpg" alt="">
+                            <img class="mobile" src="images/backgrounds/old_fabrics_mobile.jpg" alt="">
                         </div>
                         <div class="sales-text">
-                            <p class="sales-title">
+                            <p class="sales-title old_fabric">
                                 ВЕТОШЬ (х/б)
                             </p>
                             <p class="sales-content">
@@ -137,7 +232,7 @@
         <section class="mt-section">
             <div class="prefooter-section" style="background-image: url('images/backgrounds/wholesalers-bg.jpg');">
                 <div class="container">
-                    <div class="prefooter-container">
+                    <div class="prefooter-container old_fabrick">
                         <p class="prefooter-title">ОСТАВЬТЕ ЗАЯВКУ ЧТОБЫ<br> ОЗНАКОМИТЬСЯ ДЕТАЛЬНО</p>
                         <p class="prefooter-conent">Для Вашего удобства для каждой товарной группы представлен свой прайс-лист, который будет Вам <br>
                             предоставлен нашими менеджерами. Оформление заявки займет всего несколько минут.</p>

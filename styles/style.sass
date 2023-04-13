@@ -148,6 +148,16 @@ section .section-title
   padding: 18px
   outline: none
   border: 1px solid rgba(255, 255, 255, 0.2)
+.mobile
+  display: none !important
+.burget-menu
+  display: flex
+  flex-direction: column
+  gap: 5px
+  div
+      width: 30px
+      height: 2px
+      background: $white
 header
   position: fixed
   z-index: 5
@@ -183,6 +193,9 @@ header
     padding: 40px 0
     transition: all .3s ease-in-out
 
+    .burget-menu
+      display: none
+
     .container
       white-space: nowrap
       display: grid
@@ -198,6 +211,17 @@ header
           gap: 40px
           margin: 0
           padding: 0
+
+          .active-sub-menu:before
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            left: -20px
+            width: 10px
+            height: 10px
+            background: $orange
+            border-radius: 50%
 
           li
             position: relative
@@ -250,7 +274,15 @@ header
             > .sub-menu
               visibility: visible
 
-      .more-info-header
+      .more-desktop
+        display: none !important
+        align-items: center
+        justify-content: flex-start !important
+        height: 100%
+        .item-m
+          height: 100%
+
+      .more-info-header, .more-desktop
         display: flex
         gap: 40px
         justify-content: flex-end
@@ -266,10 +298,22 @@ header
           align-items: center
           justify-content: center
           gap: 5px
+          .icon
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 20px
+            height: 20px
 
         .item-m.item-m-language
           text-transform: uppercase
           position: relative
+          .icon
+            width: 20px
+            height: 20px
+            display: flex
+            align-items: center
+            justify-content: center
           .select-language
             ul
               margin: 0
@@ -317,6 +361,10 @@ header
     // transition: all .3s easy-in-out
     background: $white
 
+    .burget-menu
+      div
+        background: $black
+
     a, p, span
       color: $black !important
 
@@ -328,20 +376,19 @@ header
 
 main.mb-main
   margin-bottom: 110px
-main.no-mt
-  margin-top: 0
+main.no-pt
+  padding-top: 0
 
 main
-  margin-top: 178px
-
+  padding-top: 183px
   section
     .landing-section, .calendar-stock-section
+      padding-top: 178px
       .container
         position: relative
         height: 100%
-        margin-top: 218px
-        margin-bottom: 170px
-        overflow: hidden
+        // margin-bottom: 170px
+        // overflow: hidden
 
       .landing-container
         display: flex
@@ -349,9 +396,91 @@ main
         align-items: center
         gap: 20vh
         width: fit-content
-        overflow: hidden
+        // overflow: hidden
         margin: 0 auto
-    .landing-section, .calendar-stock-section
+    .landing-section
+      background-image: url(../images/backgrounds/landing-bg.jpg)
+      height: 1100px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position: center bottom
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+
+      .container
+        position: relative
+        height: 100%
+        // margin-bottom: 170px
+
+      .landing-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 120px
+        width: fit-content
+        margin: 0 auto
+
+        .landing-text
+          text-align: center
+          color: $white
+          font-size: var(--fz144)
+          line-height: 90%
+          margin-top: calc(90px - 40px)
+
+        .calendar-section
+          // position: absolute
+          // bottom: 0
+          // left: 50%
+          // transform: translateX(-50%)
+
+          .calendar
+            padding: 35px
+            background: $white
+            width: 720px
+            display: flex
+            flex-direction: column
+            gap: 20px
+
+            .calendar-header
+              display: flex
+              justify-content: space-between
+              align-items: center
+              text-transform: uppercase
+
+            .calendar-footer
+              display: grid
+              grid-template-columns: 2fr 1fr
+              gap: 20px
+
+            .calendar-body
+              .home-calendar-swiper
+                .home-calendar-slide
+                  display: flex
+                  flex-direction: column
+                  padding: 10px
+                  border: 1px solid $grey
+
+                  .home-calendar-date
+                    display: flex
+                    justify-content: space-between
+                    font-size: var(--fz20)
+                    color: rgba(0, 0, 0, .4)
+
+                  .home-calendar-sale
+                    font-size: var(--fz48)
+                    color: $forestGreen
+
+                .swiper-slide-active
+                  width: 30% !important
+                  background: rgba(0, 0, 0, .05)
+                  border: none
+
+                .swiper-slide:not(.swiper-slide-active)
+                  width: 20% !important
+    .calendar-stock-section
       background-image: url(../images/backgrounds/landing-bg.jpg)
       height: 100vh
       background-repeat: no-repeat
@@ -368,6 +497,7 @@ main
         height: 100%
         margin-top: 218px
         margin-bottom: 170px
+        overflow: hidden
 
       .landing-container
         display: flex
@@ -376,6 +506,7 @@ main
         gap: 20vh
         width: fit-content
         margin: 0 auto
+        overflow: hidden
 
         .landing-text
           text-align: center
@@ -444,14 +575,14 @@ main
       .landing-container
         .calendar-section
           position: relative
-          transition: all .2s ease-in-out
+          // transition: all .2s ease-in-out
           .calendar-body-big
             overflow: hidden
-            transition: all .2s ease-in-out
+            // transition: all .2s ease-in-out
             height: 0
           .calendar-big
             z-index: -1
-            transition: all .2s ease-in-out
+            // transition: all .2s ease-in-out
             background: #E5E5E5
             position: absolute
             padding: 43px 30px 28px
@@ -514,7 +645,7 @@ main
       .calendar-section.open
         background: $white
         transform: translateX(calc(((1800px - 720px) / 2) * -1))
-        transition: all .2s ease-in-out
+        // transition: all .2s ease-in-out
         .calendar-big
           left: 100%
         .calendar-body-big
@@ -551,6 +682,7 @@ main
 
     .brand-section
       padding: 60px 0
+      background-color: $white
 
       .brand-swiper
         overflow: hidden
@@ -594,20 +726,25 @@ main
       .stock-section-header
         display: flex
         justify-content: space-between
+        align-items: center
 
         .tabs-nav
           display: flex
           gap: 75px
           list-style: none
+          margin: 0
+          padding: 0
 
           li a
             text-transform: uppercase
             color: rgba(0, 0, 0, .4)
+          li a.active
+            color: $orange
 
       .stock-body
         display: grid
         grid-template-columns: repeat(3, 1fr)
-        column-gap: 20px
+        gap: 20px
 
         .stock-item
           display: flex
@@ -654,6 +791,9 @@ main
                 color: $gray
                 text-decoration: line-through
                 text-decoration-color: $black
+
+    .video-section
+      height: 95vh
 
     .about-section
       .aboout-container
@@ -763,6 +903,9 @@ main
         display: flex
         flex-direction: column
         align-items: center
+        iframe
+          width: 100vw
+          margin-bottom: 100px
         .blog-filter
           margin-top: 20px
           padding: 18px
@@ -829,6 +972,9 @@ main
         max-width: 70vw
         margin: 0 auto
 
+      .page-landing-container.mb-80
+        h1
+          margin-bottom: 80px
       .page-landing-container.mb-40
         h1
           margin-bottom: 40px
@@ -896,15 +1042,22 @@ main
               font-size: var(--fz20)
               color: $gray
               display: flex
-              align-items: center
+              align-items: flex-start
               gap: 20px
 
               .bulet
+                display: flex
+                align-items: center
+                justify-content: center
                 position: relative
+
+                img
+                  width: 24px
+                  height: 24px
 
           .about-info-content:before
             content: ''
-            height: 98%
+            height: 90%
             width: 2px
             background: $forestGreen
             position: absolute
@@ -962,10 +1115,6 @@ main
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 80px
-
-        .sales-img
-          img
-            object-fit: contain
 
         .sales-text
           display: flex
@@ -1107,6 +1256,7 @@ main
               padding: 24px 20px
               background: $white
               display: flex
+              align-items: center
               gap: 20px
               color: $black
 
@@ -1166,6 +1316,7 @@ main
             display: flex
             align-items: center
             justify-content: center
+            background-size: cover
 
     .address-section
       margin-top: 40px
@@ -1261,6 +1412,7 @@ main
           gap: 10px
           p
             margin: 0
+            text-transform: uppercase
           .news-img
             height: 330px
           .news-date
@@ -1272,22 +1424,25 @@ main
         gap: 80px
         align-items: center
         .tabs-nav
+          padding: 0
+          margin: 0
           display: flex
           gap: 10px
           align-items: center
           li
             list-style: none
             white-space: nowrap
+            border-radius: 100px
+            padding: 15px 30px
+            background: rgba(0, 0, 0, .2)
             a
               color: $black
-              border-radius: 100px
-              padding: 15px 30px
-              background: rgba(0, 0, 0, .2)
               text-transform: uppercase
               font-size: 24px
-              a.active
-                color: $white
-                background: $orange
+          li.active
+            background: $orange
+            a
+              color: $white
           .tabs-items
             .news-page-item-container
               display: grid
@@ -1304,7 +1459,21 @@ main
                   height: 330px
                 .news-date
                   opacity: .4
-
+        .tabs-items
+          .news-page-item-container
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 20px
+            p
+              margin: 0
+            a
+              color: $black
+            .news-item
+              display: flex
+              gap: 10px
+              flex-direction: column
+            .news-date
+              opacity: .4
     .news-item-section
       .news-item-container
         display: flex
@@ -1483,6 +1652,8 @@ main
                 white-space: nowrap
                 text-transform: uppercase
                 opacity: .4
+                width: 100%
+                text-align: end
 
               .job-name
                 text-transform: uppercase
@@ -1620,6 +1791,8 @@ footer
   margin-top: -2px
   background: $black
   padding: 80px 0
+  ul
+      padding: 0
 
   .main-footer
     display: grid

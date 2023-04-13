@@ -277,6 +277,21 @@ section .section-title {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.mobile {
+  display: none !important;
+}
+
+.burget-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.burget-menu div {
+  width: 30px;
+  height: 2px;
+  background: #FFFFFF;
+}
+
 header {
   position: fixed;
   z-index: 5;
@@ -312,6 +327,9 @@ header .top-baner.open {
 header .main-header {
   padding: 40px 0;
   transition: all 0.3s ease-in-out;
+}
+header .main-header .burget-menu {
+  display: none;
 }
 header .main-header .container {
   white-space: nowrap;
@@ -381,28 +399,32 @@ header .main-header .container nav ul li .sub-menu > ul > ul li a {
 header .main-header .container nav ul li:hover > .sub-menu {
   visibility: visible;
 }
-header .main-header .container .more-info-header {
+header .main-header .container .more-desktop {
+  align-items: center;
+  justify-content: flex-start !important;
+}
+header .main-header .container .more-info-header, header .main-header .container .more-desktop {
   display: flex;
   gap: 40px;
   justify-content: flex-end;
 }
-header .main-header .container .more-info-header a, header .main-header .container .more-info-header p {
+header .main-header .container .more-info-header a, header .main-header .container .more-info-header p, header .main-header .container .more-desktop a, header .main-header .container .more-desktop p {
   font-size: var(--fz20);
   margin: 0;
   padding: 0;
   color: #FFFFFF;
 }
-header .main-header .container .more-info-header .item-m {
+header .main-header .container .more-info-header .item-m, header .main-header .container .more-desktop .item-m {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
-header .main-header .container .more-info-header .item-m.item-m-language {
+header .main-header .container .more-info-header .item-m.item-m-language, header .main-header .container .more-desktop .item-m.item-m-language {
   text-transform: uppercase;
   position: relative;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul {
   margin: 0;
   padding: 0;
   background: #FFFFFF;
@@ -412,7 +434,7 @@ header .main-header .container .more-info-header .item-m.item-m-language .select
   left: 0;
   list-style: none;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li {
   user-select: none;
   padding: 20px;
   margin: 0;
@@ -420,26 +442,26 @@ header .main-header .container .more-info-header .item-m.item-m-language .select
   justify-content: space-between;
   gap: 100px;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li p {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li p, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li p {
   margin: 0;
   color: #000000;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:hover {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:hover, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li:hover {
   background: rgba(0, 0, 0, 0.05);
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:nth-of-type(2) {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:nth-of-type(2), header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li:nth-of-type(2) {
   border-top: 1px solid #D9D9D9;
   border-bottom: 1px solid #D9D9D9;
 }
-header .main-header .container .more-info-header .item-m.item-m-language:hover .select-language ul {
+header .main-header .container .more-info-header .item-m.item-m-language:hover .select-language ul, header .main-header .container .more-desktop .item-m.item-m-language:hover .select-language ul {
   visibility: visible;
 }
-header .main-header .container .more-info-header .contact-container {
+header .main-header .container .more-info-header .contact-container, header .main-header .container .more-desktop .contact-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-header .main-header .container .more-info-header .contact-container .phone {
+header .main-header .container .more-info-header .contact-container .phone, header .main-header .container .more-desktop .contact-container .phone {
   padding: 10px 20px;
   border: 2px solid #FFFFFF;
   border-radius: 100px;
@@ -447,6 +469,10 @@ header .main-header .container .more-info-header .contact-container .phone {
 header .main-header.sticky,
 header .main-header.static {
   background: #FFFFFF;
+}
+header .main-header.sticky .burget-menu div,
+header .main-header.static .burget-menu div {
+  background: #000000;
 }
 header .main-header.sticky a, header .main-header.sticky p, header .main-header.sticky span,
 header .main-header.static a,
@@ -480,7 +506,6 @@ main section .landing-section .container, main section .calendar-stock-section .
   height: 100%;
   margin-top: 218px;
   margin-bottom: 170px;
-  overflow: hidden;
 }
 main section .landing-section .landing-container, main section .calendar-stock-section .landing-container {
   display: flex;
@@ -488,10 +513,9 @@ main section .landing-section .landing-container, main section .calendar-stock-s
   align-items: center;
   gap: 20vh;
   width: fit-content;
-  overflow: hidden;
   margin: 0 auto;
 }
-main section .landing-section, main section .calendar-stock-section {
+main section .landing-section {
   background-image: url(../images/backgrounds/landing-bg.jpg);
   height: 100vh;
   background-repeat: no-repeat;
@@ -503,13 +527,13 @@ main section .landing-section, main section .calendar-stock-section {
   align-items: center;
   justify-content: center;
 }
-main section .landing-section .container, main section .calendar-stock-section .container {
+main section .landing-section .container {
   position: relative;
   height: 100%;
   margin-top: 218px;
   margin-bottom: 170px;
 }
-main section .landing-section .landing-container, main section .calendar-stock-section .landing-container {
+main section .landing-section .landing-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -517,13 +541,13 @@ main section .landing-section .landing-container, main section .calendar-stock-s
   width: fit-content;
   margin: 0 auto;
 }
-main section .landing-section .landing-container .landing-text, main section .calendar-stock-section .landing-container .landing-text {
+main section .landing-section .landing-container .landing-text {
   text-align: center;
   color: #FFFFFF;
   font-size: var(--fz144);
   line-height: 90%;
 }
-main section .landing-section .landing-container .calendar-section .calendar, main section .calendar-stock-section .landing-container .calendar-section .calendar {
+main section .landing-section .landing-container .calendar-section .calendar {
   padding: 35px;
   background: #FFFFFF;
   width: 720px;
@@ -531,39 +555,116 @@ main section .landing-section .landing-container .calendar-section .calendar, ma
   flex-direction: column;
   gap: 20px;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-header, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-header {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-footer, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-footer {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
   display: flex;
   flex-direction: column;
   padding: 10px;
   border: 1px solid #D9D9D9;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
   display: flex;
   justify-content: space-between;
   font-size: var(--fz20);
   color: rgba(0, 0, 0, 0.4);
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
   font-size: var(--fz48);
   color: #0D674C;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
   width: 30% !important;
   background: rgba(0, 0, 0, 0.05);
   border: none;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active), main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
+  width: 20% !important;
+}
+main section .calendar-stock-section {
+  background-image: url(../images/backgrounds/landing-bg.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main section .calendar-stock-section .container {
+  position: relative;
+  height: 100%;
+  margin-top: 218px;
+  margin-bottom: 170px;
+  overflow: hidden;
+}
+main section .calendar-stock-section .landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20vh;
+  width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+}
+main section .calendar-stock-section .landing-container .landing-text {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: var(--fz144);
+  line-height: 90%;
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar {
+  padding: 35px;
+  background: #FFFFFF;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #D9D9D9;
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fz20);
+  color: rgba(0, 0, 0, 0.4);
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
+  font-size: var(--fz48);
+  color: #0D674C;
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
+  width: 30% !important;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+}
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
   width: 20% !important;
 }
 main section .calendar-stock-section {
@@ -2090,8 +2191,45 @@ footer .second-footer .item-s:nth-of-type(3) a {
 }
 .custom-modal .body .job-form .comment-info {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 1fr 50px;
+  gap: 20px;
+  grid-row: span 2;
+}
+.custom-modal .body .job-form .comment-info .custom-input {
+  resize: none;
+}
+.custom-modal .body .job-form .comment-info .custom-input:nth-of-type(3) {
+  grid-column: span 2;
+}
+.custom-modal .body .job-form .comment-info .footer-form {
+  grid-row: auto;
+  margin: 0;
+  grid-column: span 2;
 }
 .custom-modal .body .job-form .more-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.custom-modal .body .job-form .more-info .item-m {
+  display: flex;
+  flex-direction: column;
+}
+.custom-modal .body .job-form .more-info .item-m .title {
+  margin-bottom: 5px;
+}
+.custom-modal .body .job-form .more-info .item-m .description {
+  margin-bottom: 20px;
+  font-size: var(--fz16);
+  opacity: 0.4;
+}
+.custom-modal .body .job-form .more-info .item-m .inputs-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px 0;
+}
+.custom-modal .body .job-form .more-info .item-m .inputs-section .custom-input {
   grid-row: span 2;
 }
 .custom-modal .body .content-review .description {
@@ -2109,6 +2247,51 @@ footer .second-footer .item-s:nth-of-type(3) a {
   resize: none;
 }
 
+@media screen and (max-width: 1920px) {
+  :root {
+    --fz14: 14px;
+    --fz16: 16px;
+    --fz18: 18px;
+    --fz20: 20px;
+    --fz24: 24px;
+    --fz28: 28px;
+    --fz36: 36px;
+    --fz48: 48px;
+    --fz64: 64px;
+    --fz96: 96px;
+    --fz144: 144px;
+    --ln120: 120%;
+    --container: 1800px;
+  }
+  header .main-header .container .more-info-header .item-m {
+    display: none;
+  }
+  header .main-header .container.desctop .burget-menu {
+    display: flex;
+  }
+  header .main-header .container.desctop nav {
+    display: none;
+  }
+  header .main-header .container.mobile {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 132px 1fr 1fr;
+  }
+  header .main-header .container.mobile .header-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  header .main-header .container.mobile .item-m.item-m-language {
+    position: relative;
+  }
+  header .main-header .container.mobile .item-m.item-m-language > .select-language {
+    position: absolute;
+    visibility: hidden;
+  }
+  main section .landing-section .container {
+    margin-top: 300px;
+  }
+}
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -2766,12 +2949,12 @@ progress {
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1080px;
+    max-width: 1020px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1680px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1280px;
+    max-width: 1560px;
   }
 }
 @media (min-width: 1920px) {

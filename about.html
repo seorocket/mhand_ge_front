@@ -15,16 +15,65 @@
 </head>
 <body>
     <header>
-        <div class="top-baner">
+        <div class="top-baner open">
             <div class="container">
-                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark"></i>
+                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark close-banner"></i>
             </div>
         </div>
         <div class="main-header static">
-            <div class="container">
+            <div class="container desctop">
+                <div class="more-desktop">
+                    <div class="burget-menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="item-m item-m-language">
+                        <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                        <div class="select-language">
+                            <p>en</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <p>русский</p>
+                                    <span>RU</span>
+                                </li>
+                                <li>
+                                    <p>English</p>
+                                    <span>EN</span>
+                                </li>
+                                <li>
+                                    <p>ქართული</p>
+                                    <span>KA</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item-m">
+                        <div class="icon"><img src="images/icons/location.svg" alt=""></div>
+                        <p id="currentCity">Тбилиси</p>
+                        <p id="headerTime">14:43</p>
+                    </div>
+                </div>
                 <nav>
                     <ul>
-                        <li><a href="about.html">о компании</a></li>
+                        <li class="active-sub-menu">
+                            <span>О компании</span>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="about.html">О компании</a></li>
+                                    <li><a href="news.html">Новости</a></li>
+                                    <li><a>Сотрудничество</a></li>
+                                    <li><a href="blog.html">Блог</a></li>
+                                    <ul>
+                                        <li><a href="landlords.html">Арендодателям</a></li>
+                                        <li><a href="wholesalers.html">Оптовикам</a></li>
+                                        <li><a href="advertisement.html">Реклама у нас</a></li>
+                                    </ul>
+                                    <li><a href="reviews.html">Отзывы</a></li>
+                                    <li><a href="faq.html">faq</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="stock.html">акции</a></li>
                         <li><a href="our_collection.html">коллекции</a></li>
                         <li><a href="brands.html">бренды</a></li>
@@ -35,11 +84,27 @@
                 <div class="more-info-header">
                     <div class="item-m item-m-language">
                         <div class="icon"><img src="images/icons/language.svg" alt=""></div>
-                        <p>en</p>
+                        <div class="select-language">
+                            <p>en</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <p>русский</p>
+                                    <span>RU</span>
+                                </li>
+                                <li>
+                                    <p>English</p>
+                                    <span>EN</span>
+                                </li>
+                                <li>
+                                    <p>ქართული</p>
+                                    <span>KA</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="item-m">
                         <div class="icon"><img src="images/icons/location.svg" alt=""></div>
-                        <p>Тбилиси</p>
+                        <p id="currentCity">Тбилиси</p>
                         <p id="headerTime">14:43</p>
                     </div>
                     <div class="contact-container">
@@ -47,6 +112,35 @@
                         <a href="contacts.html" class="btn btn-grey">Контакты</a>
                     </div>
                 </div>
+            </div>
+            <div class="container mobile">
+                <div class="burget-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="item-m item-m-language header-icon">
+                    <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                    <div class="select-language">
+                        <ul class="sub-menu">
+                            <li>
+                                <p>русский</p>
+                                <span>RU</span>
+                            </li>
+                            <li>
+                                <p>English</p>
+                                <span>EN</span>
+                            </li>
+                            <li>
+                                <p>ქართული</p>
+                                <span>KA</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="index.html" class="logo"><img src="images/logos/logo.svg" alt=""></a>
+                <div class="header-icon icon"><img src="images/icons/location.svg" alt=""></div>
+                <div class="heder-city-icon header-icon icon"><img src="images/icons/phone_white.svg" alt=""></div>
             </div>
         </div>
     </header>
@@ -61,7 +155,7 @@
                 </div>
             </div>
         </section>
-        <section class="mt-section">
+        <section>
             <div class="about-info-section">
                 <div class="container">
                     <div class="about-info-container">
@@ -113,7 +207,7 @@
                     <div class="form-recall-container">
                         <div class="form-recall-info">
                             <p class="form-recall-title">
-                                Подпишитесь<br>на рассылку
+                                Подпишитесь на рассылку
                             </p>
                             <span class="form-recall-description">
                                 Получайте первыми выгодные предложения и скидки
@@ -156,7 +250,7 @@
                 <div class="container">
                     <div class="prefooter-container">
                         <p class="prefooter-title">ПОСТУПЛЕНИЕ БРЕНДОВЫХ <br> ВЕЩЕЙ В ДЕНЬ НОВОГО ЗАВОЗА</p>
-                        <p class="prefooter-conent">Если Вы хотите приобрести эксклюзивную вещь - приходите в "Мегахенд" в день НОВОГО ЗАВОЗА. <br>
+                        <p class="prefooter-conent">Если Вы хотите приобрести эксклюзивную вещь - приходите в "Мегахенд" в день НОВОГО ЗАВОЗА. <br><br>
                             Если планируете сэкономить - обращайте внимание на таблицу скидок и приходите в дни 70%, 80% и 90% скидок.</p>
                         <a href="stock.html" class="btn btn-orange">календарь скидок <div class="icon"><img src="images/icons/arrow-up-left.svg" alt=""></div></a>
                     </div>

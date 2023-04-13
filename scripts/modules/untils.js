@@ -9,9 +9,18 @@ $(window).scroll(function() {
 
 $('.all-calendar').on('click', function () {
   const elements = $(this).parents('.open')
-  elements.each(function (key) {
-    $(elements[key]).removeClass('open')
-  })
+  let message = 'весь календарь'
+  console.log(elements);
+  if(elements.length){
+	elements.each(function (key) {
+		$(elements[key]).removeClass('open')
+	  })
+  } else {
+	message = 'скрыть календарь'
+	$(this).parents('.calendar-container').addClass('open')
+	$(this).parents('.new-calendar-section.mobile').addClass('open')
+  }
+  $('.all-calendar').html(message)
 })
 
 $(function() {
@@ -21,8 +30,8 @@ $(function() {
 	$('#tabs .tabs-nav a').click(function(){
 		tab.hide(); 
 		tab.filter(this.hash).show(); 
-		$('#tabs .tabs-nav a').removeClass('active');
-		$(this).addClass('active');
+		$('#tabs .tabs-nav li').removeClass('active');
+		$(this).parent().addClass('active');
 		return false;
 	}).filter(':first').click();
  

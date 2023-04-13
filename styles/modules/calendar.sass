@@ -1,0 +1,382 @@
+$forestGreen: #0D674C
+$orange: #F07106
+$white: #FFFFFF
+$grey: #D9D9D9
+$gray: #575757
+$black: #000000
+.new-calendar-section
+    width: 100%
+    .calendar-container
+        display: flex
+        justify-content: center
+        .main-calendar
+            padding: 30px
+            background: #fff
+            flex: 1
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            gap: 20px
+            max-width: 720px
+            .header
+                display: flex
+                justify-content: space-between
+                align-items: center
+                .title
+                    text-transform: uppercase
+                    font-size: var(--fz28)
+            .body
+                p
+                    margin: 0
+                // .swiper-wrapper
+                //     max-width: 0
+                .calendar-swiper
+                    margin-bottom: 20px
+                    .swiper-slide-active
+                        width: 30% !important
+                        // width: 240px !important
+                        background: rgba(0, 0, 0, .05)
+                        border: none
+
+                    .swiper-slide:not(.swiper-slide-active)
+                        width: 20% !important
+
+                    .item-c
+                        padding: 10px
+                        border: 1px solid $grey
+                        display: flex
+                        flex-direction: column
+                        gap: 12px
+
+                        .header
+                            display: flex
+                            justify-content: space-between
+                            opacity: .4
+                        .body
+                            .sale
+                                color: $forestGreen
+                                font-size: var(--fz48)
+
+                .address-swiper
+                    display: flex
+                    align-items: center
+                    .address-slide
+                        span
+                            display: block
+                            width: 100%
+                            text-align: center
+                    .address-prev,
+                    .address-next
+                        position: absolute
+                        z-index: 2
+                    .address-next
+                        right: 0
+                .more-info-calendar
+                    display: none
+                    .more-info-calendar-swiper
+                        padding: 54px 0 40px
+                        margin-top: 20px
+                        .more-info-calendar-slide
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            p, span
+                                color: $white
+                            .week
+                                text-transform: uppercase
+                                font-size: var(--fz48)
+                                margin-bottom: 10px
+                            .date-section
+                                display: flex
+                                gap: 20px
+                            .sale
+                                font-size: var(--fz144)
+        .footer
+            display: grid
+            grid-template-columns: 2fr 1fr
+            gap: 20px
+            .all-calendar
+                border-radius: 100px
+                padding: 15px 0
+                border: 2px solid $grey
+                text-transform: uppercase
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: var(--fz24)
+            .btn
+                font-size: var(--fz24)
+
+        .big-calendar
+            padding: 43px 0 28px
+            background: #e5e5e5
+            margin-left: -2px
+            display: none
+            .title
+                padding: 0 30px
+                text-transform: uppercase
+                font-size: var(--fz28)
+                color: $gray
+                margin-bottom: 32px
+            .calendar
+                width: 100%
+                display: flex
+                flex-direction: column
+                gap: 30px
+                .weeks
+                    border-top: 1px solid $grey
+                    border-bottom: 1px solid $grey
+                    padding: 10px 30px
+                    gap: 20px
+                    width: 100%
+                    display: grid
+                    grid-template-columns: repeat(7, 1fr)
+                    .item-w
+                        opacity: .4
+                        text-transform: uppercase
+                .sales
+                    display: grid
+                    grid-template-columns: repeat(7, 1fr)
+                    gap: 20px
+                    padding: 0 30px
+                    .item-s
+                        padding: 10px 11px 0
+                        background: $white
+                        border: 1px solid $grey
+                        display: flex
+                        flex-direction: column
+                        gap: 3px
+                        .header
+                            opacity: .4
+                            width: 100%
+                            text-align: end
+                        .body
+                            line-height: 120%
+                            color: $forestGreen
+                            font-size: var(--fz48)
+                    .item-s.empty
+                        border: none
+                        background: rgba(0, 0, 0, .05)
+                        .body, .header
+                            opacity: 1
+                            color: $gray
+                    .item-s.new-clothe
+                        .body
+                            color: $orange
+                            font-size: var(--fz24)
+                            text-transform: uppercase
+                    .item-s.today
+                        background: $forestGreen !important
+                        .body, .header
+                            color: $white !important
+                            opacity: 1
+
+    .calendar-container.open
+        transform: translateY(-400px)
+        .big-calendar
+            display: block
+        .header
+            .title
+                font-size: var(--fz48)
+        .body
+            .more-info-calendar
+                display: block
+.new-calendar-section.mobile.open
+    transform: translateY(-200px)
+    .body
+        >.main-calendar
+            display: none
+    .big-calendar
+        display: flex !important
+
+.new-calendar-section.mobile
+    @media (min-width: 280px)
+        --container: 90vw
+
+    @media (min-width: 1000px)
+        --container: 920px
+
+    @media (min-width: 1280px)
+        --container: 1100px
+
+    >.main-calendar
+        padding: 20px
+        background: $white
+        max-width: var(--container)
+        >.header
+            width: 100%
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 10px
+            .title
+                text-transform: uppercase
+                font-size: 24px
+        >.body
+            >.main-calendar
+                .today-mobile-calendar
+                    .current-day
+                        padding: 10px
+                        background: #e5e5e5
+                        display: flex
+                        flex-direction: column
+                        gap: 12px
+                        p
+                            margin: 0
+                        .header
+                            p
+                                opacity: .4
+                        .body
+                            color: $forestGreen
+                            font-size: 48px
+                .calendar-mobile-swiper
+                    margin-top: 10px
+                    .calendar-slide
+                        padding: 10px
+                        background: $white
+                        border: 1px solid $grey
+                        display: flex
+                        flex-direction: column
+                        gap: 3px
+                        p
+                            margin: 0
+                        .header
+                            opacity: .4
+                        .body
+                            .sale
+                                color: $forestGreen
+                                font-size: 24px
+            > .big-calendar
+                display: none
+                flex-direction: column
+                .monthe-container
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 100%
+                    padding: 30px 0
+                    background-size: cover
+                    margin-bottom: 10px
+                    background-repeat: no-repeat
+                    .month
+                        font-size: 48px
+                        text-transform: uppercase
+                        color: $white
+                .sales, .week
+                    display: grid
+                    grid-template-columns: repeat(7, 1fr)
+                    gap: 9px 10px
+                .no-container
+                    width: calc(100% + 40px)
+                    padding: 10px 20px
+                    margin-left: -20px
+                .week
+                    border-top: 1px solid $grey
+                    border-bottom: 1px solid $grey
+                    text-transform: uppercase
+                    .item-w
+                        font-size: 14px
+                        opacity: .4
+                .sales
+                    background: #e5e5e5
+                    display: grid
+                    grid-template-columns: repeat(7, 1fr)
+                    gap: 9px 10px
+                    .item-s
+                        padding: 3px 1px
+                        background: $white
+                        border: 1px solid $grey
+                        >.header
+                            font-size: 12px
+                            opacity: .4
+                            width: 100%
+                            text-align: end
+                        .body
+                            line-height: 120%
+                            color: $forestGreen
+                            font-size: 14px
+                            text-align: center
+                    .item-s.empty
+                        border: none
+                        background: rgba(0, 0, 0, .05)
+                        .body, .header
+                            opacity: 1
+                            color: $gray
+                    .item-s.new-clothe
+                        .body
+                            color: $orange
+                            text-transform: uppercase
+                    .item-s.today
+                        background: $forestGreen !important
+                        .body, .header
+                            color: $white !important
+                            opacity: 1
+
+                // .sales
+                //     display: grid
+                //     grid-template-columns: repeat(7, 1fr)
+                //     gap: 20px
+                //     padding: 0 30px
+                //     .item-s
+                //         padding: 10px 11px 0
+                //         background: $white
+                //         border: 1px solid $grey
+                //         display: flex
+                //         flex-direction: column
+                //         gap: 3px
+                //         .header
+                //             opacity: .4
+                //             width: 100%
+                //             text-align: end
+                //         .body
+                //             line-height: 120%
+                //             color: $forestGreen
+                //             font-size: var(--fz48)
+                //     .item-s.empty
+                //         border: none
+                //         background: rgba(0, 0, 0, .05)
+                //         .body, .header
+                //             opacity: 1
+                //             color: $gray
+                //     .item-s.new-clothe
+                //         .body
+                //             color: $orange
+                //             font-size: var(--fz24)
+                //             text-transform: uppercase
+                //     .item-s.today
+                //         background: $forestGreen !important
+                //         .body, .header
+                //             color: $white !important
+                //             opacity: 1
+            .address-swiper
+                display: flex
+                align-items: center
+                margin-top: 10px
+                .address-slide
+                    span
+                        display: block
+                        width: 100%
+                        text-align: center
+                .address-prev,
+                .address-next
+                    position: absolute
+                    z-index: 2
+                .address-next
+                    right: 0
+        .footer
+            display: grid
+            grid-template-columns: 1fr
+            gap: 10px
+            margin-top: 10px
+            .all-calendar
+                border-radius: 100px
+                padding: 15px 0
+                border: 2px solid $grey
+                text-transform: uppercase
+                display: flex
+                align-items: center
+                justify-content: center
+                font-size: var(--fz24)
+            .btn
+                padding: 15px 0 !important
+                font-size: var(--fz24)

@@ -277,6 +277,21 @@ section .section-title {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.mobile {
+  display: none !important;
+}
+
+.burget-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.burget-menu div {
+  width: 30px;
+  height: 2px;
+  background: #FFFFFF;
+}
+
 header {
   position: fixed;
   z-index: 5;
@@ -313,6 +328,9 @@ header .main-header {
   padding: 40px 0;
   transition: all 0.3s ease-in-out;
 }
+header .main-header .burget-menu {
+  display: none;
+}
 header .main-header .container {
   white-space: nowrap;
   display: grid;
@@ -327,6 +345,17 @@ header .main-header .container nav ul {
   gap: 40px;
   margin: 0;
   padding: 0;
+}
+header .main-header .container nav ul .active-sub-menu:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  width: 10px;
+  height: 10px;
+  background: #F07106;
+  border-radius: 50%;
 }
 header .main-header .container nav ul li {
   position: relative;
@@ -381,28 +410,51 @@ header .main-header .container nav ul li .sub-menu > ul > ul li a {
 header .main-header .container nav ul li:hover > .sub-menu {
   visibility: visible;
 }
-header .main-header .container .more-info-header {
+header .main-header .container .more-desktop {
+  display: none !important;
+  align-items: center;
+  justify-content: flex-start !important;
+  height: 100%;
+}
+header .main-header .container .more-desktop .item-m {
+  height: 100%;
+}
+header .main-header .container .more-info-header, header .main-header .container .more-desktop {
   display: flex;
   gap: 40px;
   justify-content: flex-end;
 }
-header .main-header .container .more-info-header a, header .main-header .container .more-info-header p {
+header .main-header .container .more-info-header a, header .main-header .container .more-info-header p, header .main-header .container .more-desktop a, header .main-header .container .more-desktop p {
   font-size: var(--fz20);
   margin: 0;
   padding: 0;
   color: #FFFFFF;
 }
-header .main-header .container .more-info-header .item-m {
+header .main-header .container .more-info-header .item-m, header .main-header .container .more-desktop .item-m {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
 }
-header .main-header .container .more-info-header .item-m.item-m-language {
+header .main-header .container .more-info-header .item-m .icon, header .main-header .container .more-desktop .item-m .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+header .main-header .container .more-info-header .item-m.item-m-language, header .main-header .container .more-desktop .item-m.item-m-language {
   text-transform: uppercase;
   position: relative;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul {
+header .main-header .container .more-info-header .item-m.item-m-language .icon, header .main-header .container .more-desktop .item-m.item-m-language .icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul {
   margin: 0;
   padding: 0;
   background: #FFFFFF;
@@ -412,7 +464,7 @@ header .main-header .container .more-info-header .item-m.item-m-language .select
   left: 0;
   list-style: none;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li {
   user-select: none;
   padding: 20px;
   margin: 0;
@@ -420,26 +472,26 @@ header .main-header .container .more-info-header .item-m.item-m-language .select
   justify-content: space-between;
   gap: 100px;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li p {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li p, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li p {
   margin: 0;
   color: #000000;
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:hover {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:hover, header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li:hover {
   background: rgba(0, 0, 0, 0.05);
 }
-header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:nth-of-type(2) {
+header .main-header .container .more-info-header .item-m.item-m-language .select-language ul li:nth-of-type(2), header .main-header .container .more-desktop .item-m.item-m-language .select-language ul li:nth-of-type(2) {
   border-top: 1px solid #D9D9D9;
   border-bottom: 1px solid #D9D9D9;
 }
-header .main-header .container .more-info-header .item-m.item-m-language:hover .select-language ul {
+header .main-header .container .more-info-header .item-m.item-m-language:hover .select-language ul, header .main-header .container .more-desktop .item-m.item-m-language:hover .select-language ul {
   visibility: visible;
 }
-header .main-header .container .more-info-header .contact-container {
+header .main-header .container .more-info-header .contact-container, header .main-header .container .more-desktop .contact-container {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-header .main-header .container .more-info-header .contact-container .phone {
+header .main-header .container .more-info-header .contact-container .phone, header .main-header .container .more-desktop .contact-container .phone {
   padding: 10px 20px;
   border: 2px solid #FFFFFF;
   border-radius: 100px;
@@ -447,6 +499,10 @@ header .main-header .container .more-info-header .contact-container .phone {
 header .main-header.sticky,
 header .main-header.static {
   background: #FFFFFF;
+}
+header .main-header.sticky .burget-menu div,
+header .main-header.static .burget-menu div {
+  background: #000000;
 }
 header .main-header.sticky a, header .main-header.sticky p, header .main-header.sticky span,
 header .main-header.static a,
@@ -468,19 +524,19 @@ main.mb-main {
   margin-bottom: 110px;
 }
 
-main.no-mt {
-  margin-top: 0;
+main.no-pt {
+  padding-top: 0;
 }
 
 main {
-  margin-top: 178px;
+  padding-top: 183px;
+}
+main section .landing-section, main section .calendar-stock-section {
+  padding-top: 178px;
 }
 main section .landing-section .container, main section .calendar-stock-section .container {
   position: relative;
   height: 100%;
-  margin-top: 218px;
-  margin-bottom: 170px;
-  overflow: hidden;
 }
 main section .landing-section .landing-container, main section .calendar-stock-section .landing-container {
   display: flex;
@@ -488,10 +544,83 @@ main section .landing-section .landing-container, main section .calendar-stock-s
   align-items: center;
   gap: 20vh;
   width: fit-content;
-  overflow: hidden;
   margin: 0 auto;
 }
-main section .landing-section, main section .calendar-stock-section {
+main section .landing-section {
+  background-image: url(../images/backgrounds/landing-bg.jpg);
+  height: 1100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main section .landing-section .container {
+  position: relative;
+  height: 100%;
+}
+main section .landing-section .landing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  width: fit-content;
+  margin: 0 auto;
+}
+main section .landing-section .landing-container .landing-text {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: var(--fz144);
+  line-height: 90%;
+  margin-top: 50px;
+}
+main section .landing-section .landing-container .calendar-section .calendar {
+  padding: 35px;
+  background: #FFFFFF;
+  width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main section .landing-section .landing-container .calendar-section .calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+main section .landing-section .landing-container .calendar-section .calendar .calendar-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #D9D9D9;
+}
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fz20);
+  color: rgba(0, 0, 0, 0.4);
+}
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
+  font-size: var(--fz48);
+  color: #0D674C;
+}
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
+  width: 30% !important;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+}
+main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
+  width: 20% !important;
+}
+main section .calendar-stock-section {
   background-image: url(../images/backgrounds/landing-bg.jpg);
   height: 100vh;
   background-repeat: no-repeat;
@@ -503,27 +632,29 @@ main section .landing-section, main section .calendar-stock-section {
   align-items: center;
   justify-content: center;
 }
-main section .landing-section .container, main section .calendar-stock-section .container {
+main section .calendar-stock-section .container {
   position: relative;
   height: 100%;
   margin-top: 218px;
   margin-bottom: 170px;
+  overflow: hidden;
 }
-main section .landing-section .landing-container, main section .calendar-stock-section .landing-container {
+main section .calendar-stock-section .landing-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20vh;
   width: fit-content;
   margin: 0 auto;
+  overflow: hidden;
 }
-main section .landing-section .landing-container .landing-text, main section .calendar-stock-section .landing-container .landing-text {
+main section .calendar-stock-section .landing-container .landing-text {
   text-align: center;
   color: #FFFFFF;
   font-size: var(--fz144);
   line-height: 90%;
 }
-main section .landing-section .landing-container .calendar-section .calendar, main section .calendar-stock-section .landing-container .calendar-section .calendar {
+main section .calendar-stock-section .landing-container .calendar-section .calendar {
   padding: 35px;
   background: #FFFFFF;
   width: 720px;
@@ -531,39 +662,39 @@ main section .landing-section .landing-container .calendar-section .calendar, ma
   flex-direction: column;
   gap: 20px;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-header, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-header {
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-footer, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-footer {
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-footer {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide {
   display: flex;
   flex-direction: column;
   padding: 10px;
   border: 1px solid #D9D9D9;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-date {
   display: flex;
   justify-content: space-between;
   font-size: var(--fz20);
   color: rgba(0, 0, 0, 0.4);
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .home-calendar-slide .home-calendar-sale {
   font-size: var(--fz48);
   color: #0D674C;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active, main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide-active {
   width: 30% !important;
   background: rgba(0, 0, 0, 0.05);
   border: none;
 }
-main section .landing-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active), main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
+main section .calendar-stock-section .landing-container .calendar-section .calendar .calendar-body .home-calendar-swiper .swiper-slide:not(.swiper-slide-active) {
   width: 20% !important;
 }
 main section .calendar-stock-section {
@@ -575,16 +706,13 @@ main section .calendar-stock-section .container {
 }
 main section .landing-section .landing-container .calendar-section, main section .calendar-stock-section .landing-container .calendar-section {
   position: relative;
-  transition: all 0.2s ease-in-out;
 }
 main section .landing-section .landing-container .calendar-section .calendar-body-big, main section .calendar-stock-section .landing-container .calendar-section .calendar-body-big {
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
   height: 0;
 }
 main section .landing-section .landing-container .calendar-section .calendar-big, main section .calendar-stock-section .landing-container .calendar-section .calendar-big {
   z-index: -1;
-  transition: all 0.2s ease-in-out;
   background: #E5E5E5;
   position: absolute;
   padding: 43px 30px 28px;
@@ -662,7 +790,6 @@ main section .landing-section .landing-container .calendar-section .calendar-big
 main section .landing-section .calendar-section.open, main section .calendar-stock-section .calendar-section.open {
   background: #FFFFFF;
   transform: translateX(-540px);
-  transition: all 0.2s ease-in-out;
 }
 main section .landing-section .calendar-section.open .calendar-big, main section .calendar-stock-section .calendar-section.open .calendar-big {
   left: 100%;
@@ -709,6 +836,7 @@ main section .landing-section .landing-container.open, main section .calendar-st
 }
 main section .brand-section {
   padding: 60px 0;
+  background-color: #FFFFFF;
 }
 main section .brand-section .brand-swiper {
   overflow: hidden;
@@ -752,20 +880,26 @@ main section .our-collection-section .collection-item:nth-of-type(4) {
 main section .stock-section .stock-section-header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 main section .stock-section .stock-section-header .tabs-nav {
   display: flex;
   gap: 75px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 main section .stock-section .stock-section-header .tabs-nav li a {
   text-transform: uppercase;
   color: rgba(0, 0, 0, 0.4);
 }
+main section .stock-section .stock-section-header .tabs-nav li a.active {
+  color: #F07106;
+}
 main section .stock-section .stock-body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  gap: 20px;
 }
 main section .stock-section .stock-body .stock-item {
   display: flex;
@@ -812,6 +946,9 @@ main section .stock-section .stock-body .stock-item .stock-body .stock-price .ol
   color: #575757;
   text-decoration: line-through;
   text-decoration-color: #000000;
+}
+main section .video-section {
+  height: 95vh;
 }
 main section .about-section .aboout-container {
   display: grid;
@@ -917,6 +1054,10 @@ main section .page-landing-section .page-landing-container {
   flex-direction: column;
   align-items: center;
 }
+main section .page-landing-section .page-landing-container iframe {
+  width: 100vw;
+  margin-bottom: 100px;
+}
 main section .page-landing-section .page-landing-container .blog-filter {
   margin-top: 20px;
   padding: 18px;
@@ -986,6 +1127,9 @@ main section .page-landing-section .page-landing-container.news {
   max-width: 70vw;
   margin: 0 auto;
 }
+main section .page-landing-section .page-landing-container.mb-80 h1 {
+  margin-bottom: 80px;
+}
 main section .page-landing-section .page-landing-container.mb-40 h1 {
   margin-bottom: 40px;
 }
@@ -1053,15 +1197,22 @@ main section .about-info-section .about-info-container .about-info-text .about-i
   font-size: var(--fz20);
   color: #575757;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 main section .about-info-section .about-info-container .about-info-text .about-info-content .item-a .bulet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
+}
+main section .about-info-section .about-info-container .about-info-text .about-info-content .item-a .bulet img {
+  width: 24px;
+  height: 24px;
 }
 main section .about-info-section .about-info-container .about-info-text .about-info-content:before {
   content: "";
-  height: 98%;
+  height: 90%;
   width: 2px;
   background: #0D674C;
   position: absolute;
@@ -1117,9 +1268,6 @@ main section .sales-section .sales-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
-}
-main section .sales-section .sales-container .sales-img img {
-  object-fit: contain;
 }
 main section .sales-section .sales-container .sales-text {
   display: flex;
@@ -1258,6 +1406,7 @@ main section .landlords-contacts-section .landloars-contacts-container .lc-conta
   padding: 24px 20px;
   background: #FFFFFF;
   display: flex;
+  align-items: center;
   gap: 20px;
   color: #000000;
 }
@@ -1325,6 +1474,7 @@ main section .brands-section .brands-container .brands .item-b {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
 }
 main section .address-section {
   margin-top: 40px;
@@ -1436,6 +1586,7 @@ main section .blog-section .blog-container .news-item {
 }
 main section .blog-section .blog-container .news-item p {
   margin: 0;
+  text-transform: uppercase;
 }
 main section .blog-section .blog-container .news-item .news-img {
   height: 330px;
@@ -1450,6 +1601,8 @@ main section .news-page-section #tabs {
   align-items: center;
 }
 main section .news-page-section #tabs .tabs-nav {
+  padding: 0;
+  margin: 0;
   display: flex;
   gap: 10px;
   align-items: center;
@@ -1457,18 +1610,20 @@ main section .news-page-section #tabs .tabs-nav {
 main section .news-page-section #tabs .tabs-nav li {
   list-style: none;
   white-space: nowrap;
-}
-main section .news-page-section #tabs .tabs-nav li a {
-  color: #000000;
   border-radius: 100px;
   padding: 15px 30px;
   background: rgba(0, 0, 0, 0.2);
+}
+main section .news-page-section #tabs .tabs-nav li a {
+  color: #000000;
   text-transform: uppercase;
   font-size: 24px;
 }
-main section .news-page-section #tabs .tabs-nav li a a.active {
-  color: #FFFFFF;
+main section .news-page-section #tabs .tabs-nav li.active {
   background: #F07106;
+}
+main section .news-page-section #tabs .tabs-nav li.active a {
+  color: #FFFFFF;
 }
 main section .news-page-section #tabs .tabs-nav .tabs-items .news-page-item-container {
   display: grid;
@@ -1488,6 +1643,25 @@ main section .news-page-section #tabs .tabs-nav .tabs-items .news-page-item-cont
   height: 330px;
 }
 main section .news-page-section #tabs .tabs-nav .tabs-items .news-page-item-container .news-item .news-date {
+  opacity: 0.4;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container p {
+  margin: 0;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container a {
+  color: #000000;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container .news-item {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+main section .news-page-section #tabs .tabs-items .news-page-item-container .news-date {
   opacity: 0.4;
 }
 main section .news-item-section .news-item-container {
@@ -1686,6 +1860,8 @@ main section .job_opening-section .job_opening-container .divisions .job_opening
   white-space: nowrap;
   text-transform: uppercase;
   opacity: 0.4;
+  width: 100%;
+  text-align: end;
 }
 main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-name {
   text-transform: uppercase;
@@ -1853,6 +2029,9 @@ footer {
   margin-top: -2px;
   background: #000000;
   padding: 80px 0;
+}
+footer ul {
+  padding: 0;
 }
 footer .main-footer {
   display: grid;
@@ -2146,6 +2325,1162 @@ footer .second-footer .item-s:nth-of-type(3) a {
   resize: none;
 }
 
+.new-calendar-section {
+  width: 100%;
+}
+.new-calendar-section .calendar-container {
+  display: flex;
+  justify-content: center;
+}
+.new-calendar-section .calendar-container .main-calendar {
+  padding: 30px;
+  background: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 720px;
+}
+.new-calendar-section .calendar-container .main-calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.new-calendar-section .calendar-container .main-calendar .header .title {
+  text-transform: uppercase;
+  font-size: var(--fz28);
+}
+.new-calendar-section .calendar-container .main-calendar .body p {
+  margin: 0;
+}
+.new-calendar-section .calendar-container .main-calendar .body .calendar-swiper {
+  margin-bottom: 20px;
+}
+.new-calendar-section .calendar-container .main-calendar .body .calendar-swiper .swiper-slide-active {
+  width: 30% !important;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+}
+.new-calendar-section .calendar-container .main-calendar .body .calendar-swiper .swiper-slide:not(.swiper-slide-active) {
+  width: 20% !important;
+}
+.new-calendar-section .calendar-container .main-calendar .body .calendar-swiper .item-c {
+  padding: 10px;
+  border: 1px solid #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.new-calendar-section .calendar-container .main-calendar .body .calendar-swiper .item-c .header {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.4;
+}
+.new-calendar-section .calendar-container .main-calendar .body .calendar-swiper .item-c .body .sale {
+  color: #0D674C;
+  font-size: var(--fz48);
+}
+.new-calendar-section .calendar-container .main-calendar .body .address-swiper {
+  display: flex;
+  align-items: center;
+}
+.new-calendar-section .calendar-container .main-calendar .body .address-swiper .address-slide span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.new-calendar-section .calendar-container .main-calendar .body .address-swiper .address-prev,
+.new-calendar-section .calendar-container .main-calendar .body .address-swiper .address-next {
+  position: absolute;
+  z-index: 2;
+}
+.new-calendar-section .calendar-container .main-calendar .body .address-swiper .address-next {
+  right: 0;
+}
+.new-calendar-section .calendar-container .main-calendar .body .more-info-calendar {
+  display: none;
+}
+.new-calendar-section .calendar-container .main-calendar .body .more-info-calendar .more-info-calendar-swiper {
+  padding: 54px 0 40px;
+  margin-top: 20px;
+}
+.new-calendar-section .calendar-container .main-calendar .body .more-info-calendar .more-info-calendar-swiper .more-info-calendar-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.new-calendar-section .calendar-container .main-calendar .body .more-info-calendar .more-info-calendar-swiper .more-info-calendar-slide p, .new-calendar-section .calendar-container .main-calendar .body .more-info-calendar .more-info-calendar-swiper .more-info-calendar-slide span {
+  color: #FFFFFF;
+}
+.new-calendar-section .calendar-container .main-calendar .body .more-info-calendar .more-info-calendar-swiper .more-info-calendar-slide .week {
+  text-transform: uppercase;
+  font-size: var(--fz48);
+  margin-bottom: 10px;
+}
+.new-calendar-section .calendar-container .main-calendar .body .more-info-calendar .more-info-calendar-swiper .more-info-calendar-slide .date-section {
+  display: flex;
+  gap: 20px;
+}
+.new-calendar-section .calendar-container .main-calendar .body .more-info-calendar .more-info-calendar-swiper .more-info-calendar-slide .sale {
+  font-size: var(--fz144);
+}
+.new-calendar-section .calendar-container .footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+.new-calendar-section .calendar-container .footer .all-calendar {
+  border-radius: 100px;
+  padding: 15px 0;
+  border: 2px solid #D9D9D9;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fz24);
+}
+.new-calendar-section .calendar-container .footer .btn {
+  font-size: var(--fz24);
+}
+.new-calendar-section .calendar-container .big-calendar {
+  padding: 43px 0 28px;
+  background: #e5e5e5;
+  margin-left: -2px;
+  display: none;
+}
+.new-calendar-section .calendar-container .big-calendar .title {
+  padding: 0 30px;
+  text-transform: uppercase;
+  font-size: var(--fz28);
+  color: #575757;
+  margin-bottom: 32px;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .weeks {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+  padding: 10px 30px;
+  gap: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .weeks .item-w {
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 20px;
+  padding: 0 30px;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s {
+  padding: 10px 11px 0;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s .header {
+  opacity: 0.4;
+  width: 100%;
+  text-align: end;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s .body {
+  line-height: 120%;
+  color: #0D674C;
+  font-size: var(--fz48);
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.empty {
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.empty .body, .new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.empty .header {
+  opacity: 1;
+  color: #575757;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.new-clothe .body {
+  color: #F07106;
+  font-size: var(--fz24);
+  text-transform: uppercase;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.today {
+  background: #0D674C !important;
+}
+.new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.today .body, .new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.today .header {
+  color: #FFFFFF !important;
+  opacity: 1;
+}
+.new-calendar-section .calendar-container.open {
+  transform: translateY(-400px);
+}
+.new-calendar-section .calendar-container.open .big-calendar {
+  display: block;
+}
+.new-calendar-section .calendar-container.open .header .title {
+  font-size: var(--fz48);
+}
+.new-calendar-section .calendar-container.open .body .more-info-calendar {
+  display: block;
+}
+
+.new-calendar-section.mobile.open {
+  transform: translateY(-200px);
+}
+.new-calendar-section.mobile.open .body > .main-calendar {
+  display: none;
+}
+.new-calendar-section.mobile.open .big-calendar {
+  display: flex !important;
+}
+
+@media (min-width: 280px) {
+  .new-calendar-section.mobile {
+    --container: 90vw;
+  }
+}
+@media (min-width: 1000px) {
+  .new-calendar-section.mobile {
+    --container: 920px;
+  }
+}
+@media (min-width: 1280px) {
+  .new-calendar-section.mobile {
+    --container: 1100px;
+  }
+}
+.new-calendar-section.mobile > .main-calendar {
+  padding: 20px;
+  background: #FFFFFF;
+  max-width: var(--container);
+}
+.new-calendar-section.mobile > .main-calendar > .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.new-calendar-section.mobile > .main-calendar > .header .title {
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .today-mobile-calendar .current-day {
+  padding: 10px;
+  background: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .today-mobile-calendar .current-day p {
+  margin: 0;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .today-mobile-calendar .current-day .header p {
+  opacity: 0.4;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .today-mobile-calendar .current-day .body {
+  color: #0D674C;
+  font-size: 48px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .calendar-mobile-swiper {
+  margin-top: 10px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .calendar-mobile-swiper .calendar-slide {
+  padding: 10px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .calendar-mobile-swiper .calendar-slide p {
+  margin: 0;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .calendar-mobile-swiper .calendar-slide .header {
+  opacity: 0.4;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .main-calendar .calendar-mobile-swiper .calendar-slide .body .sale {
+  color: #0D674C;
+  font-size: 24px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar {
+  display: none;
+  flex-direction: column;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .monthe-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 30px 0;
+  background-size: cover;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .monthe-container .month {
+  font-size: 48px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales, .new-calendar-section.mobile > .main-calendar > .body > .big-calendar .week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 9px 10px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .no-container {
+  width: calc(100% + 40px);
+  padding: 10px 20px;
+  margin-left: -20px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .week {
+  border-top: 1px solid #D9D9D9;
+  border-bottom: 1px solid #D9D9D9;
+  text-transform: uppercase;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .week .item-w {
+  font-size: 14px;
+  opacity: 0.4;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales {
+  background: #e5e5e5;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 9px 10px;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s {
+  padding: 3px 1px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s > .header {
+  font-size: 12px;
+  opacity: 0.4;
+  width: 100%;
+  text-align: end;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s .body {
+  line-height: 120%;
+  color: #0D674C;
+  font-size: 14px;
+  text-align: center;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s.empty {
+  border: none;
+  background: rgba(0, 0, 0, 0.05);
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s.empty .body, .new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s.empty .header {
+  opacity: 1;
+  color: #575757;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s.new-clothe .body {
+  color: #F07106;
+  text-transform: uppercase;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s.today {
+  background: #0D674C !important;
+}
+.new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s.today .body, .new-calendar-section.mobile > .main-calendar > .body > .big-calendar .sales .item-s.today .header {
+  color: #FFFFFF !important;
+  opacity: 1;
+}
+.new-calendar-section.mobile > .main-calendar > .body .address-swiper {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.new-calendar-section.mobile > .main-calendar > .body .address-swiper .address-slide span {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.new-calendar-section.mobile > .main-calendar > .body .address-swiper .address-prev,
+.new-calendar-section.mobile > .main-calendar > .body .address-swiper .address-next {
+  position: absolute;
+  z-index: 2;
+}
+.new-calendar-section.mobile > .main-calendar > .body .address-swiper .address-next {
+  right: 0;
+}
+.new-calendar-section.mobile > .main-calendar .footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.new-calendar-section.mobile > .main-calendar .footer .all-calendar {
+  border-radius: 100px;
+  padding: 15px 0;
+  border: 2px solid #D9D9D9;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fz24);
+}
+.new-calendar-section.mobile > .main-calendar .footer .btn {
+  padding: 15px 0 !important;
+  font-size: var(--fz24);
+}
+
+@media screen and (max-width: 1919px) {
+  main section .sales-section .sales-container .sales-img img {
+    object-position: left;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(1) {
+    grid-column: span 2;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(3) {
+    grid-column: span 3;
+  }
+  header .main-header .container .more-desktop {
+    display: flex !important;
+  }
+  header .main-header .container .more-info-header .item-m {
+    display: none;
+  }
+  header .main-header .container.desctop .burget-menu {
+    display: flex;
+  }
+  header .main-header .container.desctop nav {
+    display: none !important;
+  }
+  header .main-header .container.mobile {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 132px 1fr 1fr;
+  }
+  header .main-header .container.mobile .header-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  header .main-header .container.mobile .item-m.item-m-language {
+    position: relative;
+  }
+  header .main-header .container.mobile .item-m.item-m-language > .select-language {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 1680px) {
+  :root {
+    --fz14: 14px;
+    --fz16: 16px;
+    --fz18: 18px;
+    --fz20: 20px;
+    --fz24: 24px;
+    --fz28: 28px;
+    --fz36: 36px;
+    --fz48: 48px;
+    --fz64: 64px;
+    --fz96: 96px;
+    --fz144: 144px;
+    --ln120: 120%;
+    --container: 1800px;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(1),
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(4) {
+    grid-column: span 1;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(3) {
+    grid-column: span 2;
+  }
+  .new-calendar-section .calendar-container.open {
+    transform: translateY(-310px);
+  }
+  .new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.new-clothe .body {
+    font-size: 18px;
+  }
+  .new-calendar-section .calendar-container .big-calendar .calendar .sales {
+    gap: 10px;
+  }
+  .new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s .body {
+    font-size: 32px;
+  }
+  .new-calendar-section .calendar-container .big-calendar .calendar {
+    justify-content: space-between;
+  }
+  .new-calendar-section .calendar-container .main-calendar {
+    max-width: 650px;
+  }
+  main section .landing-section .landing-container .landing-text {
+    font-size: 96px;
+  }
+  .new-calendar-section .calendar-container .main-calendar .footer {
+    grid-template-columns: 1fr;
+  }
+  header .main-header .container .more-info-header .item-m {
+    display: none;
+  }
+  header .main-header .container.desctop .burget-menu {
+    display: flex;
+  }
+  header .main-header .container.desctop nav {
+    display: none;
+  }
+  header .main-header .container.mobile {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 132px 1fr 1fr;
+  }
+  header .main-header .container.mobile .header-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  header .main-header .container.mobile .item-m.item-m-language {
+    position: relative;
+  }
+  header .main-header .container.mobile .item-m.item-m-language > .select-language {
+    position: absolute;
+    visibility: hidden;
+  }
+  footer .footer-img img {
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 1440px) {
+  :root {
+    --fz14: 14px;
+    --fz16: 16px;
+    --fz18: 18px;
+    --fz20: 20px;
+    --fz24: 22px;
+    --fz28: 26px;
+    --fz36: 32px;
+    --fz48: 42px;
+    --fz64: 58px;
+    --fz96: 82px;
+    --fz144: 96px;
+    --ln120: 120%;
+    --container: 1800px;
+  }
+  main section .about-info-section .about-info-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main section .form-recall-section .form-recall-container {
+    gap: 200px;
+  }
+  .new-calendar-section .calendar-container .main-calendar .body .calendar-swiper .item-c .body .sale {
+    font-size: 32px;
+  }
+  .new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s .body {
+    font-size: 24px;
+  }
+  .new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s .header {
+    font-size: 14px;
+  }
+  .new-calendar-section .calendar-container .main-calendar {
+    max-width: 610px;
+  }
+  .new-calendar-section .calendar-container .big-calendar .calendar .sales .item-s.new-clothe .body {
+    font-size: 16px;
+  }
+  main section .landing-section .landing-container {
+    gap: 90px;
+  }
+  main section .stock-section .stock-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 34px;
+    margin-bottom: 20px;
+  }
+  main section .stock-section .stock-section-header .section-title {
+    margin: 0;
+  }
+  main section .stock-section .stock-body .stock-item .stock-img {
+    height: 470px;
+  }
+  main section .about-section .aboout-container.desktop {
+    display: none;
+  }
+  main section .about-section .aboout-container.mobile {
+    display: flex !important;
+    flex-direction: column;
+  }
+  main section .about-section .aboout-container.mobile p {
+    margin: 0;
+    margin-bottom: 20px;
+    opacity: 0.4;
+  }
+  main section .about-section .aboout-container.mobile .footer-container {
+    width: 90%;
+    margin: -70px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main section .about-section .aboout-container.mobile .footer-container .img {
+    margin-bottom: 10px;
+    height: 500px;
+  }
+  main section .about-section .aboout-container.mobile .footer-container p {
+    margin: 10px 0 20px;
+  }
+}
+@media screen and (max-width: 1380px) {
+  main section .job_opening-section .job_opening-container .divisions .job_opening-items {
+    grid-template-columns: 1fr;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main section .form-recall-section .form-recall-container {
+    gap: 100px;
+  }
+  .new-calendar-section.desktop {
+    display: none;
+  }
+  .new-calendar-section.mobile {
+    display: block !important;
+  }
+  footer ul {
+    padding: 0;
+  }
+  footer .main-footer {
+    grid-template-columns: 1fr;
+    gap: 47px;
+  }
+  footer .second-footer {
+    grid-template-columns: 1fr;
+  }
+  footer .second-footer p {
+    text-align: start !important;
+  }
+}
+@media screen and (max-width: 1280px) {
+  :root {
+    --fz14: 12px;
+    --fz16: 14px;
+    --fz18: 16px;
+    --fz20: 18px;
+    --fz24: 16px;
+    --fz28: 26px;
+    --fz36: 36px;
+    --fz48: 42px;
+    --fz64: 58px;
+    --fz96: 64px;
+    --fz144: 48px;
+    --ln120: 120%;
+    --container: 1800px;
+  }
+  main section .form-recall-section.similar .form-recall-container {
+    gap: 140px;
+  }
+  main section .left-text-section .left-text-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(3) {
+    grid-column: span 1;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(4) {
+    grid-column: span 2;
+  }
+  main section .sales-section .sales-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  main section .form-recall-section .form-recall-container .form-recall-form {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  main section .form-recall-section .form-recall-container .form-recall-form .btn {
+    margin-top: 10px;
+  }
+  main section .form-recall-section .form-recall-container {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+  main section .about-info-section .about-info-container {
+    grid-template-columns: 1fr;
+    gap: 140px;
+  }
+  header .main-header .container {
+    gap: 80px;
+  }
+  main section .our-collection-section {
+    grid-template-rows: 540px 200px;
+  }
+  main section .our-collection-section .collection-item {
+    padding: 25px 60px;
+  }
+  main section .stock-section .stock-body {
+    grid-template-columns: 1fr;
+  }
+  main section .news-section .news-container {
+    grid-template-columns: 1fr;
+  }
+  main section .news-section .news-container .news-img {
+    height: 300px;
+  }
+  main section .news-section .news-container .news-img img {
+    object-position: center;
+  }
+}
+@media screen and (max-width: 1000px) {
+  main section .brands-section .brands-container .brands {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main section .address-section .addresses-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  main section .reviews-section .reviews-container,
+  main section .blog-section .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main section .news-page-section #tabs .tabs-nav {
+    flex-direction: column;
+  }
+  main section .page-landing-section .page-landing-container iframe {
+    height: 500px;
+  }
+  main section .landing-section .landing-container {
+    gap: 80px;
+  }
+  header .container .more-desktop {
+    gap: 20px !important;
+  }
+  header .container.desctop .item-m:last-child .icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .container.desctop .item-m:last-child #headerTime {
+    display: none;
+  }
+  header .btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 820px) {
+  main section .news-page-section #tabs .tabs-items .news-page-item-container,
+  main section .brands-section .brands-container .brands {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main section .our-collection-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  main section .our-collection-section .collection-item {
+    height: 307px;
+    background-position: center;
+  }
+  main section .our-collection-section .collection-item .collection-name {
+    font-size: var(--fz36);
+  }
+}
+@media screen and (max-width: 768px) {
+  main section .brands-section .brands-container .search-brand input {
+    grid-column: span 4;
+  }
+  main section .brands-section .brands-container .brands .item-b {
+    height: 434px;
+  }
+  main section .brands-section .brands-container {
+    gap: 20px;
+  }
+  main section .brands-section .brands-container .brands {
+    grid-template-columns: 1fr;
+  }
+  .map-section iframe {
+    height: 422px;
+  }
+  .map-section .address-section {
+    margin-top: 20px;
+  }
+  main section .error-page-section .error-page-container .error-text p {
+    font-size: 16px;
+  }
+  main section .error-page-section .error-page-container {
+    gap: 20px;
+    align-items: stretch;
+  }
+  main section .error-page-section {
+    margin-top: 55px;
+  }
+  main section .blog-section .blog-container .news-item .news-date {
+    font-size: 12px;
+  }
+  main section .blog-section .blog-container .news-item p {
+    font-size: 16px;
+  }
+  main section .blog-section .blog-container .news-item .news-img {
+    height: 188px;
+  }
+  .accordion-header {
+    margin: 20px 0 !important;
+  }
+  .accordion-collapse {
+    margin-top: -10px;
+  }
+  main section .news-page-section #tabs {
+    gap: 26px;
+  }
+  main section .news-page-section #tabs .tabs-nav li {
+    padding: 10px 20px;
+  }
+  main section .news-page-section #tabs .tabs-nav li a {
+    font-size: 16px;
+  }
+  main section .tabs-items.faq .accordion-body p {
+    font-size: 14px;
+  }
+  main section .tabs-items.faq .accordion-button {
+    font-size: 24px;
+  }
+  main section .tabs-items.faq .accordion,
+  main section .blog-section .blog-container {
+    grid-template-columns: 1fr;
+  }
+  main section .landing-section .landing-container {
+    gap: 30px;
+  }
+  main section .news-item-section .news-item-container .socials .ya-share2__container_mobile.ya-share2__container_size_l .ya-share2__icon {
+    background-size: 24px 24px !important;
+    height: 32px;
+    width: 32px;
+  }
+  main section .news-item-section .news-item-container article p {
+    font-size: 14px;
+  }
+  main section .news-item-section .news-item-container .news-item-img {
+    height: 190px;
+  }
+  main section .page-landing-section .page-landing-container.news-item h1 {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+  main section .landlords-img .img img {
+    object-position: left;
+  }
+  .custom-input {
+    font-size: 16px;
+  }
+  main section .form-recall-section.similar .form-recall-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  main section .left-text-section .left-text-container .img {
+    padding: 20px 14px;
+  }
+  main section .left-text-section .left-text-container .img p {
+    font-size: 24px;
+  }
+  main section .left-text-section .left-text-container .content .text {
+    font-size: 16px;
+  }
+  main section .left-text-section .left-text-container .content {
+    gap: 20px;
+  }
+  main section .left-text-section .left-text-container .content .title {
+    font-size: 24px;
+  }
+  footer .main-footer .mailing .description {
+    max-width: none;
+  }
+  footer {
+    padding-top: 27px;
+  }
+  footer .main-footer .mailing .mailing-title {
+    font-size: 36px;
+  }
+  main section .prefooter-section .prefooter-container.old_fabrick .prefooter-title {
+    font-size: 36px;
+  }
+  main section .sales-section .sales-container .sales-text .sales-desctiption {
+    font-size: 24px;
+  }
+  main section .page-landing-section .page-landing-container h1.with-description {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  main section .page-landing-section .page-landing-container .description {
+    font-size: 16px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c:last-child span:last-child {
+    font-size: 36px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c:last-child span:first-child {
+    font-size: 24px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c .contact .phone {
+    font-size: 18px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c .contact .name {
+    font-size: 16px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c > p {
+    font-size: 16px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c {
+    padding: 20px;
+  }
+  main section .landlords-contacts-section {
+    padding-top: 20px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .title {
+    font-size: 36px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-header {
+    grid-template-columns: 1fr;
+    margin-bottom: 20px;
+  }
+  main section .landlords-contacts-section .landloars-contacts-container .lc-header .city-list {
+    display: none;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto !important;
+  }
+  main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c, main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(4) {
+    grid-column: auto;
+  }
+  main section .sales-section .sales-container .sales-text .sales-content {
+    font-size: 16px;
+  }
+  main section .sales-section .sales-container .sales-img .desktop {
+    display: none;
+  }
+  main section .sales-section .sales-container .sales-img .mobile {
+    display: block !important;
+  }
+  main section .sales-section .sales-container .sales-text .sales-title.old_fabric {
+    font-size: 36px;
+  }
+  main section .sales-section .sales-container .sales-text .sales-title {
+    font-size: 32px;
+  }
+  main section .landlords-img {
+    margin-top: 35px;
+  }
+  main section .landlords-img .img {
+    height: 269px;
+  }
+  main section .prefooter-section .prefooter-container .prefooter-conent {
+    font-size: 16px;
+  }
+  main section .prefooter-section .prefooter-container .prefooter-title {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  main section .prefooter-section {
+    padding: 20px;
+  }
+  main section .form-recall-section .form-recall-container .form-recall-info .form-recall-title {
+    font-size: 36px;
+  }
+  section .section-title {
+    font-size: 36px;
+  }
+  main section .about-info-section .about-info-container .about-info-text {
+    gap: 20px;
+  }
+  .mt-section {
+    margin-top: 20px;
+  }
+  main section .about-info-section .about-info-container {
+    padding-bottom: 0;
+  }
+  main section .sales-section .sales-container .sales-text {
+    gap: 20px;
+  }
+  main section .form-recall-section .form-recall-container .form-recall-form .description {
+    font-size: 12px;
+  }
+  main section .page-landing-section .page-landing-container h1 {
+    margin-bottom: 45px;
+    font-size: 48px;
+  }
+  main section .form-recall-section .form-recall-container .form-recall-info .form-recall-description {
+    font-size: 16px;
+  }
+  main section .page-landing-section .page-landing-container iframe {
+    height: 298px;
+    margin-bottom: 20px;
+  }
+  main section .landing-section .landing-container .landing-text {
+    font-size: 48px;
+  }
+  main section .landing-section {
+    height: 836px;
+  }
+  header .main-header .container.desctop {
+    display: none;
+  }
+  header .main-header .container.mobile {
+    display: grid !important;
+  }
+  header .main-header .container.mobile .burget-menu {
+    display: flex !important;
+    gap: 4px;
+  }
+  header .main-header .container.mobile .burget-menu div {
+    width: 16px;
+  }
+  main section .map-section .info-block {
+    height: fit-content;
+    top: auto;
+    bottom: 0;
+    padding: 20px;
+  }
+  main section .map-section .info-block .section-title {
+    display: none;
+  }
+  main section .landing-section .landing-container .calendar-section {
+    display: none;
+  }
+  main section .landing-section .landing-container .calendar-section .calendar {
+    padding: 20px;
+  }
+  main section .stock-section .stock-section-header .tabs-nav {
+    gap: 30px;
+  }
+  header .main-header .container.mobile {
+    gap: 0;
+  }
+  .header-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .main-header .container.mobile .burget-menu {
+    align-items: center;
+  }
+  footer .main-footer .footer-content {
+    gap: 40px;
+  }
+  footer .main-footer .footer-content nav:first-child ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+  footer .main-footer .footer-content nav:first-child ul li:last-child {
+    display: none;
+  }
+  footer .main-footer .footer-content nav:last-child {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+  footer .main-footer .footer-content nav:last-child ul li a {
+    font-size: var(--fz16);
+  }
+  footer .main-footer .footer-content nav:last-child .footer-img {
+    grid-column: span 2;
+  }
+}
+@media screen and (max-width: 668px) {
+  main section .reviews-section .reviews-container {
+    grid-template-columns: 1fr;
+  }
+  main {
+    padding-top: 125px;
+  }
+  main section .about-info-section .about-info-container .about-info-img .item-a:nth-of-type(2) {
+    height: 132px;
+    width: 198px;
+  }
+  main section .about-info-section .about-info-container .about-info-img .item-a:nth-of-type(3) {
+    width: 170px;
+    height: 114px;
+  }
+  main section .about-info-section .about-info-container {
+    gap: 60px;
+  }
+  :root {
+    --fz48: 36px;
+  }
+  main section .landing-section {
+    padding-top: 125px;
+  }
+  .mt-section {
+    margin-top: 40px;
+  }
+  header .top-baner.open {
+    height: 45px;
+  }
+  header .top-baner .container span {
+    font-size: 12px;
+  }
+  header .top-baner .container i {
+    display: none;
+  }
+  header .main-header {
+    padding: 20px 0;
+  }
+  footer .second-footer .item-s:nth-of-type(3) {
+    flex-direction: column;
+  }
+  main section .our-collection-section .collection-item {
+    padding: 25px 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main section .address-section .addresses-container .item-a .header {
+    flex-direction: column;
+    gap: 20px;
+  }
+  main section .news-page-section #tabs .tabs-items .news-page-item-container {
+    grid-template-columns: 1fr;
+  }
+  main section .news-page-section #tabs .tabs-items .news-page-item-container .news-img {
+    height: 190px;
+  }
+  main section .map-section .info-block {
+    width: 90vw;
+  }
+  main section .stock-section .stock-section-header .tabs-nav::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  main section .stock-section .stock-section-header .tabs-nav {
+    width: 100%;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 375px) {
+  main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c {
+    align-items: stretch;
+  }
+  .new-calendar-section.mobile > .main-calendar .body > .main-calendar .calendar-mobile-swiper .calendar-slide {
+    padding: 8px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mt-section.mt-20 {
+    margin-top: 20px;
+  }
+  .mt-section.mt-40 {
+    margin-top: 40px;
+  }
+  .page-landing-container.mb-80 h1 {
+    margin-bottom: 40px !important;
+  }
+  main.mb-main {
+    margin-bottom: 40px;
+  }
+}
 /*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -2786,29 +4121,39 @@ progress {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .container-sm, .container {
     max-width: 540px;
   }
-}
-@media (min-width: 768px) {
+} */
+@media (min-width: 280px) {
   .container-md, .container-sm, .container {
-    max-width: 720px;
+    max-width: 90vw;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 960px;
+    max-width: 920px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 1100px;
+  }
+}
+@media (min-width: 1380px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1440px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1080px;
+    max-width: 1320px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1680px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1280px;
+    max-width: 1560px;
   }
 }
 @media (min-width: 1920px) {
