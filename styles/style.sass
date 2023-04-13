@@ -1,4 +1,4 @@
-:root
+\:root
   --fz14: 14px
   --fz16: 16px
   --fz18: 18px
@@ -18,8 +18,8 @@ $grey: #D9D9D9
 $gray: #575757
 $black: #000000
 ::selection
-  background-color: $orange/* Здесь можно указать цвет фона при выделении */
-  color: #ffffff /* Здесь можно указать цвет текста при выделении */
+  background-color: $orange
+  color: #ffffff
 
 *, *::before, *::after
   box-sizing: border-box
@@ -104,6 +104,7 @@ img
 
 .mt-section
   margin-top: 100px
+
 .mt-section.mt-80
   margin-top: 80px
 
@@ -117,13 +118,16 @@ section .section-title
   align-items: center
   position: relative
   gap: 10px
+
   label
     width: 20px
     height: 20px
     background: rgba(0, 0, 0, 0.05)
     border: 1px solid rgba(0, 0, 0, 0.1)
+
   .input
     display: none
+
   .input:checked ~ label:after
     content: url(../images/icons/agree.png)
     width: 20px
@@ -134,16 +138,20 @@ section .section-title
 
 .custom-input.black
   background-color: $black
+
 .custom-input.gray::placeholder
   color: rgba(0, 0, 0, .2)
+
 .custom-input.gray
   background: rgba(0, 0, 0, 0.05)
   border: 1px solid rgba(0, 0, 0, 0.1)
   color: $black
+
 .custom-input.green
   background: rgba(255, 255, 255, 0.1)
   border: 1px solid rgba(255, 255, 255, 0.2)
   color: $white
+
 .custom-input.green::placeholder
   opacity: .4
   color: $white
@@ -154,12 +162,15 @@ section .section-title
   padding: 18px
   outline: none
   border: 1px solid rgba(255, 255, 255, 0.2)
+
 .mobile
   display: none !important
+
 .burget-menu
   display: flex
   flex-direction: column
   gap: 5px
+
   div
     width: 30px
     height: 2px
@@ -167,6 +178,7 @@ section .section-title
 
 h1.title-page
   font-size: var(--fz144)
+
 header
   position: fixed
   z-index: 5
@@ -194,6 +206,7 @@ header
         a
           color: $white
           opacity: .4
+
   .top-baner.open
     padding: 15px
     height: 54px
@@ -234,6 +247,7 @@ header
 
           li:first-child
             padding-left: 30px
+
           li
             position: relative
             user-select: none
@@ -250,7 +264,8 @@ header
               padding-top: 10px
               position: absolute
               left: 0
-              >ul
+
+              > ul
                 justify-items: flex-start
                 border: 1px solid $grey
                 padding: 30px
@@ -260,14 +275,16 @@ header
                 grid-template-columns: repeat(2, 1fr)
                 grid-template-rows: repeat(4, 1fr)
 
-                >li:nth-of-type(3)
+                > li:nth-of-type(3)
                   a
                     opacity: .4
+
                 li
                   margin: 0
                   padding: 0
                   user-select: none
                   cursor: pointer
+
                   a
                     text-transform: uppercase
                     color: $black
@@ -282,6 +299,7 @@ header
                   li
                     user-select: none
                     cursor: pointer
+
                     a
                       font-size: var(--fz16)
 
@@ -294,6 +312,7 @@ header
         align-items: center
         justify-content: flex-start !important
         height: 100%
+
         .item-m
           height: 100%
 
@@ -313,6 +332,7 @@ header
           align-items: center
           justify-content: center
           gap: 5px
+
           .icon
             display: flex
             justify-content: center
@@ -323,12 +343,14 @@ header
         .item-m.item-m-language
           text-transform: uppercase
           position: relative
+
           .icon
             width: 20px
             height: 20px
             display: flex
             align-items: center
             justify-content: center
+
           .select-language
             ul
               margin: 0
@@ -340,6 +362,7 @@ header
               top: 100%
               left: 0
               list-style: none
+
               li
                 user-select: none
                 padding: 20px
@@ -347,11 +370,14 @@ header
                 display: flex
                 justify-content: space-between
                 gap: 100px
+
                 p
                   margin: 0
                   color: $black
+
               li:hover
                 background: rgba(0, 0, 0, .05)
+
               li:nth-of-type(2)
                 border-top: 1px solid $grey
                 border-bottom: 1px solid $grey
@@ -371,8 +397,10 @@ header
             padding: 10px 20px
             border: 2px solid $white
             border-radius: 100px
+
   .main-header.sticky
     transition: all .3s ease-in-out
+
   .main-header.sticky,
   .main-header.static
     // transition: all .3s easy-in-out
@@ -390,19 +418,23 @@ header
 
     .phone
       border-color: $black !important
+
   .mobile-menu.open
     display: flex
+
   .mobile-menu
     border-top: 1px solid $grey
     padding: 30px
     background: $white
     display: none
+
     .title
       display: none
       text-transform: uppercase
       color: $forestGreen
       font-size: 36px
       margin-bottom: 30px
+
     .body
       nav ul
         padding: 0
@@ -410,28 +442,33 @@ header
         list-style: none
         display: flex
         justify-content: space-between
+
         li
           a
             color: $black
             text-transform: uppercase
+
         li:last-child
           display: none
 
 main.mb-main
   margin-bottom: 110px
+
 main.no-pt
   padding-top: 0
 
 main
   padding-top: 183px
+
   section
     .landing-section, .calendar-stock-section
       padding-top: 178px
+
       .container
         position: relative
         height: 100%
-        // margin-bottom: 170px
-        // overflow: hidden
+      // margin-bottom: 170px
+      // overflow: hidden
 
       .landing-container
         display: flex
@@ -441,6 +478,7 @@ main
         width: fit-content
         // overflow: hidden
         margin: 0 auto
+
     .landing-section
       background-image: url(../images/backgrounds/landing-bg.jpg)
       height: 1100px
@@ -456,7 +494,7 @@ main
       .container
         position: relative
         height: 100%
-        // margin-bottom: 170px
+      // margin-bottom: 170px
 
       .landing-container
         display: flex
@@ -523,6 +561,7 @@ main
 
                 .swiper-slide:not(.swiper-slide-active)
                   width: 20% !important
+
     .calendar-stock-section
       background-image: url(../images/backgrounds/landing-bg.jpg)
       height: 100vh
@@ -611,6 +650,7 @@ main
     .calendar-stock-section
       background: none
       height: fit-content
+
       .container
         margin: 0
 
@@ -623,6 +663,7 @@ main
             overflow: hidden
             // transition: all .2s ease-in-out
             height: 0
+
           .calendar-big
             z-index: -1
             // transition: all .2s ease-in-out
@@ -636,29 +677,36 @@ main
             display: flex
             flex-direction: column
             gap: 32px
+
             .header
               color: $gray
               font-size: var(--fz28)
               text-transform: uppercase
+
               p
                 margin: 0
+
             .body
               display: flex
               flex-direction: column
               gap: 30px
+
               .week.border-no-padding
                 width: 100%
                 display: grid
                 padding: 10px 0
                 grid-template-columns: repeat(7, 1fr)
                 gap: 20px
+
                 .item-w
                   color: rgba(0, 0, 0, .4)
                   text-transform: uppercase
+
               .sales
                 display: grid
                 grid-template-columns: repeat(7, 1fr)
                 gap: 20px
+
                 .item-s
                   padding: 10px
                   background: $white
@@ -666,60 +714,78 @@ main
                   display: flex
                   justify-content: space-between
                   gap: 5px
+
                   .date
                     color: rgba(0, 0, 0, .4)
+
                   .sale
                     padding-top: 20px
                     color: $forestGreen
                     font-size: var(--fz48)
                     text-transform: uppercase
+
                   .sale.new-clothe
                     color: $orange
                     font-size: var(--fz24)
                     line-height: 120%
+
                 .item-s.today
                   background: $forestGreen
+
                   .date, .sale
                     color: $white
+
                 .item-s.empty
                   background: rgba(0, 0, 0, .05)
+
                   .date, .sale
                     color: $gray
+
       .calendar-section.open
         background: $white
         transform: translateX(calc(((1800px - 720px) / 2) * -1))
         // transition: all .2s ease-in-out
         .calendar-big
           left: 100%
+
         .calendar-body-big
           height: 390px
+
         .calendar-header
           span
             font-size: var(--fz48)
+
         .calendar
           padding: 30px 30px 48px
+
         .detailed-calendar-swiper
           padding: 54px 0
           width: 100%
           margin-top: 10px
+
           .item-day
             display: flex
             flex-direction: column
             align-items: center
             color: $white
+
             .item-day-header
               font-size: 48px
               text-transform: uppercase
+
             .item-day-navigation
               margin-top: 20px
               display: flex
               align-items: center
               gap: 20px
+
             .item-day-sale
               line-height: 120%
               font-size: var(--fz144)
+
       .landing-container.index.open
         position: absolute
+
       .landing-container.open
         width: 100%
 
@@ -729,6 +795,7 @@ main
 
       .brand-swiper
         overflow: hidden
+
         .brand-slide
           filter: invert(100%)
 
@@ -773,7 +840,7 @@ main
 
         .tabs-nav
           display: flex
-          gap: 75px
+          gap: 46px
           list-style: none
           margin: 0
           padding: 0
@@ -781,6 +848,7 @@ main
           li a
             text-transform: uppercase
             color: rgba(0, 0, 0, .4)
+
           li a.active
             color: $orange
 
@@ -946,9 +1014,11 @@ main
         display: flex
         flex-direction: column
         align-items: center
+
         iframe
           width: 100vw
           margin-bottom: 100px
+
         .blog-filter
           margin-top: 20px
           padding: 18px
@@ -956,17 +1026,24 @@ main
           background: rgba(0, 0, 0, 0.05)
           width: 100%
           max-width: 496px
+
           select
             width: 100%
             background: transparent
             border: none
+            outline: none
+            -moz-appearance: none
+            -webkit-appearance: none
+
         .title
           display: flex
           align-items: center
           justify-content: space-between
           width: 100%
+
           h1
             flex: 1
+
         .breadcrumbs
           ul
             list-style: none
@@ -974,6 +1051,7 @@ main
             gap: 10px
             padding: 0
             margin: 20px 0 0 0
+
             li
               color: $black
               opacity: .4
@@ -981,10 +1059,12 @@ main
               display: flex
               align-items: center
               gap: 10px
+
               .icon
                 img
                   width: 9px
                   height: 8px
+
               a
                 color: $black
 
@@ -1018,15 +1098,19 @@ main
       .page-landing-container.mb-80
         h1
           margin-bottom: 80px
+
       .page-landing-container.mb-40
         h1
           margin-bottom: 40px
+
       .page-landing-container.mb-0
         h1
           margin-bottom: 0
+
       .page-landing-container.mb-20
         h1
           margin-bottom: 20px
+
         .btn
           margin-bottom: 80px
 
@@ -1114,9 +1198,9 @@ main
 
       .form-recall-container
         display: grid
-        grid-template-columns: 1fr 2fr
+        grid-template-columns: repeat(2, 1fr)
         align-items: center
-        column-gap: 400px
+        column-gap: 80px !important
 
         .form-recall-info
           display: flex
@@ -1154,10 +1238,58 @@ main
       background: $forestGreen
 
     .sales-section
+      .sales-container.wholesalers
+        .sales-content
+          max-width: 780px
+      .sales-container.old_fabric
+        .sales-content
+          max-width: 530px
       .sales-container
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 80px
+
+        .sales-img
+          background-repeat: no-repeat
+          background-size: cover
+          padding: 30px
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          align-items: flex-start
+          height: 100%
+
+          .present
+            padding: 20px 40px
+            font-size: 48px
+            background: $forestGreen
+            color: $white
+            border-radius: 100px
+
+          .item-s
+            display: flex
+            flex-direction: column
+
+            .name
+              grid-column: span 2
+              color: $black
+              font-size: 48px
+
+            .prices
+              display: flex
+              gap: 12px
+              align-items: center
+
+              .old-price
+                font-size: 24px
+                color: $gray
+                text-decoration: line-through
+                text-decoration-color: $black
+
+              .new-price
+                color: $forestGreen
+                font-size: 24px
+
 
         .sales-text
           display: flex
@@ -1232,7 +1364,7 @@ main
       padding: 60px 0
       margin-bottom: 2px
       background: $black
-      border-bottom: 1px solid $gray
+      border-bottom: 2px solid #1A1A1A
 
       .landloars-contacts-container
         color: $white
@@ -1293,6 +1425,7 @@ main
                 height: 32px
 
             > p
+              margin-top: 0
               margin-bottom: 20px
 
             .contact
@@ -1319,23 +1452,29 @@ main
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 80px
+
         .content
           display: flex
           flex-direction: column
           gap: 40px
+
           p
             margin: 0
+
           .title
             font-size: var(--fz48)
             text-transform: uppercase
+
           .text
             opacity: .4
+
         .img
           padding: 68px 115px
           color: $white
           font-size: var(--fz48)
           text-align: center
           text-transform: uppercase
+
           p
             margin: 0
 
@@ -1344,15 +1483,20 @@ main
         display: flex
         flex-direction: column
         gap: 40px
+
         .search-brand
           display: grid
-          grid-template-columns: repeat(4,1fr)
+          gap: 20px
+          grid-template-columns: repeat(4, 1fr)
+
           input
             grid-column: 2/4
+
         .brands
           display: grid
           grid-template-columns: repeat(4, 1fr)
           gap: 20px
+
           .item-b
             background-repeat: no-repeat
             height: 561px
@@ -1363,10 +1507,12 @@ main
 
     .address-section
       margin-top: 40px
+
       .addresses-container
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 20px
+
         .item-a
           padding: 30px
           border: 1px solid $grey
@@ -1374,23 +1520,29 @@ main
           flex-direction: column
           align-items: flex-start
           gap: 20px
+
           p
             margin: 0
+
           .header
             display: flex
             justify-content: space-between
             width: 100%
+
             .work-time
               opacity: .4
               display: flex
               gap: 10px
               align-items: flex-start
+
               .icon
                 width: 24px
                 height: 24px
+
                 img
                   width: 24px
                   height: 24px
+
           .phone
             color: $black
             border: 1px solid $black
@@ -1402,34 +1554,41 @@ main
         display: flex
         flex-direction: column
         gap: 100px
+
         .item-our-collection
           display: grid
           grid-template-columns: repeat(4, 1fr)
           grid-template-rows: 1fr 350px
           gap: 20px
+
           .item-o:nth-child(6n + 1)
             padding: 40px
             display: flex
             align-items: flex-start
             flex-direction: column
             gap: 20px
+
             .title
               text-transform: uppercase
               font-size: var(--fz64)
               line-height: 120%
               max-width: 433px
+
             .type-collection
               display: flex
               gap: 10px
+
               .item-t
                 padding: 10px 15px
                 border-radius: 100px
                 background: rgba(0, 0, 0, 0.2)
                 text-transform: uppercase
                 cursor: pointer
+
               .item-t.active
                 background: $black
                 color: $white
+
             .descriptio
               margin: 0
               opacity: .4
@@ -1439,6 +1598,7 @@ main
           .item-o:nth-child(6n + 4),
           .item-o:nth-child(6n + 5)
             grid-column: span 2
+
           .item-o
             background-repeat: no-repeat
             background-size: cover
@@ -1449,75 +1609,96 @@ main
         display: grid
         gap: 20px
         grid-template-columns: repeat(3, 1fr)
+
         .news-item
           color: $black
           display: flex
           flex-direction: column
           gap: 10px
+
           p
             margin: 0
             text-transform: uppercase
+
           .news-img
             height: 330px
+
           .news-date
             opacity: .4
+
     .news-page-section
       #tabs
         display: flex
         flex-direction: column
         gap: 80px
         align-items: center
+
         .tabs-nav
           padding: 0
           margin: 0
           display: flex
           gap: 10px
           align-items: center
+
           li
             list-style: none
             white-space: nowrap
             border-radius: 100px
             padding: 15px 30px
             background: rgba(0, 0, 0, .2)
+
             a
               color: $black
               text-transform: uppercase
               font-size: 24px
+
           li.active
             background: $orange
+
             a
               color: $white
+
           .tabs-items
             .news-page-item-container
               display: grid
               gap: 20px
               grid-template-columns: repeat(3, 1fr)
+
               .news-item
                 color: $black
                 display: flex
                 flex-direction: column
                 gap: 10px
+
                 p
                   margin: 0
+
                 .news-img
                   height: 330px
+
                 .news-date
                   opacity: .4
+
         .tabs-items
           .news-page-item-container
             display: grid
             grid-template-columns: repeat(3, 1fr)
-            gap: 20px
+            gap: 60px 20px
+
             p
               margin: 0
+
             a
               color: $black
+
             .news-item
               display: flex
               gap: 10px
               flex-direction: column
+
             .news-date
               opacity: .4
+
     .news-item-section
       .news-item-container
         display: flex
@@ -1525,21 +1706,28 @@ main
         gap: 20px
         max-width: 70vw
         margin: 0 auto
+
         .news-item-img
           height: 503px
+
         article
           p
             margin: 0
             color: rgba(0, 0, 0, .4)
+
             b
               color: $black
+
         .socials
           margin-top: 20px
+
           .ya-share2__container_mobile.ya-share2__container_size_l .ya-share2__icon
             height: 40px
             width: 40px
+
           .ya-share2__container_shape_round.ya-share2__container_size_l .ya-share2__badge
             background-color: $orange
+
             .ya-share2__icon:not(.ya-share2__icon_messenger-contact):not(.ya-share2__icon_more):not(.ya-share2__icon_copy)
               background-size: 32px 32px
 
@@ -1547,6 +1735,7 @@ main
         .news-item-img
           height: 420px
           position: relative
+
         .news-item-img:after
           content: ''
           width: 100%
@@ -1563,26 +1752,32 @@ main
         display: grid
         grid-template-columns: repeat(3, 1fr)
         gap: 20px
+
         .item-r
           display: flex
           flex-direction: column
           gap: 20px
           padding: 30px
           border: 1px solid $grey
+
           .icon
             img
               object-fit: contain
               width: 43px
               height: 43px
+
           p
             margin: 0
+
           p.text-review
             opacity: .4
+
           p.review-name
             font-size: var(--fz28)
 
     .tabs-items.faq
       width: 100%
+
       .accordion-button::after
         background-image: url("../images/icons/plus.svg")
         background-size: 32px 32px
@@ -1604,6 +1799,8 @@ main
         text-transform: uppercase
         font-size: var(--fz36)
         padding: 0
+        justify-content: space-between
+        align-items: center
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 
       .accordion-header
@@ -1612,20 +1809,37 @@ main
       .accordion-body
         padding: 0
         padding-bottom: 30px
+
         p
           margin: 0
           opacity: .4
 
       .accordion-button:not(.collapsed)
         color: $black
-        background-color: none
+        background-color: transparent
         box-shadow: none
+        width: 100%
+
+      .accordion-button:not(.collapsed)::after
+        content: '-'
+        font-size: 42px
+        color: $orange
+        background-repeat: no-repeat
+        background-size: contain
+
+      .accordion-button::after
+        content: '+'
+        background-repeat: no-repeat
+        background-size: contain
+        font-size: 42px
+        color: $orange
 
       .accordion
         width: 100%
         display: grid
         grid-template-columns: repeat(2, 1fr)
         gap: 0 20px
+
         .accordion-item
           border: none
           border-radius: 0
@@ -1636,16 +1850,19 @@ main
           border-top: 1px solid rgba(0, 0, 0, 0.1)
 
     .error-page-section
-      margin-top: calc(183px + 90px)
+      margin-top: 80px
+
       .error-page-container
         display: flex
         flex-direction: column
         align-items: center
         gap: 40px
+
         .error-text
           max-width: 410px
           text-align: center
           opacity: .4
+
           p
             margin: 0
 
@@ -1654,22 +1871,27 @@ main
         display: flex
         flex-direction: column
         gap: 100px
+
         .divisions
           display: flex
           flex-direction: column
           gap: 40px
           align-items: center
+
           .title
             color: $forestGreen
             text-transform: uppercase
             font-size: var(--fz48)
+
           .job_opening-items
             display: grid
             grid-template-columns: repeat(2, 1fr)
             gap: 20px
             width: 100%
+
             .accordion-item
               border: 1px solid $grey
+
             .accordion-button.collapsed
               .close-modal
                 display: none
@@ -1683,6 +1905,7 @@ main
               transform: translateX(-50%)
               position: absolute
               background: $grey
+
             .accordion-button
               position: relative
               background: none
@@ -1702,38 +1925,46 @@ main
               .job-name
                 text-transform: uppercase
                 font-size: var(--fz28)
+
               .job-wages
                 font-size: var(--fz28)
                 color: $forestGreen
                 text-align: end
                 width: 100%
+
             .accordion-body
               display: flex
               flex-direction: column
               padding: 0
-              gap: 30px 30px 0
+              gap: 30px 30px
+
               .title
                 font-size: var(--fz20)
                 color: $black
+
               .divisions
                 padding: 30px
                 display: flex
                 align-items: stretch
                 flex-direction: column
                 gap: 20px
+
                 .duties
                   display: grid
                   grid-template-columns: repeat(3, 1fr)
                   width: 100%
                   gap: 69px
+
                   .item-d
                     display: flex
                     gap: 20px
                     align-items: flex-start
+
                     p
                       margin: 0
                       font-size: var(--fz16)
                       color: $gray
+
                     .icon img
                       width: 20px
                       height: 20px
@@ -1746,40 +1977,52 @@ main
                 position: absolute
                 left: 0
                 top: 0
+
               .proposal
                 padding: 30px 0 0
                 position: relative
+
                 .title
                   padding: 0 30px
                   margin-bottom: 30px
+
                 p
                   margin: 0
+
                 .proposal-items
                   display: grid
                   grid-template-columns: repeat(3, minmax(0, 1fr))
+
                   .item-p:nth-of-type(6n+3)
                     border-right: none
+
                   .item-p
                     display: flex
                     gap: 12px
                     padding: 35px 35px 30px
                     border-top: 1px solid rgba(0, 0, 0, .1)
                     border-right: 1px solid rgba(0, 0, 0, .1)
+
                     .number
                       font-size: var(--fz28)
+
                     p
                       margin: 0
                       font-size: var(--fz16)
                       opacity: .4
+
               .requirements
                 padding: 30px
+
                 .title
                   margin-bottom: 20px
+
                 .requirements-items
                   display: flex
                   gap: 10px
                   flex-wrap: wrap
                   width: 100%
+
                   .item-r
                     padding: 10px 20px
                     border: 1px solid $grey
@@ -1787,6 +2030,7 @@ main
 
 .select-city-popup.open
   visibility: visible
+
 .select-city-popup
   border-top: 1px solid $grey
   height: calc(100vh - (183px * 2))
@@ -1800,16 +2044,20 @@ main
   left: 50%
   transform: translateX(-50%)
   padding: 30px
+
   .header
     display: flex
     justify-content: space-between
     align-items: center
     margin-bottom: 20px
+
     .title
       font-size: var(--fz48)
       text-transform: uppercase
+
     i
       font-size: 32px
+
   .city-searh
     width: 100%
     margin-bottom: 40px
@@ -1828,10 +2076,12 @@ main
     width: 100%
     padding: 0
     margin: 0
+
     .first-later-city
       text-transform: uppercase
       font-size: var(--fz28)
       margin-bottom: 20px
+
     .select-city-content-item
       margin-bottom: 20px
       opacity: .4
@@ -1840,6 +2090,7 @@ footer
   margin-top: -2px
   background: $black
   padding: 80px 0
+
   ul
     padding: 0
 
@@ -1928,13 +2179,15 @@ footer
   .second-footer
     padding-top: 40px
     margin-top: 40px
-    border-top: 2px solid $gray
+    border-top: 2px solid #1A1A1A
     display: grid
     align-items: center
     grid-template-columns: 1fr 2fr 1fr
     white-space: nowrap
+
     .logo
       width: 162px
+
     img
       object-fit: contain
 

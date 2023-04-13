@@ -937,7 +937,7 @@ main section .stock-section .stock-section-header {
 }
 main section .stock-section .stock-section-header .tabs-nav {
   display: flex;
-  gap: 75px;
+  gap: 46px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1123,6 +1123,9 @@ main section .page-landing-section .page-landing-container .blog-filter select {
   width: 100%;
   background: transparent;
   border: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 main section .page-landing-section .page-landing-container .title {
   display: flex;
@@ -1279,9 +1282,9 @@ main section .form-recall-section {
 }
 main section .form-recall-section .form-recall-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  column-gap: 400px;
+  column-gap: 80px !important;
 }
 main section .form-recall-section .form-recall-container .form-recall-info {
   display: flex;
@@ -1317,10 +1320,57 @@ main section .form-recall-section.similar .form-recall-container {
 main section .form-recall-section.green {
   background: #0D674C;
 }
+main section .sales-section .sales-container.wholesalers .sales-content {
+  max-width: 780px;
+}
+main section .sales-section .sales-container.old_fabric .sales-content {
+  max-width: 530px;
+}
 main section .sales-section .sales-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
+}
+main section .sales-section .sales-container .sales-img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+main section .sales-section .sales-container .sales-img .present {
+  padding: 20px 40px;
+  font-size: 48px;
+  background: #0D674C;
+  color: #FFFFFF;
+  border-radius: 100px;
+}
+main section .sales-section .sales-container .sales-img .item-s {
+  display: flex;
+  flex-direction: column;
+}
+main section .sales-section .sales-container .sales-img .item-s .name {
+  grid-column: span 2;
+  color: #000000;
+  font-size: 48px;
+}
+main section .sales-section .sales-container .sales-img .item-s .prices {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+main section .sales-section .sales-container .sales-img .item-s .prices .old-price {
+  font-size: 24px;
+  color: #575757;
+  text-decoration: line-through;
+  text-decoration-color: #000000;
+}
+main section .sales-section .sales-container .sales-img .item-s .prices .new-price {
+  color: #0D674C;
+  font-size: 24px;
 }
 main section .sales-section .sales-container .sales-text {
   display: flex;
@@ -1393,7 +1443,7 @@ main section .landlords-contacts-section {
   padding: 60px 0;
   margin-bottom: 2px;
   background: #000000;
-  border-bottom: 1px solid #575757;
+  border-bottom: 2px solid #1A1A1A;
 }
 main section .landlords-contacts-section .landloars-contacts-container {
   color: #FFFFFF;
@@ -1452,6 +1502,7 @@ main section .landlords-contacts-section .landloars-contacts-container .lc-conta
   height: 32px;
 }
 main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c > p {
+  margin-top: 0;
   margin-bottom: 20px;
 }
 main section .landlords-contacts-section .landloars-contacts-container .lc-contacts .item-c .contact {
@@ -1510,6 +1561,7 @@ main section .brands-section .brands-container {
 }
 main section .brands-section .brands-container .search-brand {
   display: grid;
+  gap: 20px;
   grid-template-columns: repeat(4, 1fr);
 }
 main section .brands-section .brands-container .search-brand input {
@@ -1701,7 +1753,7 @@ main section .news-page-section #tabs .tabs-nav .tabs-items .news-page-item-cont
 main section .news-page-section #tabs .tabs-items .news-page-item-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 60px 20px;
 }
 main section .news-page-section #tabs .tabs-items .news-page-item-container p {
   margin: 0;
@@ -1812,6 +1864,8 @@ main section .tabs-items.faq .accordion-button {
   text-transform: uppercase;
   font-size: var(--fz36);
   padding: 0;
+  justify-content: space-between;
+  align-items: center;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 main section .tabs-items.faq .accordion-header {
@@ -1827,8 +1881,23 @@ main section .tabs-items.faq .accordion-body p {
 }
 main section .tabs-items.faq .accordion-button:not(.collapsed) {
   color: #000000;
-  background-color: none;
+  background-color: transparent;
   box-shadow: none;
+  width: 100%;
+}
+main section .tabs-items.faq .accordion-button:not(.collapsed)::after {
+  content: "-";
+  font-size: 42px;
+  color: #F07106;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+main section .tabs-items.faq .accordion-button::after {
+  content: "+";
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: 42px;
+  color: #F07106;
 }
 main section .tabs-items.faq .accordion {
   width: 100%;
@@ -1846,7 +1915,7 @@ main section .tabs-items.faq .accordion .accordion-item:nth-of-type(2) {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 main section .error-page-section {
-  margin-top: 273px;
+  margin-top: 80px;
 }
 main section .error-page-section .error-page-container {
   display: flex;
@@ -1930,7 +1999,7 @@ main section .job_opening-section .job_opening-container .divisions .job_opening
   display: flex;
   flex-direction: column;
   padding: 0;
-  gap: 30px 30px 0;
+  gap: 30px 30px;
 }
 main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .title {
   font-size: var(--fz20);
@@ -2174,7 +2243,7 @@ footer .main-footer .footer-content nav:last-child ul li a {
 footer .second-footer {
   padding-top: 40px;
   margin-top: 40px;
-  border-top: 2px solid #575757;
+  border-top: 2px solid #1A1A1A;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 2fr 1fr;
@@ -3105,6 +3174,9 @@ footer .second-footer .item-s:nth-of-type(3) a {
     --ln120: 120%;
     --container: 1800px;
   }
+  main section .sales-section .sales-container .sales-img {
+    gap: 110px;
+  }
   main section .form-recall-section.similar .form-recall-container {
     gap: 140px;
   }
@@ -3227,6 +3299,19 @@ footer .second-footer .item-s:nth-of-type(3) a {
   }
 }
 @media screen and (max-width: 768px) {
+  main section .sales-section .sales-container .sales-img {
+    padding: 10px;
+  }
+  main section .sales-section .sales-container .sales-img .present {
+    font-size: 24px;
+    padding: 10px 20px;
+  }
+  main section .sales-section .sales-container .sales-img .item-s .name {
+    font-size: 24px;
+  }
+  main section .sales-section .sales-container .sales-img .item-s .prices .new-price, main section .sales-section .sales-container .sales-img .item-s .prices .old-price {
+    font-size: 16px;
+  }
   #successModal.custom-modal .header {
     margin: 0;
   }
