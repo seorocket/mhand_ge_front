@@ -10,4 +10,5 @@ $(document).ready(function () {
     $('.questionnaire').on('click', function () {
         $('#jobModal').modal('show')        
     })  
+    // $('#successModal').modal('show')
 })

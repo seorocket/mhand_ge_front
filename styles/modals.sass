@@ -6,10 +6,16 @@
         .title
             text-transform: uppercase
             font-size: var(--fz48)
+        .description
+            margin-top: 10px
+            opacity: .4
+            font-size: 24px
     .body
         display: flex
         flex-direction: column
         gap: 30px
+        .description
+            opacity: .4
         .select-city-container
             grid-column: 2 span
         .select2-container
@@ -38,15 +44,19 @@
                 width: 100%
                 list-style: none
                 margin-bottom: 30px
+                li.black.active
+                    background: $black
+                    a
+                        color: $white
                 li
                     width: 100%
+                    border-radius: 100px
+                    padding: 10px 0
+                    background: rgba(0, 0, 0, .2)
                     a
                         display: block
                         width: 100%
-                        padding: 10px 0
-                        border-radius: 100px
                         text-align: center
-                        background: rgba(0, 0, 0, .2)
                         color: rgba(0, 0, 0, .4)
 
                     a.active
@@ -151,3 +161,21 @@
                     textarea
                         grid-column: span 2
                         resize: none
+
+#successModal.custom-modal 
+    padding: 40px
+    .header
+        justify-content: flex-end
+    .body
+        gap: 0
+        .title
+            text-transform: uppercase
+            font-size: var(--fz64)
+            text-align: center
+            margin: 0 0 20px
+            span
+                color: $forestGreen
+        .description
+            text-align: center
+            opacity: .4
+            margin-bottom: 30px

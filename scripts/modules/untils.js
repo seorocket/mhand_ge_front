@@ -22,6 +22,10 @@ $('.all-calendar').on('click', function () {
   }
   $('.all-calendar').html(message)
 })
+$('.select-city-trigger').on('click', function () {
+	console.log(1)
+	$('.select-city-popup').toggleClass('open')
+})
 
 $(function() {
 	var tab = $('#tabs .tabs-items > div'); 
@@ -93,5 +97,12 @@ $(document).ready(function() {
 		
 		$(".datepicker").datepicker();
 	}
+	$('.burget-menu').on('click', function () {
+		const window_width = $(window).width()
+		if(window_width > 768){
+			$('.main-header').toggleClass('static')
+		}
+		$('.mobile-menu').toggleClass('open')
+	})
 
 })

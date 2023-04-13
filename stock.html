@@ -15,16 +15,65 @@
 </head>
 <body>
     <header>
-        <div class="top-baner">
+        <div class="top-baner open">
             <div class="container">
-                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark"></i>
+                <span>Скидка дня - 50%, узнайте больше в <a href="stock.html">календаре скидок</a></span><i class="fa-solid fa-xmark close-banner"></i>
             </div>
         </div>
         <div class="main-header static">
-            <div class="container">
+            <div class="container desctop">
+                <div class="more-desktop">
+                    <div class="burget-menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="item-m item-m-language">
+                        <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                        <div class="select-language">
+                            <p>en</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <p>русский</p>
+                                    <span>RU</span>
+                                </li>
+                                <li>
+                                    <p>English</p>
+                                    <span>EN</span>
+                                </li>
+                                <li>
+                                    <p>ქართული</p>
+                                    <span>KA</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="item-m">
+                        <div class="icon"><img src="images/icons/location.svg" alt=""></div>
+                        <p id="currentCity">Тбилиси</p>
+                        <p id="headerTime">14:43</p>
+                    </div>
+                </div>
                 <nav>
                     <ul>
-                        <li><a href="about.html">о компании</a></li>
+                        <li class="active-sub-menu">
+                            <span>О компании</span>
+                            <div class="sub-menu">
+                                <ul>
+                                    <li><a href="about.html">О компании</a></li>
+                                    <li><a href="news.html">Новости</a></li>
+                                    <li><a>Сотрудничество</a></li>
+                                    <li><a href="blog.html">Блог</a></li>
+                                    <ul>
+                                        <li><a href="landlords.html">Арендодателям</a></li>
+                                        <li><a href="wholesalers.html">Оптовикам</a></li>
+                                        <li><a href="advertisement.html">Реклама у нас</a></li>
+                                    </ul>
+                                    <li><a href="reviews.html">Отзывы</a></li>
+                                    <li><a href="faq.html">faq</a></li>
+                                </ul>
+                            </div>
+                        </li>
                         <li><a href="stock.html">акции</a></li>
                         <li><a href="our_collection.html">коллекции</a></li>
                         <li><a href="brands.html">бренды</a></li>
@@ -35,11 +84,27 @@
                 <div class="more-info-header">
                     <div class="item-m item-m-language">
                         <div class="icon"><img src="images/icons/language.svg" alt=""></div>
-                        <p>en</p>
+                        <div class="select-language">
+                            <p>en</p>
+                            <ul class="sub-menu">
+                                <li>
+                                    <p>русский</p>
+                                    <span>RU</span>
+                                </li>
+                                <li>
+                                    <p>English</p>
+                                    <span>EN</span>
+                                </li>
+                                <li>
+                                    <p>ქართული</p>
+                                    <span>KA</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="item-m">
                         <div class="icon"><img src="images/icons/location.svg" alt=""></div>
-                        <p>Тбилиси</p>
+                        <p id="currentCity">Тбилиси</p>
                         <p id="headerTime">14:43</p>
                     </div>
                     <div class="contact-container">
@@ -47,6 +112,35 @@
                         <a href="contacts.html" class="btn btn-grey">Контакты</a>
                     </div>
                 </div>
+            </div>
+            <div class="container mobile">
+                <div class="burget-menu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="item-m item-m-language header-icon">
+                    <div class="icon"><img src="images/icons/language.svg" alt=""></div>
+                    <div class="select-language">
+                        <ul class="sub-menu">
+                            <li>
+                                <p>русский</p>
+                                <span>RU</span>
+                            </li>
+                            <li>
+                                <p>English</p>
+                                <span>EN</span>
+                            </li>
+                            <li>
+                                <p>ქართული</p>
+                                <span>KA</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="index.html" class="logo"><img src="images/logos/logo.svg" alt=""></a>
+                <div class="header-icon icon"><img src="images/icons/location.svg" alt=""></div>
+                <div class="heder-city-icon header-icon icon"><img src="images/icons/phone_white.svg" alt=""></div>
             </div>
         </div>
     </header>
@@ -61,271 +155,600 @@
                               <li>Акции</li>
                             </ul>
                           </div>
-                        <h1>акции</h1>
+                        <h1 class="title-page">акции</h1>
                     </div>
                 </div>
             </div>
         </section>
         <section>
-            <div class="calendar-stock-section">
+            <div class="stock-page-section">
                 <div class="container">
-                   <div class="landing-container open">
-                    <div class="calendar-section open">
-                        <div class="calendar">
-                            <div class="calendar-header">
-                                <span>календарь скидок</span>
-                                <div class="share-block"><img src="images/icons/share.svg" alt=""></div>
-                            </div>
-                            <div class="calendar-body">
-                                <div class="home-calendar-swiper swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="home-calendar-slide swiper-slide">
-                                            <div class="home-calendar-date">
-                                                <span class="date">27</span>
-                                                <span class="week-day">ПН, Сегодня</span>
-                                            </div>
-                                            <div class="home-calendar-sale">
-                                                <span>60%</span>
+                    <div class="stock-page-container">
+                        <div class="new-calendar-section desktop">
+                            <div class="calendar-container open">
+                                <div class="main-calendar">
+                                    <div class="header">
+                                        <div class="title">календарь скидок</div>
+                                        <div class="share"><img src="images/icons/share.svg" alt=""></div>
+                                    </div>
+                                    <div class="body">
+                                        <div class="swiper calendar-swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide item-c">
+                                                    <div class="header">
+                                                        <p class="week">ПН</p>
+                                                        <p class="date">27</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="home-calendar-slide swiper-slide">
-                                            <div class="home-calendar-date">
-                                                <span class="date">28</span>
-                                                <span class="week-day">ВТ</span>
+                                        <div class="swiper address-swiper">
+                                            <div class="arrow-prev address-prev"><img src="images/icons/arrow.svg" alt=""></div>
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide address-slide">
+                                                    <span>39-57 Egnate Ninoshvili St</span>
+                                                </div>
+                                                <div class="swiper-slide address-slide">
+                                                    <span>39-57 Egnate Ninoshvili St</span>
+                                                </div>
                                             </div>
-                                            <div class="home-calendar-sale">
-                                                <span>60%</span>
-                                            </div>
+                                            <div class="arrow-next address-next"><img src="images/icons/arrow.svg" alt=""></div>
                                         </div>
-                                        <div class="home-calendar-slide swiper-slide">
-                                            <div class="home-calendar-date">
-                                                <span class="date">29</span>
-                                                <span class="week-day">Ср</span>
-                                            </div>
-                                            <div class="home-calendar-sale">
-                                                <span>70%</span>
-                                            </div>
-                                        </div>
-                                        <div class="home-calendar-slide swiper-slide">
-                                            <div class="home-calendar-date">
-                                                <span class="date">30</span>
-                                                <span class="week-day">ЧТ</span>
-                                            </div>
-                                            <div class="home-calendar-sale">
-                                                <span>80%</span>
-                                            </div>
-                                        </div>
-                                        <div class="home-calendar-slide swiper-slide">
-                                            <div class="home-calendar-date">
-                                                <span class="date">31</span>
-                                                <span class="week-day">ПТ</span>
-                                            </div>
-                                            <div class="home-calendar-sale">
-                                                <span>90%</span>
+                                        <div class="more-info-calendar" style="background-image: url('images/backgrounds/adv_text.png');">
+                                            <div class="swiper more-info-calendar-swiper">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide more-info-calendar-slide">
+                                                        <p class="week">понедельник</p>
+                                                        <div class="date-section">
+                                                            <div class="arrow-prev more-info-calendar-prev"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                            <span>27 марта</span>
+                                                            <div class="arrow-next more-info-calendar-next"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                        </div>
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                    <div class="swiper-slide more-info-calendar-slide">
+                                                        <p class="week">понедельник</p>
+                                                        <div class="date-section">
+                                                            <div class="arrow-prev more-info-calendar-prev"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                            <span>27 марта</span>
+                                                            <div class="arrow-next more-info-calendar-next"><img src="images/icons/arrow-ligth.svg" alt=""></div>
+                                                        </div>
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-footer-block">
-                                        <div class="home-calendar-prev arrow-prev"><img src="images/icons/arrow.svg" alt=""></div>
-                                        <span>39-57 Egnate Ninoshvili St</span>
-                                        <div class="home-calendar-next arrow-next"><img src="images/icons/arrow.svg" alt=""></div>
+                                    <div class="footer">
+                                        <div class="all-calendar">весь календарь</div>
+                                        <div class="btn btn-orange get-coupon">КУПОН НА 500₽</div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="calendar-body-big">
-                                    <div class="detailed-calendar-swiper swiper" style="background-image: url('images/backgrounds/adv_text.png');">
-                                        <div class="swiper-wrapper">
-                                            <div class="item-day swiper-slide">
-                                                <div class="item-day-header">понедельник</div>
-                                                <div class="item-day-navigation">
-                                                    <div class="detailed-calendar-prev arrow-prev"><img src="images/icons/arrow-ligth.svg" alt=""></div>
-                                                    <span>27 марта</span>
-                                                    <div class="detailed-calendar-next arrow-next"><img src="images/icons/arrow-ligth.svg" alt=""></div>
-                                                </div>
-                                                <div class="item-day-sale">
-                                                    60%
-                                                </div>
+                                <div class="big-calendar">
+                                    <div class="title">март</div>
+                                    <div class="calendar">
+                                        <div class="weeks">
+                                            <div class="item-w">пн</div>
+                                            <div class="item-w">вт</div>
+                                            <div class="item-w">ср</div>
+                                            <div class="item-w">чт</div>
+                                            <div class="item-w">пт</div>
+                                            <div class="item-w">сб</div>
+                                            <div class="item-w">вс</div>
+                                        </div>
+                                        <div class="sales">
+                                            <div class="item-s empty">
+                                                <div class="header">27</div>
+                                                <div class="body">-</div>
                                             </div>
-                                            <div class="item-day swiper-slide">
-                                                <div class="item-day-header">понедельник</div>
-                                                <div class="item-day-navigation">
-                                                    <div class="detailed-calendar-prev arrow-prev"><img src="images/icons/arrow-ligth.svg" alt=""></div>
-                                                    <span>27 марта</span>
-                                                    <div class="detailed-calendar-next arrow-next"><img src="images/icons/arrow-ligth.svg" alt=""></div>
-                                                </div>
-                                                <div class="item-day-sale">
-                                                    60%
-                                                </div>
+                                            <div class="item-s empty">
+                                                <div class="header">27</div>
+                                                <div class="body">-</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s today">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s new-clothe">
+                                                <div class="header">27</div>
+                                                <div class="body">новый завоз</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
                                             </div>
                                         </div>
                                     </div>
-                            </div>
-                            <div class="calendar-footer">
-                                <div class="btn btn-outline all-calendar">весь календарь</div>
-                                <div class="btn btn-orange">КУПОН НА 500₽</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="calendar-big">
-                            <div class="header">
-                                <p>март</p>
-                            </div>
-                            <div class="body">
-                                <div class="week border-no-padding">
-                                    <div class="item-w">пн</div>
-                                    <div class="item-w">вт</div>
-                                    <div class="item-w">ср</div>
-                                    <div class="item-w">чт</div>
-                                    <div class="item-w">пт</div>
-                                    <div class="item-w">сб</div>
-                                    <div class="item-w">вс</div>
+                        <div class="new-calendar-section mobile">
+                            <div class="main-calendar">
+                                <div class="header">
+                                    <div class="title">календарь скидок</div>
+                                    <div class="share"><img src="images/icons/share.svg" alt=""></div>
                                 </div>
-                                <div class="sales">
-                                    <div class="item-s empty">
-                                        <span class="sale">-</span>
-                                        <span class="date">-</span>
-
+                                <div class="body">
+                                    <div class="main-calendar">
+                                        <div class="swiper today-mobile-calendar">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide current-day">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide current-day">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide current-day">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper calendar-mobile-swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide calendar-slide">
+                                                    <div class="header">
+                                                        <p class="date">27</p>
+                                                        <p class="week">пн</p>
+                                                    </div>
+                                                    <div class="body">
+                                                        <p class="sale">60%</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="item-s empty">
-                                        <span class="sale">-</span>
-                                        <span class="date">-</span>
+                                    <div class="big-calendar">
+                                        <div class="monthe-container" style="background-image: url('images/backgrounds/calendar-bg.jpg');">
+                                            <div class="month">март</div>
+                                        </div>
+                                        <div class="week no-container">
+                                            <div class="item-w">пн</div>
+                                            <div class="item-w">вт</div>
+                                            <div class="item-w">ср</div>
+                                            <div class="item-w">чт</div>
+                                            <div class="item-w">пт</div>
+                                            <div class="item-w">сб</div>
+                                            <div class="item-w">вс</div>
+                                        </div>
+                                        <div class="sales no-container">
+                                            <div class="item-s empty">
+                                                <div class="header">27</div>
+                                                <div class="body">-</div>
+                                            </div>
+                                            <div class="item-s empty">
+                                                <div class="header">27</div>
+                                                <div class="body">-</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s today">
+                                                <div class="header">27</div>
+                                                <div class="body">40%</div>
+                                            </div>
+                                            <div class="item-s new-clothe">
+                                                <div class="header">27</div>
+                                                <div class="body">NEW</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                            <div class="item-s rub">
+                                                <div class="header">27</div>
+                                                <div class="body">40₽</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
+                                    <div class="swiper address-swiper">
+                                        <div class="arrow-prev address-prev"><img src="images/icons/arrow.svg" alt=""></div>
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide address-slide">
+                                                <span>39-57 Egnate Ninoshvili St</span>
+                                            </div>
+                                            <div class="swiper-slide address-slide">
+                                                <span>39-57 Egnate Ninoshvili St</span>
+                                            </div>
+                                        </div>
+                                        <div class="arrow-next address-next"><img src="images/icons/arrow.svg" alt=""></div>
                                     </div>
-                                    <div class="item-s">
-                                        <span class="sale new-clothe">новый завоз</span>
-                                        <span class="date">02</span>
-                                    </div>
-                                    <div class="item-s today">
-                                        <span class="sale new-clothe">новый завоз</span>
-                                        <span class="date">02</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
-                                    <div class="item-s">
-                                        <span class="sale">40%</span>
-                                        <span class="date">01</span>
-                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <div class="all-calendar">весь календарь</div>
+                                    <div class="btn btn-orange get-coupon">КУПОН НА 500₽</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   </div>
                 </div>
             </div>
         </section>

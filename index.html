@@ -75,7 +75,7 @@
     </div>
     <!-- modals -->
     <div class="modal fade custom-modal" id="couponModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-body">
                 <div class="header">
@@ -86,8 +86,8 @@
                     <span class="description">Еще не совершали покупку в МЕГАХЕНД? Тогда заполните форму ниже и совершите первую покупку с выгодой!</span>
                     <div id="tabs" class="select-coupon-type">
                         <ul class="tabs-nav">
-                            <li><a href="#tab-1">ПОЛУЧИТЬ 300₽</a></li>
-                            <li><a href="#tab-2">ПОЛУЧИТЬ 500₽</a></li>
+                            <li class="black"><a href="#tab-1">ПОЛУЧИТЬ 300₽</a></li>
+                            <li class="black"><a href="#tab-2">ПОЛУЧИТЬ 500₽</a></li>
                         </ul>	
                         <div class="tabs-items">
                             <div class="tabs-item" id="tab-1">
@@ -158,6 +158,23 @@
                             </div>
                         </div>
                     </div>  
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade custom-modal" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+                <div class="header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="body">
+                    <div class="title">СПАСИБО<br> За <span>ОТКЛИК</span></div>
+                    <div class="description">Мы свяжемся с Вами в течение двух дней.
+                        Ожидайте звонка менеджера!</div>
+                        <div class="btn btn-orange" data-bs-dismiss="modal">понятно</div>
                 </div>
             </div>
           </div>
@@ -252,7 +269,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="item-m">
+                    <div class="item-m select-city-trigger">
                         <div class="icon"><img src="images/icons/location.svg" alt=""></div>
                         <p id="currentCity">Тбилиси</p>
                         <p id="headerTime">14:43</p>
@@ -289,8 +306,57 @@
                     </div>
                 </div>
                 <a href="index.html" class="logo"><img src="images/logos/logo.svg" alt=""></a>
-                <div class="header-icon icon"><img src="images/icons/location.svg" alt=""></div>
+                <div class="header-icon icon select-city-trigger"><img src="images/icons/location.svg" alt=""></div>
                 <div class="heder-city-icon header-icon icon"><img src="images/icons/phone_white.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <div class="container">
+                <div class="title">меню</div>
+                <div class="body">
+                    <nav>
+                        <ul>
+                            <li><a href="about.html">о компании</a></li>
+                            <li><a href="landlords.html">арендодателям</a></li>
+                            <li><a href="wholesalers.html">оптовика</a></li>
+                            <li><a href="advertisement.html">реклама у нас</a></li>
+                            <li><a href="news.html">новости</a></li>
+                            <li><a href="blog.html">блог</a></li>
+                            <li><a href="reviews.html">отзывы</a></li>
+                            <li><a href="faq.html">faq</a></li>
+                            <li><a href="stock.html">акции</a></li>
+                            <li><a href="our_collection.html">коллекции</a></li>
+                            <li><a href="brands.html">бренды</a></li>
+                            <li><a href="job_openings.html">вакансии</a></li>
+                            <li><a href="contacts.html">контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mobile location" style="background-image: url('images/backgrounds/adv_text.png');">
+                        <div class="title">
+                            <div class="icon"><img src="images/icons/location.svg" alt=""></div>
+                            <span>Тбилиси</span>
+                        </div>
+                        <div class="body">
+                            <div class="week">ПН, 27 Марта</div>
+                            <div class="time">14:43</div>
+                        </div>
+                    </div>
+                    <div class="mobile contacts">
+                        <a href="tel:+7(987)847-33-11" class="phone btn">+7(987)847-33-11</a>
+                        <a href="contacts.html" class="btn btn-grey">контакты</a>
+                    </div>
+                </div>
+                <div class="mobile footer">
+                    <div class="socials">
+                        <div class="social">
+                            <img src="images/socilas/dzen.svg" alt="">
+                        </div>
+                        <div class="social">
+                            <img src="images/socilas/youtube.svg" alt="">
+                        </div>
+                    </div>
+                    <span>2023 © МЕГАХЕНД интернет магазин</span>
+                </div>
             </div>
         </div>
     </header>

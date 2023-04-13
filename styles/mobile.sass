@@ -46,6 +46,8 @@
         --fz144: 144px
         --ln120: 120%
         --container: 1800px
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection
+        grid-template-columns: repeat(3, 1fr)
     main section .sales-section .sales-container .sales-text .content.landlords-requirements
         grid-template-columns: repeat(2, 1fr)
     main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(1),
@@ -113,6 +115,17 @@
         --fz144: 96px
         --ln120: 120%
         --container: 1800px
+    header .mobile-menu .body nav ul::-webkit-scrollbar
+        width: 0
+        height: 0
+    header .mobile-menu .body nav ul
+        -ms-overflow-style: none
+        overflow: -moz-scrollbars-none
+        overflow-x: auto
+        gap: 20px
+        width: 100%
+        li a
+            white-space: nowrap
     main section .about-info-section .about-info-container
         grid-template-columns: repeat(2, 1fr)
     main section .form-recall-section .form-recall-container
@@ -167,6 +180,10 @@
                             margin: 10px 0 20px
 
 @media screen and (max-width: 1380px)
+    .custom-modal .body .job-form
+        grid-template-columns: 1fr
+        .comment-info
+            order: 3
     main section .job_opening-section .job_opening-container .divisions .job_opening-items
         grid-template-columns: 1fr
     main section .landlords-contacts-section .landloars-contacts-container .lc-contacts
@@ -250,6 +267,10 @@
                             object-position: center
 
 @media screen and (max-width: 1000px)
+    header .mobile-menu .body nav ul li:last-child
+        display: inline-block
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection
+        grid-template-columns: repeat(2, 1fr)
     main section .brands-section .brands-container .brands
         grid-template-columns: repeat(3, 1fr)
     main section .address-section .addresses-container
@@ -297,6 +318,194 @@
             .collection-name
                 font-size: var(--fz36)
 @media screen and (max-width: 768px)
+    #successModal.custom-modal 
+        .header
+            margin: 0
+        .body
+            .title
+                font-size: 36px
+                margin-bottom: 20px
+                margin-top: -27px
+            .description
+                margin-bottom: 50px
+                font-size: 16px
+               
+    .select-city-popup .select-city-content .select-city-content-item
+        font-size: 16px
+    .select-city-popup .select-city-content .first-later-city
+        font-size: 24px
+    .select-city-popup .header .title
+        font-size: 36px
+    .select-city-popup
+        margin-top: 125px
+        max-width: none !important
+        height: calc(100vh - 125px)
+        .close-popup
+            display: none
+        .select-city-content
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+    .custom-modal .body .content-review .review-form
+        grid-template-columns: 1fr
+        textarea
+            grid-column: auto
+    .custom-modal .body .job-form .more-info .item-m .inputs-section
+        gap: 10px
+    .custom-modal .body .job-form
+        .more-info
+            gap: 40px
+            grid-template-columns: 1fr
+        .main-info,
+        .comment-info
+            gap: 10px
+            grid-template-columns: 1fr
+        .comment-info
+            grid-template-rows: auto
+            textarea
+                height: 150px
+            .custom-input:nth-of-type(3),
+            .footer-form
+                grid-column: auto
+        .more-info
+            .custom-checkbox
+                span
+                    font-size: 16px
+
+    .custom-modal .body .footer-form .agree-checkbox
+        gap: 6px 10px
+    .modal-body
+        padding: 20px !important
+    .custom-modal .body .select-coupon-type .tabs-nav li.black.active a
+        font-size: 16px
+    .custom-modal .body .select-coupon-type .tabs-nav
+        margin-bottom: 20px
+    .custom-modal
+        .body
+            gap: 10px
+            .description
+                font-size: 16px
+        .header .title
+            font-size: 36px
+    .custom-modal .body .select-city-container
+        grid-column: auto
+    .custom-modal .body .select-coupon-type .tabs-item .coupon-form,
+    .custom-modal .body .footer-form
+        grid-template-columns: 1fr
+    header .mobile-menu 
+        height: calc(100vh - 125px)
+        overflow: auto
+        .container
+            height: fit-content
+        .mobile.contacts
+            margin: 22px 0
+            display: grid !important
+            grid-template-columns: repeat(2, 1fr)
+            gap: 15px
+            .btn
+                display: flex
+            .phone.btn
+                color: $black
+                border: 2px solid $black
+        .mobile.footer
+            display: flex !important
+            justify-content: space-between
+            span
+                max-width: 193px
+                opacity: .2
+                text-align: end
+            .socials
+                gap: 20px
+                display: flex
+                align-items: center
+                justify-content: center
+                img
+                    width: 40   
+                    height: 40px
+        .mobile.location
+            display: flex !important
+            flex-direction: column
+            gap: 23px
+            background-repeat: no-repeat
+            padding: 10px
+            .title 
+                display: flex
+                color: $white
+                font-size: 24px
+                .icon
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    img
+                        width: 24px
+                        height: 24px
+            .body
+                display: flex
+                justify-content: space-between
+                align-items: flex-end
+                .week
+                    font-size: 16px
+                    color: $white
+                    opacity: .6
+                .time
+                    color: $white
+                    font-size: 48px
+    header .mobile-menu .title
+        display: block
+    header .mobile-menu .body nav ul li
+        padding-bottom: 20px
+        border-bottom: 1px solid $grey
+    header .mobile-menu .body nav ul li:last-child
+        display: none
+    header .mobile-menu .body nav ul
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 20px
+    main section .our-collection-page-section .our-collection-page-container
+        gap: 40px
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection
+        grid-template-rows: 389px 179px
+        .item-o:nth-of-type(4), .item-o:nth-of-type(5), .item-o:nth-of-type(6)
+            display: none
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .close-modal:after
+        content: url('../images/icons/arrow-black.svg')
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .close-modal
+        display: flex
+        justify-content: center
+        gap: 10px
+        align-items: center
+        border: 1px solid $grey
+        color: $black
+        border-radius: 100px
+        text-align: center
+        padding: 10px 0
+        opacity: 1
+        grid-column: span 2
+        margin-top: -10px
+        position: relative
+    main section .job_opening-section .job_opening-container
+        gap: 40px
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button
+        padding: 0
+    main section .page-landing-section .page-landing-container h1
+        margin-top: 10px
+    main section .job_opening-section .job_opening-container .divisions
+        gap: 20px
+    main section .job_opening-section .job_opening-container .divisions .title
+        font-size: 24px
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .btn
+        width: 100%
+        grid-column: span 2
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-name
+        text-align: start
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-wages
+        font-size: 18px
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-name
+        font-size: 24px
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .proposal .proposal-items
+        grid-template-columns: 1fr
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions .duties
+        grid-template-columns: repeat(2, 1fr)
+        gap: 20px
     main section .brands-section .brands-container .search-brand input
         grid-column: span 4
     main section .brands-section .brands-container .brands .item-b
@@ -324,7 +533,7 @@
     main section .blog-section .blog-container .news-item .news-img
         height: 188px
     .accordion-header
-        margin: 20px 0 !important
+        margin: 20px !important
     .accordion-collapse
         margin-top: -10px
     main section .news-page-section #tabs
@@ -545,6 +754,30 @@
     main section .our-collection-section .collection-item
         padding: 25px 20px
 @media screen and (max-width: 500px)
+    .modal-dialog
+        margin: 0 !important
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .type-collection .item-t
+        background: rgba(255, 255, 255, 0.2)
+        color: $black 
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .descriptio
+        font-size: 14px
+        max-width: 60%
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1)
+        padding: 20px
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .type-collection
+        order: 3
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .descriptio
+        order: 1
+    .btn.btn-orange
+        order: 2
+    main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .title
+        font-size: 36px
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button
+        grid-template-columns: 2fr 1fr
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-wages
+        font-size: 16px
+    main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions .duties
+        grid-template-columns: 1fr
     main section .address-section .addresses-container .item-a .header
         flex-direction: column
         gap: 20px

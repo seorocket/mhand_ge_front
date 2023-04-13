@@ -42,7 +42,7 @@ new Swiper('.more-info-calendar-swiper', {
 
 new Swiper('.brand-swiper', {
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 80,
     autoplay: {
         delay: 3000,
     },
