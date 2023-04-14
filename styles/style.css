@@ -311,6 +311,9 @@ header {
   left: 0;
   width: 100%;
 }
+header .mobile-select-language {
+  display: none;
+}
 header .top-baner {
   padding: 0;
   height: 0;
@@ -3793,10 +3796,9 @@ footer .second-footer .item-s:nth-of-type(3) a {
     display: none;
   }
   .mobile-select-language.open {
-    display: block;
+    display: block !important;
   }
   .mobile-select-language {
-    display: none;
     width: 100%;
     background: #FFFFFF;
   }
