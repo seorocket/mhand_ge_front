@@ -769,8 +769,35 @@
         height: 836px
   header .main-header .container.desctop
     display: none
+  .mobile-select-language.open
+    display: block
+  .mobile-select-language
+    display: none
+    width: 100%
+    background: $white
+    p, ul, li
+      list-style: none
+      margin: 0
+      padding: 0
+    ul
+      li
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px
+        p
+          font-size: 20px
+        span
+          opacity: .4
+          font-size: 20px
+      li:nth-of-type(2)
+        border-top: 1px solid $grey
+        border-bottom: 1px solid $grey
+
   header .main-header .container.mobile
-    display: grid !important
+    display: flex !important
+    justify-content: space-between
+    align-items: center
 
     .burget-menu
       display: flex !important
@@ -797,10 +824,13 @@
     gap: 0
   .header-icon
     display: flex
-    align-items: center
     justify-content: center
+  .heder-city-icon, .select-city-trigger
+    justify-content: flex-end
+  .item-m-language
+    justify-content: flex-start
   header .main-header .container.mobile .burget-menu
-    align-items: center
+    align-items: flex-start
   footer .main-footer .footer-content
     gap: 40px
 
