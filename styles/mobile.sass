@@ -363,8 +363,86 @@
         font-size: var(--fz36)
 
 @media screen and (max-width: 768px)
+  main.mb-main.error-main
+    margin-bottom: 100px
+  main section .address-section .addresses-container .item-a .header .address
+    font-size: 24px
+    line-height: 120%
+  main section .address-section .addresses-container .item-a .header .work-time .icon img
+    height: 20px
+    width: 20px
+  main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .requirements .requirements-items .item-r
+    font-size: 14px
+  main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions
+    padding: 10px 30px 0
+  main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body
+    gap: 20px
+  main section .page-landing-section .page-landing-container.news,
+  main section .news-item-section .news-item-container
+    max-width: none
+  main section .page-landing-section .page-landing-container.mb-40 h1
+    font-size: 24px
+  main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .title
+    line-height: 100%
+  .new-calendar-section.mobile > .main-calendar > .body .address-swiper
+    margin: 10px 0 20px
+  .new-calendar-section.mobile > .main-calendar > .body > .main-calendar .today-mobile-calendar .current-day .header,
+  .new-calendar-section.mobile > .main-calendar > .body > .main-calendar .calendar-mobile-swiper .calendar-slide .header
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  main section .tabs-items.faq .accordion-header
+    margin: 20px 0 !important
+  main section .reviews-section .reviews-container .item-r p.text-review
+    font-size: 14px
+  main section .reviews-section .reviews-container .item-r p.review-name
+    font-size: 20px
+  main section .page-landing-section .page-landing-container.mb-20 .btn
+    margin-bottom: 40px
+  main section .news-page-section #tabs .tabs-items .news-page-item-container
+    gap: 20px
+
+  main section .form-recall-section
+    padding: 20px 0
+  main section .form-recall-section .form-recall-container
+    gap: 20px
+  .btn.mobile-pt-15
+    padding: 15px 0 !important
+  main section .about-info-section .about-info-container .about-info-text .section-title.desktop
+    display: none
+  main section .about-info-section .about-info-container .about-info-text .section-title.mobile
+    display: block !important
+  header .mobile-menu .mobile.location .title
+    margin-bottom: 0
+
+    span
+      text-transform: none
+  header .mobile-menu .body nav ul li a
+    font-size: 16px
+  header .mobile-menu
+    padding: 30px 0
+  header .mobile-menu .mobile.contacts .phone.btn
+    font-size: 16px
+    padding: 10px 0 !important
+  footer .second-footer
+    gap: 40px
+  footer .main-footer .footer-content nav:last-child ul li a
+    text-transform: none
+  main section .about-section .aboout-container.mobile p
+    color: $black
+    opacity: .4
+  body, a, p, span, h1, h2, h3, ul, li
+    font-weight: 500 !important
+  main section .our-collection-section .collection-item:nth-of-type(1)
+    background-image: url("../images/our_collection/our_collection_woomen_mobile.jpg")
+  main section .our-collection-section .collection-item:nth-of-type(2)
+    background-image: url("../images/our_collection/our_collection_man_mobile.jpg")
+  main section .our-collection-section .collection-item:nth-of-type(3)
+    background-image: url("../images/our_collection/our_collection_kids_mobile.jpg")
+  main section .brand-section
+    padding: 40px 0
   main section .sales-section .sales-container .sales-img
-    padding: 10px
+    padding: 0
   main section .sales-section .sales-container .sales-img .present
     font-size: 24px
     padding: 10px 20px
@@ -494,7 +572,7 @@
         justify-content: center
 
         img
-          width: 40
+          width: 40px
           height: 40px
 
     .mobile.location
@@ -538,10 +616,13 @@
     border-bottom: 1px solid $grey
   header .mobile-menu .body nav ul li:last-child
     display: none
-  header .mobile-menu .body nav ul
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    gap: 20px
+  header .mobile-menu .body nav
+    margin-bottom: 20px
+
+    ul
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 20px
   main section .our-collection-page-section .our-collection-page-container
     gap: 40px
   main section .our-collection-page-section .our-collection-page-container .item-our-collection
@@ -564,11 +645,16 @@
     opacity: 1
     grid-column: span 2
     margin-top: -10px
+    font-weight: 400
     position: relative
+    font-size: 16px
+    order: 2
+    margin-top: 10px
   main section .job_opening-section .job_opening-container
     gap: 40px
   main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button
     padding: 0
+    gap: 0
   main section .page-landing-section .page-landing-container h1
     margin-top: 10px
   main section .job_opening-section .job_opening-container .divisions
@@ -577,6 +663,7 @@
     font-size: 24px
   main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .btn
     width: 100%
+    margin-top: 20px
     grid-column: span 2
   main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-button .job-name
     text-align: start
@@ -610,9 +697,11 @@
     align-items: stretch
   main section .error-page-section
     margin-top: 55px
-  main section .blog-section .blog-container .news-item .news-date
+  main section .blog-section .blog-container .news-item .news-date,
+  main section .news-page-section #tabs .tabs-items .news-page-item-container .news-date
     font-size: 12px
-  main section .blog-section .blog-container .news-item p
+  main section .blog-section .blog-container .news-item p,
+  main section .news-page-section #tabs .tabs-items .news-page-item-container p
     font-size: 16px
   main section .blog-section .blog-container .news-item .news-img
     height: 188px
@@ -672,6 +761,7 @@
     font-size: 36px
   main section .prefooter-section .prefooter-container.old_fabrick .prefooter-title
     font-size: 36px
+    line-height: 100%
   main section .sales-section .sales-container .sales-text .sales-desctiption
     font-size: 24px
 
@@ -727,6 +817,8 @@
 
       .sales-title
         font-size: 32px
+        line-height: 120%
+        letter-spacing: 0.02em
   main section .landlords-img
     margin-top: 35px
 
@@ -751,16 +843,23 @@
     padding-bottom: 0
   main section .sales-section .sales-container .sales-text
     gap: 20px
+    align-items: stretch
   main section .form-recall-section .form-recall-container .form-recall-form .description
     font-size: 12px
+    order: 2
   main section .page-landing-section .page-landing-container h1
     margin-bottom: 45px
     font-size: 48px
+    margin-top: 55px
   main section .form-recall-section .form-recall-container .form-recall-info .form-recall-description
     font-size: 16px
   main section .page-landing-section .page-landing-container iframe
     height: 298px
     margin-bottom: 20px
+  main section .landing-section .landing-container .landing-text.desktop
+    display: none
+  main section .landing-section .landing-container .landing-text.mobile
+    display: block !important
   main section .landing-section .landing-container .landing-text
     font-size: 48px
   main
@@ -771,24 +870,30 @@
     display: none
   .mobile-select-language.open
     display: block !important
+    border-top: 1px solid $grey
   .mobile-select-language
     width: 100%
     background: $white
+
     p, ul, li
       list-style: none
       margin: 0
       padding: 0
+
     ul
       li
         display: flex
         justify-content: space-between
         align-items: center
         padding: 20px
+
         p
           font-size: 20px
+
         span
           opacity: .4
           font-size: 20px
+
       li:nth-of-type(2)
         border-top: 1px solid $grey
         border-bottom: 1px solid $grey
@@ -828,6 +933,11 @@
     justify-content: flex-end
   .item-m-language
     justify-content: flex-start
+  .logo
+    width: 132px
+  header .main-header .container.mobile .header-icon img
+    width: 24px
+    height: 24px
   header .main-header .container.mobile .burget-menu
     align-items: flex-start
   footer .main-footer .footer-content
