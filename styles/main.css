@@ -204,6 +204,21 @@ img {
   text-transform: none;
 }
 
+.btn.w-arrow {
+  align-items: flex-end;
+}
+.btn.w-arrow .icon {
+  padding-bottom: 3px;
+}
+.btn.w-arrow .icon img {
+  width: 16px;
+  height: 16px;
+}
+
+.btn.p-15 {
+  padding: 15px 0;
+}
+
 .swiper-footer-block {
   margin-top: 20px;
   display: flex;
@@ -513,6 +528,9 @@ header .main-header .container .more-info-header .contact-container, header .mai
   display: flex;
   align-items: center;
   gap: 10px;
+}
+header .main-header .container .more-info-header .contact-container .btn, header .main-header .container .more-desktop .contact-container .btn {
+  padding: 10px 20px;
 }
 header .main-header .container .more-info-header .contact-container .phone, header .main-header .container .more-desktop .contact-container .phone {
   padding: 10px 20px;
@@ -1286,7 +1304,6 @@ main section .form-recall-section {
 main section .form-recall-section .form-recall-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  align-items: center;
   column-gap: 80px !important;
 }
 main section .form-recall-section .form-recall-container .form-recall-info {
@@ -1297,7 +1314,7 @@ main section .form-recall-section .form-recall-container .form-recall-info {
 main section .form-recall-section .form-recall-container .form-recall-info .form-recall-title {
   margin: 0;
   font-size: var(--fz64);
-  line-height: 120%;
+  line-height: 100%;
   text-transform: uppercase;
 }
 main section .form-recall-section .form-recall-container .form-recall-info .form-recall-description {
@@ -1331,18 +1348,20 @@ main section .sales-section .sales-container.old_fabric .sales-content {
 }
 main section .sales-section .sales-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 80px;
 }
 main section .sales-section .sales-container .sales-img {
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   height: 100%;
+}
+main section .sales-section .sales-container .sales-img img {
+  width: auto;
 }
 main section .sales-section .sales-container .sales-img .present {
   padding: 20px 40px;
@@ -1414,6 +1433,9 @@ main section .sales-section .sales-container .sales-text .content.landlords-requ
 main section .sales-section .sales-container .sales-text .content.landlords-requirements .item-c:nth-of-type(4) {
   grid-column: span 2;
 }
+main section .sales-section .sales-container.about-page .sales-img {
+  padding: 30px;
+}
 main section .prefooter-section {
   color: #FFFFFF;
   text-align: center;
@@ -1432,6 +1454,7 @@ main section .prefooter-section .prefooter-container p {
 main section .prefooter-section .prefooter-container .prefooter-title {
   font-size: var(--fz96);
   margin-bottom: 20px;
+  line-height: 100%;
 }
 main section .prefooter-section .prefooter-container .prefooter-conent {
   margin-bottom: 30px;
@@ -2002,7 +2025,6 @@ main section .job_opening-section .job_opening-container .divisions .job_opening
   display: flex;
   flex-direction: column;
   padding: 0;
-  gap: 30px 30px;
 }
 main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .title {
   font-size: var(--fz20);
@@ -2198,7 +2220,6 @@ footer .main-footer .mailing .mailing-form .btn {
 }
 footer .main-footer .mailing .description {
   display: inline-block;
-  max-width: 60%;
   font-size: var(--fz14);
   margin-top: 10px;
   color: #FFFFFF;
@@ -2328,6 +2349,9 @@ footer .second-footer .item-s:nth-of-type(3) a {
 .custom-modal .body .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: rgba(0, 0, 0, 0.2);
 }
+.custom-modal .body .select2-container .select2-selection--single .select2-selection__rendered {
+  padding: 0;
+}
 .custom-modal .body .select-coupon-type .tabs-nav {
   padding: 0;
   margin: 0;
@@ -2419,7 +2443,7 @@ footer .second-footer .item-s:nth-of-type(3) a {
 .custom-modal .body .job-form .comment-info {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 1fr 50px;
+  grid-template-rows: 226px 1fr 50px;
   gap: 20px;
   grid-row: span 2;
 }
@@ -3302,6 +3326,9 @@ footer .second-footer .item-s:nth-of-type(3) a {
   }
 }
 @media screen and (max-width: 768px) {
+  main section .sales-section .sales-container.about-page .sales-img {
+    padding: 10px;
+  }
   main.mb-main.error-main {
     margin-bottom: 100px;
   }
@@ -3319,21 +3346,15 @@ footer .second-footer .item-s:nth-of-type(3) a {
   main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body .divisions {
     padding: 10px 30px 0;
   }
-  main section .job_opening-section .job_opening-container .divisions .job_opening-items .accordion-body {
-    gap: 20px;
-  }
   main section .page-landing-section .page-landing-container.news,
   main section .news-item-section .news-item-container {
     max-width: none;
-  }
-  main section .page-landing-section .page-landing-container.mb-40 h1 {
-    font-size: 24px;
   }
   main section .our-collection-page-section .our-collection-page-container .item-our-collection .item-o:nth-child(6n+1) .title {
     line-height: 100%;
   }
   .new-calendar-section.mobile > .main-calendar > .body .address-swiper {
-    margin: 10px 0 20px;
+    margin: 20px 0 30px;
   }
   .new-calendar-section.mobile > .main-calendar > .body > .main-calendar .today-mobile-calendar .current-day .header,
   .new-calendar-section.mobile > .main-calendar > .body > .main-calendar .calendar-mobile-swiper .calendar-slide .header {
@@ -3370,6 +3391,7 @@ footer .second-footer .item-s:nth-of-type(3) a {
   }
   main section .about-info-section .about-info-container .about-info-text .section-title.mobile {
     display: block !important;
+    line-height: 100%;
   }
   header .mobile-menu .mobile.location .title {
     margin-bottom: 0;
@@ -3408,6 +3430,9 @@ footer .second-footer .item-s:nth-of-type(3) a {
   }
   main section .our-collection-section .collection-item:nth-of-type(3) {
     background-image: url("../images/our_collection/our_collection_kids_mobile.jpg");
+  }
+  main section .our-collection-section .collection-item:nth-of-type(4) {
+    background-image: url("../images/our_collection/our_collection_home_mobile.jpg");
   }
   main section .brand-section {
     padding: 40px 0;
@@ -3495,7 +3520,7 @@ footer .second-footer .item-s:nth-of-type(3) a {
   .modal-body {
     padding: 20px !important;
   }
-  .custom-modal .body .select-coupon-type .tabs-nav li.black.active a {
+  .custom-modal .body .select-coupon-type .tabs-nav li.black a {
     font-size: 16px;
   }
   .custom-modal .body .select-coupon-type .tabs-nav {
@@ -4149,6 +4174,9 @@ footer .second-footer .item-s:nth-of-type(3) a {
   }
 }
 @media screen and (max-width: 768px) {
+  .page-landing-container.w-bc h1 {
+    margin-top: 10px !important;
+  }
   .mt-section.mt-20 {
     margin-top: 20px;
   }

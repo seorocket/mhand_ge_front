@@ -94,6 +94,15 @@ img
 .btn.no-uppercase
   text-transform: none
 
+.btn.w-arrow
+  align-items: flex-end
+  .icon
+    padding-bottom: 3px
+    img
+      width: 16px
+      height: 16px
+.btn.p-15
+  padding: 15px 0
 .swiper-footer-block
   margin-top: 20px
   display: flex
@@ -394,6 +403,9 @@ header
           display: flex
           align-items: center
           gap: 10px
+
+          .btn
+            padding: 10px 20px
 
           .phone
             padding: 10px 20px
@@ -1201,7 +1213,6 @@ main
       .form-recall-container
         display: grid
         grid-template-columns: repeat(2, 1fr)
-        align-items: center
         column-gap: 80px !important
 
         .form-recall-info
@@ -1212,7 +1223,7 @@ main
           .form-recall-title
             margin: 0
             font-size: var(--fz64)
-            line-height: 120%
+            line-height: 100%
             text-transform: uppercase
 
           .form-recall-description
@@ -1248,18 +1259,20 @@ main
           max-width: 530px
       .sales-container
         display: grid
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, minmax(0, 1fr))
         gap: 80px
 
         .sales-img
           background-repeat: no-repeat
           background-size: cover
-          padding: 30px
           display: flex
           flex-direction: column
           justify-content: space-between
           align-items: flex-start
           height: 100%
+
+          img
+            width: auto
 
           .present
             padding: 20px 40px
@@ -1333,7 +1346,9 @@ main
 
             .item-c:nth-of-type(4)
               grid-column: span 2
-
+      .sales-container.about-page
+        .sales-img
+          padding: 30px
     .prefooter-section
       color: $white
       text-align: center
@@ -1352,6 +1367,7 @@ main
         .prefooter-title
           font-size: var(--fz96)
           margin-bottom: 20px
+          line-height: 100%
 
         .prefooter-conent
           margin-bottom: 30px
@@ -1938,7 +1954,7 @@ main
               display: flex
               flex-direction: column
               padding: 0
-              gap: 30px 30px
+              //gap: 30px 30px
 
               .title
                 font-size: var(--fz20)
@@ -2132,7 +2148,6 @@ footer
 
       .description
         display: inline-block
-        max-width: 60%
         font-size: var(--fz14)
         margin-top: 10px
         color: $white
